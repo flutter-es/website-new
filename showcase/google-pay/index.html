@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+        Flutter Showcase |Google Pay
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="As Google Pay expanded to new regions — each with its own unique user dynamics, geography, and challenges — the team needed a more efficient way to make platform changes at scale."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Flutter Showcase |Google Pay">
+    <meta property="og:url" content="//flutter.dev/showcase/google-pay/">
+    <meta property="og:description" content="As Google Pay expanded to new regions — each with its own unique user dynamics, geography, and challenges — the team needed a more efficient way to make platform changes at scale.">
+    <meta property="og:image" content="
+  https://storage.googleapis.com/cms-storage-bucket/images/case_study_part_1_Google_Pay_1.width-500.png
+">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior showcase showcase-story"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multi-Platform <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Overview</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Mobile</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter on iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Desktop</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embedded</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Development <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Overview</a>
+                </li>
+                <li><a class="btn" href="/learn">Learn</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Flutter Favorites</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Packages</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetization</a></li>
+                <li><a class="btn" href="/games">Games</a></li>
+                <li><a class="btn" href="/news">News</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosystem <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Overview</a>
+                </li>
+                <li><a class="btn" href="/community">Community</a></li>
+                <li><a class="btn" href="/events">Events</a></li>
+                <li><a class="btn" href="/culture">Culture</a></li>
+                <li><a class="btn" href="/consultants">Consultants</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Showcase </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Overview</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">What's new</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Editor support</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Profiling</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Install Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >DevTools</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutorials</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Get started</a
+      >
+
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+      
+<section id="story">
+  <div class="container">
+    <article class="story-detail">
+      <div class="story-logo">
+        <img alt="gpay_logo.png" height="50" src="https://storage.googleapis.com/cms-storage-bucket/images/gpay_logo.width-128.png" width="128">
+      </div>
+      <h1>Google Pay</h1>
+
+      
+        
+        <img src="https://storage.googleapis.com/cms-storage-bucket/images/header_Google_Pay_1.width-1440.format-webp-lossless.webp" class="poster" alt="Google Pay">
+      
+
+      <h2>Going global at Google Pay with Flutter</h2>
+
+      
+        <div class="success-metrics">
+          <h2>Success metrics</h2>
+          <div class="success-metrics-wrapper">
+            <div class="block-metric">
+
+<div class="success-metric"> 
+  <h4>70%</h4>
+  <h3>reduction in engineering effort</h3>
+</div>
+</div>
+<div class="block-metric">
+
+<div class="success-metric"> 
+  <h4>35%</h4>
+  <h3>reduction in lines of code</h3>
+</div>
+</div>
+          </div>
+        </div>
+      
+      
+      <div class="story-body">
+        <p data-block-key="38s5b"><b>Goal</b></p><p data-block-key="4kdq5">With 100 million users in dozens of countries, <a href="https://pay.google.com/">Google Pay</a> allows users around the world to pay, save, manage expenses, and more. But to do that, they relied on 1.7 million lines of code between their <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.walletnfcrel">Android</a> and <a href="https://apps.apple.com/us/app/google-pay-save-pay-manage/id1193357041">iOS</a> apps — an amount that didn’t feel sustainable as Google Pay continued to expand to new countries, each of which would require its own unique features.</p><p data-block-key="55dlp">To make things even more challenging, many of those new regions had a large number of iOS users, while their existing users were almost exclusively Android. That meant they would not only need to hire more iOS engineers, they would need to continue building every feature twice — once for Android, and once for iOS.</p><p data-block-key="9ptar">So instead, they opted to invest in a cross-platform framework that would enable them to do more with less: Flutter.</p><p data-block-key="796jj"></p><p data-block-key="nqmj"><b>Why Flutter?</b></p><p data-block-key="1gcb7">The team initially tested Flutter as an <a href="https://flutter.dev/docs/development/add-to-app">Add-to-app</a> possibility, but the opportunity to rewrite the whole app was too big to ignore.</p><p data-block-key="24dds">While it meant a heavy upfront investment of engineering resources, it would allow the team to unify their engineering leadership, shift their work away from endlessly patching holes, and increase the speed and efficiency of their client development for faster response and implementation times.</p><p data-block-key="ap4o9">Above all, migrating to Flutter would enable fast, resource-efficient scaling of Google Pay around the world. Whereas building out features on both Android and iOS required double the effort, Flutter would only require about 1.2 times as much work. So they decided to take the plunge.</p><p data-block-key="f2iqg"></p><p data-block-key="2u7fv"></p><p data-block-key="d7m7t"></p><p data-block-key="vveyq"></p><p data-block-key="7r3fs"></p><img alt="" class="richtext-image full-width" height="378" src="https://storage.googleapis.com/cms-storage-bucket/images/body_image_2_Google_Pay_15-_dpi.width-800.png" width="800"><p data-block-key="alkq1"></p><p data-block-key="3m2mt"></p><p data-block-key="fnepo"></p><p data-block-key="ec5tb"></p><p data-block-key="9uj0r"></p><p data-block-key="vkhf"><b>Their Solution</b></p><p data-block-key="7jh7e">Rebuilding Google Pay on Flutter didn’t come without its challenges. First, they would need to retrain the team on a new language, platform, and approach to the user interface. Then, they would need to rewrite the app as it was changing, because it was constantly being updated. And finally, they would need to jump through all of the necessary security reviews and audits for a second time where the app was already launched.</p><p data-block-key="fvat7">But before any of that, they had to prove the concept. So in 2019, they spent several months building the case for migrating Google Pay to Flutter. A small team of three senior software engineers from Android and iOS came together, writing and rewriting until they had a vertical slice of the app — home page, chat, and payments (with critical native plugins).</p><p data-block-key="c0ih8">Then they ran a few small sprints for other engineers to give them an opportunity to provide feedback. Flutter was a hit — the team loved that they could get instant feedback while developing, as well as the number of high-quality widgets they could leverage to make development easier.</p><p data-block-key="9lllt">Once they had the green light from senior management, they brought in 50 engineers and gave them six months to retrain and rewrite the app for a beta launch in Singapore.</p><p data-block-key="ftmob">The launch was a success. Encouraged, they brought in another 100 engineers to help them relaunch Google Pay in India and the US on the Flutter codebase, as well. It was a race against time: They needed to rewrite an existing app with nearly 300 features and beta test it, then launch to over 100 million monthly active users, all while maintaining the legacy app.</p><p data-block-key="2oukp"></p><p data-block-key="cc45l"></p><p data-block-key="103h0"><b><i>“Everyone loved Flutter — you could see the thrill on people’s faces as they talked about how fast it was to build a user interface.”</i></b></p><p data-block-key="btfme">- David Ko, Engineering Director, Google Pay</p><p data-block-key="89bhs"></p><p data-block-key="3ojjf"><b>Results</b></p><p data-block-key="489nb">Despite these challenges, the team launched Google Pay for beta testing in India in early August.</p><p data-block-key="choqr">The rebuilt Google Pay app is smaller, more efficient to manage, and easier to update. Despite adding several new features, the new codebase is 35% smaller than the original implementations — 1.1 million lines of code instead of 1.7 million. At the same time, the team estimates that they’ve saved about 60-70% of their engineers’ time because Flutter is just so much easier to manage.</p><p data-block-key="9lkqq">The team — now at nearly 180 software engineers — is still gathering feedback on the India beta test, but the results are looking promising. The India beta will roll out to all of the over 100 million Indian users later this year, bringing with it a fresh user interface and all of the features their users have come to know and love.</p><p data-block-key="8kkg">With Flutter, Google Pay 3.0 will be able to scale quickly and efficiently across iOS and Android, starting with a major relaunch of Google Pay in the US this year. This technology provides a foundation for the team to build on as they expand Google Pay 3.0 to the rest of the world in 2021.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+    </main>
+    
+    
+
+<footer>
+  <div class="content footer-main">
+    <div class="logo">
+      <a href="/">
+        <img
+          src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+          width="154"
+          alt="Flutter"
+        />
+      </a>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li>About Flutter</li>
+        <li>
+          <a href="https://docs.flutter.dev/jobs" target="_blank">Careers</a>
+        </li>
+        <li><a href="https://medium.com/flutter" target="_blank">News</a></li>
+        <li><a href="/brand">Brand</a></li>
+        <li><a href="/culture">Culture</a></li>
+      </ul>
+      <ul>
+        <li>Learn Flutter</li>
+        <li><a href="/learn" target="_blank">Learning Journey</a></li>
+        <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Codelabs</a></li>
+        <li>
+          <a href="https://flutter.github.io/samples" target="_blank"
+            >Samples</a
+          >
+        </li>
+        <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+      </ul>
+      <ul>
+        <li>Multi-Platform</li>
+        <li><a href="/multi-platform/mobile">Mobile</a></li>
+        <li><a href="/multi-platform/web">Web</a></li>
+        <li><a href="/multi-platform/desktop">Desktop</a></li>
+        <li><a href="/multi-platform/embedded">Embedded</a></li>
+        <li><a href="/multi-platform/ios">iOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content footer-social">
+    <div>
+      <a
+        href="https://www.youtube.com/flutterdev"
+        target="_blank"
+        aria-label="Flutter YouTube"
+      >
+        <i class="fab fa-youtube fa-lg"></i>
+      </a>
+      <a
+        href="https://twitter.com/flutterdev"
+        target="_blank"
+        aria-label="Flutter Twittter"
+      >
+        <i class="fab fa-x-twitter fa-lg"></i>
+      </a>
+      <a
+        href="https://github.com/flutter"
+        target="_blank"
+        aria-label="Flutter Github"
+      >
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a
+        href="https://medium.com/flutter"
+        target="_blank"
+        aria-label="Flutter Medium"
+      >
+        <i class="fab fa-medium fa-lg"></i>
+      </a>
+      <a
+        href="https://www.meetup.com/pro/flutter/"
+        target="_blank"
+        aria-label="Flutter Meetup"
+      >
+        <i class="fab fa-meetup fa-lg"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/showcase/flutterdevofficial/"
+        target="_blank"
+        aria-label="Flutter LinkedIn"
+      >
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+    </div>
+  </div>
+  <div class="content footer-tray">
+    <div>
+      Except as otherwise noted, this work is licensed under a Creative Commons
+      Attribution 4.0 International License, and code samples are licensed under
+      the BSD License.
+    </div>
+    <div>
+      <ul>
+        <li><a href="https://docs.flutter.dev/tos">Terms</a></li>
+        <li>
+          <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+            >Privacy</a
+          >
+        </li>
+        <li><a href="https://docs.flutter.dev/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+  <div class="container">
+    <p>Google uses cookies to deliver its services, to personalize ads, and to analyze traffic. You can 
+      adjust your privacy controls anytime in your 
+      <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">Google settings</a>. 
+      <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Learn more</a>.
+    </p>
+    <button @click.prevent="consent" class="solid">Okay</button>
+  </div>
+</section>
+
+    <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+    <div class="container">
+      <p>NOTICE: Flutter hopes this directory is useful for customers seeking consultants with Flutter experience; however, Flutter makes no representation to you or anyone else that the listed consultants are Flutter or Google partners, and Flutter does not represent or warrant their qualifications or the quality of services you may receive.  Your relationship is strictly between you and the consultants.</p>
+      <button @click.prevent="dismiss" class="solid">Okay</button>
+    </div>
+  </section>
+  
+
+    
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>

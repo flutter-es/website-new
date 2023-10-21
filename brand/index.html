@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+        Marca
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="El nombre y el logotipo de Flutter son marcas comerciales propiedad de Google. Obtenga más información sobre cómo representar la marca Flutter."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Brand">
+    <meta property="og:url" content="//flutter.dev/brand/">
+    <meta property="og:description" content="El nombre y el logotipo de Flutter son marcas comerciales propiedad de Google. Obtenga más información sobre cómo representar la marca Flutter.">
+    <meta property="og:image" content="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior brand"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multiplataforma <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Móvil</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter en iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Escritorio</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embebido</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Desarrollo <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/learn">Aprender</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Favoritos de Flutter </a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Paquetes</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetización</a></li>
+                <li><a class="btn" href="/games">Juegos</a></li>
+                <li><a class="btn" href="/news">Noticias</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosistema <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/community">Comunidad</a></li>
+                <li><a class="btn" href="/events">Eventos</a></li>
+                <li><a class="btn" href="/culture">Cultura</a></li>
+                <li><a class="btn" href="/consultants">Consultores</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Galería </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">Que hay de nuevo</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Soporte de edición</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Perfilado</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Instalar Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >Herramientas de desarrollo</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutoriales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Empezar</a
+      >
+
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+<section class="hero">
+  <div class="container">
+    <div class="mantle full">
+      <div class="text">
+        <h4 class="eyebrow">Guías de la marca</h4>
+        <h1>Representando la marca Flutter</h1>
+        <div class="stacked-centered">
+          <a class="btn white" href="https://storage.googleapis.com/cms-storage-bucket/flutter-brand-assets.zip">
+            Descarga todos los archivos
+          </a>
+          <a class="btn quiet" href="https://docs.flutter.dev/brand" target="_blank">
+            Guía de marca registrada de Flutter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+  <section 
+    class="content-container" 
+    x-data="initSpy(headerOffset, toggleContentActive)">
+
+
+    <section id="logo">
+      <div class="container features">
+        <div class="stacked-feature brand-feature">
+          <hgroup>
+            <h2>Logotipo de Flutter</h2>
+            <p>No utilice la marca Flutter ni ninguna variante de la 
+              marca Flutter junto con el nombre general de su aplicación, 
+              producto, servicio o sitio web. No alteres ni uses la marca 
+              Flutter de una manera que pueda resultar confusa o engañosa, 
+              y nunca uses la marca Flutter como el elemento más destacado de tu página.
+            </p>
+          </hgroup>
+          <div class="feature nospy">
+            <div class="text">
+              <div>
+                <h3>Diseño estándar</h3>
+                <p>El diseño estándar se puede utilizar en presentaciones de diapositivas y publicaciones 
+                  de blogs. Nunca debe usarse en el producto o de una manera que implique que Flutter respalda 
+                  o ha creado el producto.
+                </p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="downloadable-image-harness">
+                <div class="downloadable-image">
+                  <img src="https://storage.googleapis.com/cms-storage-bucket/847ae81f5430402216fd.svg" alt="Standard horizontal lockup">
+                </div>
+                <div class="downloadable-options">
+                  <a href="https://storage.googleapis.com/cms-storage-bucket/847ae81f5430402216fd.svg" download>SVG</a>
+                  <a href="https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png" download>PNG</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="logo-color-variations">
+      <div class="container variations">
+        <hgroup>
+          <h3>Variaciones de color</h3>
+        </hgroup>
+        <div class="variation-grid">
+          <div>
+            <h4>Claro</h4>
+            <p>Para fondos más claros con formas superpuestas o patrones variados.</p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img 
+                  src="https://storage.googleapis.com/cms-storage-bucket/847ae81f5430402216fd.svg" 
+                  alt="Standard horizontal lockup">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/847ae81f5430402216fd.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>Oscuro</h4>
+            <p>Para fondos más oscuros con formas superpuestas o patrones variados cuando 
+              la transparencia no está disponible.
+            </p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img 
+                  src="https://storage.googleapis.com/cms-storage-bucket/67187dff9313e2831a8c.svg" 
+                  alt="Flutter white horizontal lockup">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/67187dff9313e2831a8c.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/6e19fee6b47b36ca613f.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>Transparencia</h4>
+            <p>Para fondos más oscuros con formas superpuestas o patrones variados.</p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img 
+                  src="https://storage.googleapis.com/cms-storage-bucket/8ac0834f57eb3b542a45.svg" 
+                  alt="Flutter horizontal transparent lockup">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/8ac0834f57eb3b542a45.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/a73a8b28b53d8d01cf76.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>Knockout</h4>
+            <p>Para fondos sólidos más oscuros con altos contrastes</p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img 
+                  src="https://storage.googleapis.com/cms-storage-bucket/d113e56856107a174445.svg" 
+                  alt="Flutter knockout lockup">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/d113e56856107a174445.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/683514c5660dbe52f5ba.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="logo-variations">
+      <div class="container variations">
+        <hgroup>
+          <h3>Variaciones del logotipo</h3>
+        </hgroup>
+        <div class="variation-grid">
+          <div>
+            <h4>Diseño vertical</h4>
+            <p>Cuando hay espacio horizontal limitado, se puede utilizar un diseño vertical.</p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img src="https://storage.googleapis.com/cms-storage-bucket/64d67700f8293a9dc827.svg" alt="Flutter vertical lockup">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/64d67700f8293a9dc827.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/a9d6ce81aee44ae017ee.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>Logotipo</h4>
+            <p>Cuando el espacio vertical y horizontal es limitado, el icono 
+              se puede utilizar solo sin el logotipo.
+            </p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img src="https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg" alt="Flutter logomark">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>Hecho con Flutter</h4>
+            <p>Cuando se hace referencia en el contexto de otra aplicación. Esto incluye 
+              publicaciones de blogs, entrevistas de prensa y la propia aplicación.
+            </p>
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img 
+                  src="https://storage.googleapis.com/cms-storage-bucket/916809aa4c8f73ad70d2.svg" 
+                  alt="Flutter build with horizontal lockup">
+              </div>
+              <div class="downloadable-options">
+                <a href="https://storage.googleapis.com/cms-storage-bucket/916809aa4c8f73ad70d2.svg" download>SVG</a>
+                <a href="https://storage.googleapis.com/cms-storage-bucket/4cdf1c5482cd30174cfe.png" download>PNG</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="logo-sizing-spacing" class="subsection">
+      <div class="container">
+        <hgroup>
+          <h3>Tamaño y espaciado</h3>
+          <p>Para garantizar la legibilidad, el diseño y el ícono de Flutter deben ubicarse 
+            dentro de un espacio abierto. Siempre se debe mantener un margen mínimo de espacio 
+            equivalente a la altura de una sola 'F' alrededor del candado o icono. Se deberá 
+            demostrar un mayor margen de espacio cuando sea posible. El logotipo nunca debe 
+            superponerse ni abarrotarse con texto o ilustraciones. Además, el logotipo no debe 
+            estar vinculado a otros logotipos o etiquetas. Sólo se deben utilizar diseños de marcas 
+            aprobadas.
+          </p>
+        </hgroup>
+        <div class="compare-cols">
+          <div>
+            <img src="https://storage.googleapis.com/cms-storage-bucket/7a31957471db44e5c2e6.png" alt="Sizing and Spacing 1">
+          </div>
+          <div>
+            <img src="https://storage.googleapis.com/cms-storage-bucket/22b6ce6f012cb7ee44bb.png" alt="Sizing and Spacing 2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="logo-alignment" class="subsection">
+      <div class="container">
+        <hgroup>
+          <h3>Alineación</h3>
+          <p>El icono de Flutter aparece desequilibrado cuando está alineado en el centro. 
+            Al alinear el icono en el centro, utilice las esquinas superior e inferior izquierda 
+            como puntos de referencia para proporcionar equilibrio óptico.
+          </p>
+        </hgroup>
+        <div class="compare-cols">
+          <div>
+            <div class="image-harness">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/0a9a0f470b169b58b8e6.png" alt="Good logo alignment">
+            </div>
+            <h4 class="compare-label good">
+              <span>Qué hacer:</span> Alinear ópticamente el ícono Flutter usando las esquinas superior e inferior como puntos de referencia.
+            </h4>
+          </div>
+          <div>
+            <div class="image-harness">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/ea559ad2611bf6707330.png" alt="Bad logo alignment">
+            </div>
+            <h4 class="compare-label bad">
+              <span>No:</span> Centrar geométricamente el icono de Flutter
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="logo-contrast" class="subsection">
+      <div class="container">
+        <hgroup>
+          <h3>Contraste</h3>
+          <p>
+            Cuando utilice la versión knockout del logotipo, asegúrese siempre de que los colores 
+            de primer plano y de fondo cumplan con los estándares de 
+            <a href="https://webaim.org/resources/contrastchecker"> accesibilidad WCAG AA</a>
+            . WCAG 2.0 nivel AA requiere una relación de contraste de al menos 4.5:1 para texto
+            normal y 3:1 para texto grande. WCAG 2.1 requiere una relación de contraste de al
+            menos 3:1 para gráficos y componentes de interfaz de usuario.
+          </p>
+        </hgroup>
+        <div class="compare-cols">
+          <div>
+            <div class="image-harness">
+              <img 
+                src="https://storage.googleapis.com/cms-storage-bucket/d113e56856107a174445.svg" 
+                alt="Good accessibility">
+            </div>
+            <h4 class="compare-label good">
+              <span>Si:</span> Relación de contraste: 5.29:1, cumple con los estándares WCAG AA
+            </h4>
+          </div>
+          <div>
+            <div class="image-harness">
+              <img 
+                src="https://storage.googleapis.com/cms-storage-bucket/d113e56856107a174445.svg" 
+                alt="Bad accessibility">
+            </div>
+            <h4 class="compare-label bad">
+              <span>No:</span> Relación de contraste: 2.23:1, no cumple con los estándares WCAG AA
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="logo-ligatures" class="subsection">
+      <div class="container">
+        <hgroup>
+          <h3>Uniones</h3>
+          <p>Desactive las uniones estándar al representar el nombre 'Flutter' en formato de título. 
+            Los dos caracteres 't' deben permanecer distintos.
+          </p>
+        </hgroup>
+        <div class="compare-cols">
+          <div>
+            <div class="image-harness">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/6c1339c04cf2d0f4a9d6.png" alt="Good logo alignment">
+            </div>
+            <h4 class="compare-label good">
+              <span>Si:</span> Quitar las uniones estándar
+            </h4>
+          </div>
+          <div>
+            <div class="image-harness">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/9e71a02625738550fca6.png" alt="Bad logo alignment">
+            </div>
+            <h4 class="compare-label bad">
+              <span>No:</span> Con uniones estándar
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="color" class="subsection">
+      <div class="container">
+        <hgroup>
+          <h2>Colores</h2>
+        </hgroup>
+        <div class="colors-row colors-primary">
+          <div class="colors-grid col-3">
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Azul marino Flutter</h4>
+                <h5>#042B59</h5>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Azul Flutter</h4>
+                <h5>#0553B1</h5>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Cielo Flutter</h4>
+                <h5>#027DFD</h5>
+              </div>
+            </div>
+          </div>
+          <div class="colors-desc">
+            <h3>Colores primarios</h3>
+            <p>El logotipo consta de un color azul primario y dos colores azules destacados.</p>
+          </div>
+        </div>
+        <div class="colors-row colors-secondary">
+          <div class="colors-grid col-4">
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Rojo</h4>
+                <h5>#F25D50</h5>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Amarillo</h4>
+                <h5>#FFF275</h5>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Púrpura</h4>
+                <h5>#6200EE</h5>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-chip"></div>
+              <div class="color-desc">
+                <h4>Verde</h4>
+                <h5>#1CDAC5</h5>
+              </div>
+            </div>
+          </div>
+          <div class="colors-desc">
+            <h3>Colores secundarios</h3>
+            <p>
+              Flutter también tiene una paleta extendida que se utiliza para colores de fondo 
+              y otras visualizaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="dash">
+      <div class="features container">
+        <div class="feature nospy">
+          <div class="text">
+            <hgroup>
+              <h3>Dash</h3>
+            </hgroup>
+            <p>Dash es la mascota del lenguaje Dart y del framework Flutter.</p>
+            <a class="btn" href="https://storage.googleapis.com/cms-storage-bucket/780e0e64d323aad2cdd5.png" download>
+              Descargar a Dash
+            </a>
+          </div>
+          <div class="media">
+            <div class="downloadable-image-harness">
+              <div class="downloadable-image">
+                <img src="https://storage.googleapis.com/cms-storage-bucket/d406c736e7c4c57f5f61.png" alt="Dashatar Dash">
+              </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+    </section>
+
+
+    
+
+<section id="cta" class="module">
+  <div class="insert cta-insert container">
+    <div class="text">
+      <h3>Empezar</h3>
+      <p>Acceso instantáneo al poder del framework Flutter</p>
+      <div>
+        <a href="https://docs.flutter.dev/get-started/install" class="btn">
+          Instalar
+        </a>
+        <a href="https://docs.flutter.dev" class="btn quiet">
+          Lea los documentos &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+        </a>
+      </div>
+    </div>
+    <div class="media">
+      <img src="https://storage.googleapis.com/cms-storage-bucket/72521e62275b24d3c37d.png" alt="Powered by Dart">
+    </div>
+  </div>
+</section>
+
+
+
+</section>
+
+    </main>
+    
+    
+
+    <footer>
+      <div class="content footer-main">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+              width="154"
+              alt="Flutter"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Acerca de Flutter</li>
+            <li>
+              <a href="https://docs.flutter.dev/jobs" target="_blank">Carreras</a>
+            </li>
+            <li><a href="https://medium.com/flutter" target="_blank">Noticias</a></li>
+            <li><a href="/brand">Marca</a></li>
+            <li><a href="/culture">Cultura</a></li>
+          </ul>
+          <ul>
+            <li>Aprenda Flutter</li>
+            <li><a href="/learn" target="_blank">Viaje de aprendizaje</a></li>
+            <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Laboratorios de código</a></li>
+            <li>
+              <a href="https://flutter.github.io/samples" target="_blank"
+                >Ejemplos</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+          </ul>
+          <ul>
+            <li>Multiplataforma</li>
+            <li><a href="/multi-platform/mobile">Móvil</a></li>
+            <li><a href="/multi-platform/web">Web</a></li>
+            <li><a href="/multi-platform/desktop">Escritorio</a></li>
+            <li><a href="/multi-platform/embedded">Embebido</a></li>
+            <li><a href="/multi-platform/ios">iOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content footer-social">
+        <div>
+          <a
+            href="https://www.youtube.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter YouTube"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://twitter.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter Twittter"
+          >
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/flutter"
+            target="_blank"
+            aria-label="Flutter Github"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://medium.com/flutter"
+            target="_blank"
+            aria-label="Flutter Medium"
+          >
+            <i class="fab fa-medium fa-lg"></i>
+          </a>
+          <a
+            href="https://www.meetup.com/pro/flutter/"
+            target="_blank"
+            aria-label="Flutter Meetup"
+          >
+            <i class="fab fa-meetup fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/flutterdevofficial/"
+            target="_blank"
+            aria-label="Flutter LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content footer-tray">
+        <div>
+          Salvo que se indique lo contrario, este trabajo tiene la licencia Creative Commons 
+          Attribution 4.0 International y los ejemplos de código tienen la licencia BSD.
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://docs.flutter.dev/tos">Terminos</a></li>
+            <li>
+              <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+                >Privacidad</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/security">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+        <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+      <div class="container">
+        <p>Google utiliza cookies para ofrecer sus servicios, personalizar anuncios y analizar el tráfico. Puedes
+          ajustar tus controles de privacidad en cualquier momento en tu 
+          <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">configuración de Google</a>. 
+          <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Aprende más</a>.
+        </p>
+        <button @click.prevent="consent" class="solid">Aceptar</button>
+      </div>
+    </section>
+    
+        <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+        <div class="container">
+          <p>AVISO: Flutter espera que este directorio sea útil para los clientes que buscan consultores con experiencia en Flutter; sin embargo, Flutter no representa ni garantiza a usted ni a ninguna otra persona que los consultores enumerados sean socios de Flutter o de Google, y Flutter no representa ni garantiza sus calificaciones ni la calidad de los servicios que puede recibir. Su relación es estrictamente entre usted y los consultores.</p>
+          <button @click.prevent="dismiss" class="solid">Aceptar</button>
+        </div>
+      </section>
+  
+
+    
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>
