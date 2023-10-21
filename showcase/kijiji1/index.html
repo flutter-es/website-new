@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+        Flutter Showcase | Kijiji
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="Since 2005, Kijiji has been a leader in helping millions of Canadians buy and sell locally and
+sustainably across 400 categories including Autos, Real Estate, Home, Electronics, Services, Pets and
+Auto parts."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Flutter Showcase | Kijiji">
+    <meta property="og:url" content="//flutter.dev/showcase/kijiji1/">
+    <meta property="og:description" content="Since 2005, Kijiji has been a leader in helping millions of Canadians buy and sell locally and
+sustainably across 400 categories including Autos, Real Estate, Home, Electronics, Services, Pets and
+Auto parts.">
+    <meta property="og:image" content="
+  https://storage.googleapis.com/cms-storage-bucket/images/kijiji-case-study-01.width-500.png
+">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior showcase showcase-story"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multi-Platform <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Overview</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Mobile</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter on iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Desktop</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embedded</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Development <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Overview</a>
+                </li>
+                <li><a class="btn" href="/learn">Learn</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Flutter Favorites</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Packages</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetization</a></li>
+                <li><a class="btn" href="/games">Games</a></li>
+                <li><a class="btn" href="/news">News</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosystem <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Overview</a>
+                </li>
+                <li><a class="btn" href="/community">Community</a></li>
+                <li><a class="btn" href="/events">Events</a></li>
+                <li><a class="btn" href="/culture">Culture</a></li>
+                <li><a class="btn" href="/consultants">Consultants</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Showcase </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Overview</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">What's new</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Editor support</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Profiling</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Install Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >DevTools</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutorials</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Get started</a
+      >
+
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+      
+<section id="story">
+  <div class="container">
+    <article class="story-detail">
+      <div class="story-logo">
+        <img alt="kijiji_logo.webp" height="128" src="https://storage.googleapis.com/cms-storage-bucket/images/kijiji_logo.width-128.png" width="128">
+      </div>
+      <h1>Kijiji</h1>
+
+      
+        
+        <img src="https://storage.googleapis.com/cms-storage-bucket/images/kijiji-header-v2.width-1440.format-webp-lossless.webp" class="poster" alt="Kijiji">
+      
+
+      <h2>Kijiji launches features faster with Flutter</h2>
+
+      
+        <div class="success-metrics">
+          <h2>Success metrics</h2>
+          <div class="success-metrics-wrapper">
+            <div class="block-metric">
+
+<div class="success-metric"> 
+  <h4>50%</h4>
+  <h3>reduction in time required to launch new features</h3>
+</div>
+</div>
+<div class="block-metric">
+
+<div class="success-metric"> 
+  <h4>64%</h4>
+  <h3>reduction in size of codebase</h3>
+</div>
+</div>
+          </div>
+        </div>
+      
+      
+      <div class="story-body">
+        <p data-block-key="o7e73"><b>Goal</b></p><p data-block-key="18rum">With nearly 11 million monthly active users, the Kijiji mobile app needs to be fast, reliable, and consistent across platforms. However, after several years, Kijiji’s native apps had grown to millions of lines of code and incurred a significant amount of technical debt. The team needed a way to streamline their codebase, reach feature parity between platforms, and keep the app running smoothly for users.</p><p data-block-key="aqgk4"></p><p data-block-key="cpqc4"><b>Why Flutter?</b></p><p data-block-key="5dhj1">The team considered several native and cross-platform solutions, and on a recommendation from senior leadership, decided to look into Flutter. As an experiment, they ran a two-day internal hackathon with every web, backend, and mobile developer at Kijiji to rebuild and reimagine their existing feature sets in Flutter.</p><p data-block-key="7uton">“We were really impressed with the ability Flutter gave our team to be creative and create the changes our customers were looking for effectively and efficiently,” said Mike Baxter, Chief Technology Officer at Kijiji.</p><p data-block-key="4bkr4">After the hackathon, they gathered feedback on the developers&#x27; experiences. Across the board, the development team really enjoyed working with Flutter and it was apparent it would help the team overcome many of their existing concerns, so they decided to make the switch.</p><p data-block-key="f8jhf"></p><img alt="" class="richtext-image full-width" height="377" src="https://storage.googleapis.com/cms-storage-bucket/images/kijiji-body-image.width-800.png" width="800"><p data-block-key="13jcc"></p><p data-block-key="c1ors"><b>Their solution</b></p><p data-block-key="p4qe">Kijiji hired an experienced Flutter architect to lead the team in rebuilding their mobile apps.</p><p data-block-key="519bv">Rebuilding their native apps in Flutter allowed them to wipe out their technical debt and start with a clean slate. Building cross-platform from the start also allowed them to deploy features with parity on iOS and Android, which had been a challenge in the past. Platform-specific constraints sometimes made it tough to maintain a consistent experience cross-platform, but Flutter made it easier to deploy in tandem.</p><p data-block-key="asdid">For example, in their native apps, the team had created a large number of custom views and reusable components throughout the codebase. But for those components to actually be reusable, they had to overload them with functionality to make them applicable to every scenario. Not only did that involve a lot of extra code, it meant that if one custom view broke, it would break in multiple places throughout the app.</p><p data-block-key="9cjii">When they migrated to Flutter, the team chose to leverage widgets instead, keeping each widget and component self-contained. That allowed multiple developers to work on different parts of the app at once without stepping on anyone&#x27;s toes. It also constrained the components to the functionality that is required and reduced the amount of code they needed to write.</p><p data-block-key="e008f"></p><p data-block-key="989gb">“<i>Flutter is a first-class development environment. Even if you are a native developer, the ramp-up is relatively quick, and the software truly enabled our team to modernize our app and create a more seamless customer experience.</i>”</p><p data-block-key="6ee1g">-Mike Baxter, Chief Technology Officer, Kijiji</p><p data-block-key="9ndou"><b>Results</b></p><p data-block-key="3dsud">Migrating to Flutter has saved Kijiji a significant amount of development time, enabling them to quickly offer an improved app experience for Canadians. The original Kijiji native apps took about 2-3 years to build for each platform, or about 6 development years in total. Flutter enabled them to recreate the core features of the Kijiji mobile app in just 9 months. While it used to take an average of 2-4 sprints to release a major feature, Flutter has allowed them to launch new features in half the time, freeing the team to innovate, iterate and go to market faster with new features their customers are asking for.</p><p data-block-key="57ra7">The team has also been able to hire talented developers more quickly by standing out from the competition. Their original mobile team consisted of 4 iOS and 4 Android developers, hired over a period of 2 years, but they were able to hire 12 experienced Flutter developers within 6 months.</p><p data-block-key="ah7ed">Finally, the Kijiji team were able to drastically reduce the number of libraries and dependencies they relied on for a more streamlined experience. They were able to reduce their codebase from over 2.5M lines of code in their native Android app to approximately 900k with 100% code coverage, making it much easier to maintain and avoid future technical debt. After final feature validation, the Kijiji team rolled out their new Flutter app to users on March 7/23.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+    </main>
+    
+    
+
+<footer>
+  <div class="content footer-main">
+    <div class="logo">
+      <a href="/">
+        <img
+          src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+          width="154"
+          alt="Flutter"
+        />
+      </a>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li>About Flutter</li>
+        <li>
+          <a href="https://docs.flutter.dev/jobs" target="_blank">Careers</a>
+        </li>
+        <li><a href="https://medium.com/flutter" target="_blank">News</a></li>
+        <li><a href="/brand">Brand</a></li>
+        <li><a href="/culture">Culture</a></li>
+      </ul>
+      <ul>
+        <li>Learn Flutter</li>
+        <li><a href="/learn" target="_blank">Learning Journey</a></li>
+        <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Codelabs</a></li>
+        <li>
+          <a href="https://flutter.github.io/samples" target="_blank"
+            >Samples</a
+          >
+        </li>
+        <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+      </ul>
+      <ul>
+        <li>Multi-Platform</li>
+        <li><a href="/multi-platform/mobile">Mobile</a></li>
+        <li><a href="/multi-platform/web">Web</a></li>
+        <li><a href="/multi-platform/desktop">Desktop</a></li>
+        <li><a href="/multi-platform/embedded">Embedded</a></li>
+        <li><a href="/multi-platform/ios">iOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content footer-social">
+    <div>
+      <a
+        href="https://www.youtube.com/flutterdev"
+        target="_blank"
+        aria-label="Flutter YouTube"
+      >
+        <i class="fab fa-youtube fa-lg"></i>
+      </a>
+      <a
+        href="https://twitter.com/flutterdev"
+        target="_blank"
+        aria-label="Flutter Twittter"
+      >
+        <i class="fab fa-x-twitter fa-lg"></i>
+      </a>
+      <a
+        href="https://github.com/flutter"
+        target="_blank"
+        aria-label="Flutter Github"
+      >
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a
+        href="https://medium.com/flutter"
+        target="_blank"
+        aria-label="Flutter Medium"
+      >
+        <i class="fab fa-medium fa-lg"></i>
+      </a>
+      <a
+        href="https://www.meetup.com/pro/flutter/"
+        target="_blank"
+        aria-label="Flutter Meetup"
+      >
+        <i class="fab fa-meetup fa-lg"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/showcase/flutterdevofficial/"
+        target="_blank"
+        aria-label="Flutter LinkedIn"
+      >
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+    </div>
+  </div>
+  <div class="content footer-tray">
+    <div>
+      Except as otherwise noted, this work is licensed under a Creative Commons
+      Attribution 4.0 International License, and code samples are licensed under
+      the BSD License.
+    </div>
+    <div>
+      <ul>
+        <li><a href="https://docs.flutter.dev/tos">Terms</a></li>
+        <li>
+          <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+            >Privacy</a
+          >
+        </li>
+        <li><a href="https://docs.flutter.dev/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+  <div class="container">
+    <p>Google uses cookies to deliver its services, to personalize ads, and to analyze traffic. You can 
+      adjust your privacy controls anytime in your 
+      <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">Google settings</a>. 
+      <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Learn more</a>.
+    </p>
+    <button @click.prevent="consent" class="solid">Okay</button>
+  </div>
+</section>
+
+    <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+    <div class="container">
+      <p>NOTICE: Flutter hopes this directory is useful for customers seeking consultants with Flutter experience; however, Flutter makes no representation to you or anyone else that the listed consultants are Flutter or Google partners, and Flutter does not represent or warrant their qualifications or the quality of services you may receive.  Your relationship is strictly between you and the consultants.</p>
+      <button @click.prevent="dismiss" class="solid">Okay</button>
+    </div>
+  </section>
+  
+
+    
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>

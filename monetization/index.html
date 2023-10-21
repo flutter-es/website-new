@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+      
+        Monetización
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="Explora nuestro conjunto de integraciones con funciones de monetización para hacer crecer tu negocio de Flutter."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Monetización">
+    <meta property="og:url" content="//flutter.dev/monetization/">
+    <meta property="og:description" content="Explora nuestro conjunto de integraciones con funciones de monetización para hacer crecer tu negocio de Flutter.">
+    <meta property="og:image" content="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior monetization"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multiplataforma <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Móvil</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter en iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Escritorio</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embebido</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Desarrollo <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/learn">Aprender</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Favoritos de Flutter </a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Paquetes</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetización</a></li>
+                <li><a class="btn" href="/games">Juegos</a></li>
+                <li><a class="btn" href="/news">Noticias</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosistema <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/community">Comunidad</a></li>
+                <li><a class="btn" href="/events">Eventos</a></li>
+                <li><a class="btn" href="/culture">Cultura</a></li>
+                <li><a class="btn" href="/consultants">Consultores</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Galería </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">Que hay de nuevo</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Soporte de edición</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Perfilado</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Instalar Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >Herramientas de desarrollo</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutoriales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+    
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Empezar</a
+      >
+
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+      
+
+
+<section class="hero">
+  <div class="container">
+    <div class="mantle">
+      <div class="text">
+        <h1>Construyendo un negocio con Flutter</h1>
+      </div>
+      <div class="media">
+        <img 
+          src="https://storage.googleapis.com/cms-storage-bucket/53fcd582cfd792bb238d.png" 
+          alt="Building a Flutter business">
+      </div>
+    </div>
+    <h2>Construir con Flutter es solo el comienzo. Explora nuestro conjunto de integraciones con funciones de monetización para hacer crecer tu negocio con Flutter.</h2>
+  </div>
+</section>
+
+<section 
+  class="content-container" 
+  x-data="initSpy(headerOffset, toggleContentActive)">
+
+
+  <section id="feature-columns" class="module">
+    <div class="feature-columns container">
+      <div>
+        <h3>Anuncios</h3>
+        <p>Integre fácilmente anuncios de Google AdMob y Ad Manager directamente en su aplicación Flutter</p>
+        <img src="https://storage.googleapis.com/cms-storage-bucket/17d4ce19457ca8896928.png" alt="Ads">
+      </div>
+      <div>
+        <h3>Compras en la aplicación</h3>
+        <p>Genere ingresos dentro de la aplicación con el soporte de Google Play y App Store para Flutter</p>
+        <img src="https://storage.googleapis.com/cms-storage-bucket/2e98995671135b2bb9f3.png" alt="In-App Purchaases">
+      </div>
+      <div>
+        <h3>Pagos</h3>
+        <p>Acepte pagos sin problemas con múltiples proveedores en su aplicación Flutter</p>
+        <img src="https://storage.googleapis.com/cms-storage-bucket/3e358cf44d3b2080d787.png" alt="Payments">
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="features container">
+      <div class="feature nospy">
+        <div class="text">
+          <hgroup>
+            <h4 class="eyebrow">SDK de anuncios de Google para móviles</h4>
+            <h3>Anuncios en tu aplicación Flutter</h3>
+          </hgroup>
+          <p>El SDK de anuncios de Google para móviles para Flutter funciona tanto con AdMob como con Ad Manager. Es el primer paso para admitir una variedad de formatos de anuncios, incluidos banners, anuncios intersticiales, videos recompensados ​​y anuncios nativos para obtener ingresos.</p>
+          <a class="btn" href="https://pub.dev/packages/google_mobile_ads">Empezar</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/08384bc5791085f2cc0c.svg" alt="Ads in your Fluter app">
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
+  <section id="resources-1" class="module">
+    <div class="feature-grid container">
+      <div class="feature-header">
+        <hgroup>
+          <h4 class="eyebrow">Obtenga más información sobre los anuncios de Google para móviles</h4>
+          <h2>Comience con los anuncios de Google para móviles en Flutter</h2>
+        </hgroup>
+      </div>
+      <div class="feature-grid-features col-2">
+        <div>
+          <a href="https://www.youtube.com/watch?v=m0d_pbgeeG8">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/ab6776c7b80cc36b88d6.svg" alt="Watch the video">
+            <h3>Ver el video &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Conozca las estrategias de monetización de aplicaciones creadas con Flutter para convertir una aplicación exitosa en un negocio exitoso.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://developers.google.com/admob/flutter/quick-start">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/9a785df0a861799fcc58.svg" alt="Get started in docs">
+            <h3>Empezar con la documentación &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Documentación y tutoriales para comenzar con Google Mobile Ads en Flutter.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://codelabs.developers.google.com/codelabs/admob-inline-ads-in-flutter#0">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/9b4ab591a50ef2f565bf.svg" alt="Flutter ads codelab 1">
+            <h3>Laboratorio de código 1 de anuncios con Flutter  &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Aprenda a implementar banners en línea y anuncios nativos en este laboratorio.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://codelabs.developers.google.com/codelabs/admob-ads-in-flutter#0">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/9b4ab591a50ef2f565bf.svg" alt="Flutter ads codelab 2">
+            <h3>Laboratorio de código 2 de anuncios con Flutter   &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Aprenda a implementar anuncios de banner, intersticiales y de video recompensados ​​en este codelab.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+
+<section id="case-studies" class="module carousel-section">
+  <div class="stacked-header container">
+    <h2>Casos de estudio</h2>
+  </div>
+  <div 
+    class="carousel"  
+    x-data="Carousel"
+    x-on:resize.window.debounce.300="onResize">
+    <div 
+      class="carousel-slider"
+      x-ref="slider" 
+      x-on:scroll="onScroll">
+
+    
+    <div class="story-item">
+      <a href="/showcase/sua-musica/">
+        
+        <img alt="case study part 2_Sua Musica.png" height="472" src="https://storage.googleapis.com/cms-storage-bucket/images/case_study_part_2_Sua_Musica.width-635.png" width="635">
+        <div class="text">
+          <h3>Sua Musica</h3>
+          <p>Apoyando a 10 millones de usuarios mensuales con Sua Musica</p>
+        </div>
+        
+      </a>
+    </div>
+    
+    <div class="story-item">
+      <a href="/showcase/lotum/">
+        
+        <img alt="case study part 1_Lotum.png" height="472" src="https://storage.googleapis.com/cms-storage-bucket/images/case_study_part_1_Lotum.width-635.png" width="635">
+        <div class="text">
+          <h3>4 fotos 1 palabra</h3>
+          <p>Llegar a nuevos usuarios en Lotum con Flutter</p>
+        </div>
+        
+      </a>
+    </div>
+    
+
+    </div>
+    <div class="carousel-progress container">
+      <div class="carousel-track">
+        <div class="carousel-completed" x-ref="progress"></div>
+      </div>
+      <div class="carousel-nav">
+        <a 
+          href="#" class="disabled"
+          x-ref="prevBtn" @click.prevent="navigate($event, 'bwd')">
+          <i class="far fa-arrow-alt-circle-left fa-2x"></i>
+        </a>
+        <a 
+          href="#" class="disabled"
+          x-ref="nextBtn" @click.prevent="navigate($event, 'fwd')">
+          <i class="far fa-arrow-alt-circle-right fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="monetize-users">
+    <div class="features container">
+      <div class="feature reverse" x-data="initSpy">
+        <div class="text">
+          <hgroup>
+            <h4 class="eyebrow">Monetizar usuarios</h4>
+            <h3>Compras dentro de la aplicación en Flutter</h3>
+          </hgroup>
+          <p>Integre con una superficie unificada para ofrecer contenido adicional en su aplicación, como servicios premium, productos digitales y suscripciones.</p>
+          <a class="btn" href="https://pub.dev/packages/in_app_purchase">Empezar</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/b73451531b90b133f532.png" alt="In-App Purchases">
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
+  <section id="resources-2" class="module">
+    <div class="feature-grid container">
+      <div class="feature-header">
+        <hgroup>
+          <h4 class="eyebrow">Recursos para compras dentro de la aplicación</h4>
+          <h2>Aprenda cómo recolectar compras dentro de la aplicación en Flutter</h2>
+        </hgroup>
+      </div>
+      <div class="feature-grid-features col-2">
+        <div>
+          <a href="https://github.com/flutter/packages/blob/main/packages/in_app_purchase/in_app_purchase/example/README.md">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/7d6464342e3547a75b3e.svg" alt="See the sample">
+            <h3>Ver el ejemplo &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Comience con un ejemplo para integrar compras dentro de la aplicación en su aplicación Flutter.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://codelabs.developers.google.com/codelabs/flutter-in-app-purchases#0">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/ce2d063556cad77772fe.svg" alt="Codelab">
+            <h3>Laboratorio &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Aprenda cómo agregar compras dentro de la aplicación a su aplicación Flutter.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://pub.dev/documentation/in_app_purchase/latest/">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/9a785df0a861799fcc58.svg" alt="Get started in docs">
+            <h3>Empezar con la documentación &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Documentación y tutoriales para comenzar con las compras dentro de la aplicación en Flutter.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/flutter/packages/blob/main/packages/in_app_purchase/in_app_purchase">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/3060c3c301136232bf22.svg" alt="See the code">
+            <h3>Ver el código &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Sumérgete en el complemento de código abierto en GitHub.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="payments">
+    <div class="features container">
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h4 class="eyebrow">Pagos en aplicaciones Flutter</h4>
+            <h3>Aceptar pagos</h3>
+          </hgroup>
+          <p>Facilite la integración con múltiples proveedores de pagos como Google y Apple Pay con el complemento Pay para Flutter.</p>
+          <a class="btn" href="https://pub.dev/packages/pay">Empezar</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/fa72fc576d061caa0f80.png" alt="Payments in Flutter Apps">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="start-learning" class="module">
+    <div class="features container">
+      <div class="stacked-feature">
+        <hgroup>
+          <h4 class="eyebrow">Integre pagos en aplicaciones Flutter</h4>
+          <h2>Obtenga más información sobre los pagos en las aplicaciones Flutter/h2>
+        </hgroup>
+        <div class="feature full nospy">
+          <div class="text">
+            <div>
+              <h3>Empezar en la documentación</h3>
+              <a href="https://pub.dev/documentation/pay/latest/" class="btn quiet collapsed">
+                Leer más &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+            <div>
+              <h3>Comience a usar el complemento Pay</h3>
+              <a href="https://github.com/google-pay/flutter-plugin" class="btn quiet collapsed">
+                Ver documentación &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section id="cta" class="module">
+    <div class="insert cta-insert container">
+      <div class="text">
+        <h3>Empezar</h3>
+        <p>Acceso instantáneo al poder del framework Flutter</p>
+        <div>
+          <a href="https://docs.flutter.dev/get-started/install" class="btn">
+            Instalar
+          </a>
+          <a href="https://docs.flutter.dev" class="btn quiet">
+            Lea los documentos &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+          </a>
+        </div>
+      </div>
+      <div class="media">
+        <img src="https://storage.googleapis.com/cms-storage-bucket/72521e62275b24d3c37d.png" alt="Powered by Dart">
+      </div>
+    </div>
+  </section>
+
+
+</section>
+
+    </main>
+    
+    
+    <footer>
+      <div class="content footer-main">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+              width="154"
+              alt="Flutter"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Acerca de Flutter</li>
+            <li>
+              <a href="https://docs.flutter.dev/jobs" target="_blank">Carreras</a>
+            </li>
+            <li><a href="https://medium.com/flutter" target="_blank">Noticias</a></li>
+            <li><a href="/brand">Marca</a></li>
+            <li><a href="/culture">Cultura</a></li>
+          </ul>
+          <ul>
+            <li>Aprenda Flutter</li>
+            <li><a href="/learn" target="_blank">Viaje de aprendizaje</a></li>
+            <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Laboratorios de código</a></li>
+            <li>
+              <a href="https://flutter.github.io/samples" target="_blank"
+                >Ejemplos</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+          </ul>
+          <ul>
+            <li>Multiplataforma</li>
+            <li><a href="/multi-platform/mobile">Móvil</a></li>
+            <li><a href="/multi-platform/web">Web</a></li>
+            <li><a href="/multi-platform/desktop">Escritorio</a></li>
+            <li><a href="/multi-platform/embedded">Embebido</a></li>
+            <li><a href="/multi-platform/ios">iOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content footer-social">
+        <div>
+          <a
+            href="https://www.youtube.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter YouTube"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://twitter.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter Twittter"
+          >
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/flutter"
+            target="_blank"
+            aria-label="Flutter Github"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://medium.com/flutter"
+            target="_blank"
+            aria-label="Flutter Medium"
+          >
+            <i class="fab fa-medium fa-lg"></i>
+          </a>
+          <a
+            href="https://www.meetup.com/pro/flutter/"
+            target="_blank"
+            aria-label="Flutter Meetup"
+          >
+            <i class="fab fa-meetup fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/flutterdevofficial/"
+            target="_blank"
+            aria-label="Flutter LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content footer-tray">
+        <div>
+          Salvo que se indique lo contrario, este trabajo tiene la licencia Creative Commons 
+          Attribution 4.0 International y los ejemplos de código tienen la licencia BSD.
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://docs.flutter.dev/tos">Terminos</a></li>
+            <li>
+              <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+                >Privacidad</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/security">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+        <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+      <div class="container">
+        <p>Google utiliza cookies para ofrecer sus servicios, personalizar anuncios y analizar el tráfico. Puedes
+          ajustar tus controles de privacidad en cualquier momento en tu 
+          <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">configuración de Google</a>. 
+          <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Aprende más</a>.
+        </p>
+        <button @click.prevent="consent" class="solid">Aceptar</button>
+      </div>
+    </section>
+    
+        <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+        <div class="container">
+          <p>AVISO: Flutter espera que este directorio sea útil para los clientes que buscan consultores con experiencia en Flutter; sin embargo, Flutter no representa ni garantiza a usted ni a ninguna otra persona que los consultores enumerados sean socios de Flutter o de Google, y Flutter no representa ni garantiza sus calificaciones ni la calidad de los servicios que puede recibir. Su relación es estrictamente entre usted y los consultores.</p>
+          <button @click.prevent="dismiss" class="solid">Aceptar</button>
+        </div>
+      </section>
+    
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>
