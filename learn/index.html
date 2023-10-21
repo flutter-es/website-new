@@ -1,0 +1,1169 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+        Aprender
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="Con codelabs, videos de YouTube, documentos detallados y más, encuentra todo lo que necesitas para comenzar con Flutter o continuar tu viaje de aprendizaje."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Aprender">
+    <meta property="og:url" content="//flutter.dev/learn/">
+    <meta property="og:description" content="Con codelabs, videos de YouTube, documentos detallados y más, encuentra todo lo que necesitas para comenzar con Flutter o continuar tu viaje de aprendizaje.">
+    <meta property="og:image" content="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+<style>
+  #beginner .feature-grid-features > div:nth-child(1) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/b65000ddf059afa4a98e.svg); }
+  #beginner .feature-grid-features > div:nth-child(2) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/e527607b9d760f663107.svg); }
+  #beginner .feature-grid-features > div:nth-child(3) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/a3ee3fd67cadf64bebcb.svg); }
+  #beginner .feature-grid-features > div:nth-child(4) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/8fbb000d76657e6d3003.svg); }
+  #beginner .feature-grid-features > div:nth-child(5) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/2fee11c665fb8d2241c8.svg); }
+  #beginner .feature-grid-features > div:nth-child(6) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/0df285612b499b2e2324.svg); }
+  #beginner .feature-grid-features > div:nth-child(7) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/67ee374493c6431700d0.svg); }
+  #beginner .feature-grid-features > div:nth-child(8) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/ddd1f9986635a7ef25e3.svg); }
+  #beginner .feature-grid-features > div:nth-child(9) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/f89c78ef4111b92b76e9.svg); }
+  #beginner .feature-grid-features > div:nth-child(10) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/550d10dce8680ea8cc91.svg); }
+  #beginner .feature-grid-features > div:nth-child(11) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/eee0f5cd5f67b445b625.svg); }
+  #beginner .feature-grid-features > div:nth-child(12) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/1a66e4fc5bee6b21e1e5.svg); }
+  #beginner .feature-grid-features > div:nth-child(13) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/d24856d021125be641a3.svg); }
+
+  #intermediate .feature-grid-features > div:nth-child(1) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/4344e5e81a2e2bfefddb.svg); }
+  #intermediate .feature-grid-features > div:nth-child(2) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/323a44b7a15ad8dc7950.svg); }
+  #intermediate .feature-grid-features > div:nth-child(3) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/8d1fe5eb4f2fa7c9bea7.svg); }
+  #intermediate .feature-grid-features > div:nth-child(4) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/4091430eb9bc93e9b335.svg); }
+  #intermediate .feature-grid-features > div:nth-child(5) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/d1afafb7f5ab693729ea.svg); }
+  #intermediate .feature-grid-features > div:nth-child(6) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/3cd6077d8d41721eb6cd.svg); }
+  #intermediate .feature-grid-features > div:nth-child(7) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/e0eb7ed244b83fc50d7a.svg); }
+  #intermediate .feature-grid-features > div:nth-child(8) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/75311a5eeda19c238b80.svg); }
+  #intermediate .feature-grid-features > div:nth-child(9) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/c44441516129ce77c371.svg); }
+  #intermediate .feature-grid-features > div:nth-child(10) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/7f795f7e328bf0726f42.svg); }
+  #intermediate .feature-grid-features > div:nth-child(11) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/7d82fc50e9e6c3a0bb8a.svg); }
+  #intermediate .feature-grid-features > div:nth-child(12) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/8ef1a936c212cd9320f3.svg); }
+  #intermediate .feature-grid-features > div:nth-child(13) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/0649240f37b8b7a5979b.svg); }
+  #intermediate .feature-grid-features > div:nth-child(14) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/e0614435c5580db2f188.svg); }
+
+  #advanced .feature-grid-features > div:nth-child(1) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/4344e5e81a2e2bfefddb.svg); }
+  #advanced .feature-grid-features > div:nth-child(2) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/b7da3fc7d1acfc3ff3a7.svg); }
+  #advanced .feature-grid-features > div:nth-child(3) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/354526ab79749966753c.svg); }
+  #advanced .feature-grid-features > div:nth-child(4) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/0c10d02368530f69d1f3.svg); }
+  #advanced .feature-grid-features > div:nth-child(5) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/1ef6fd89c1dd449af4e7.svg); }
+  #advanced .feature-grid-features > div:nth-child(6) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/06-Native-Libraries.svg); }
+  #advanced .feature-grid-features > div:nth-child(7) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/eef9ec27f7e2d426075b.svg); }
+  #advanced .feature-grid-features > div:nth-child(8) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/1e8138d54e08fb5d3a44.svg); }
+  #advanced .feature-grid-features > div:nth-child(9) i  { background-image: url(https://storage.googleapis.com/cms-storage-bucket/7fce75335326525219bc.svg); }
+  #advanced .feature-grid-features > div:nth-child(10) i { background-image: url(https://storage.googleapis.com/cms-storage-bucket/10-Community.svg); }
+</style>
+
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior learn"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multiplataforma <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Móvil</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter en iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Escritorio</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embebido</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Desarrollo <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/learn">Aprender</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Favoritos de Flutter </a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Paquetes</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetización</a></li>
+                <li><a class="btn" href="/games">Juegos</a></li>
+                <li><a class="btn" href="/news">Noticias</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosistema <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/community">Comunidad</a></li>
+                <li><a class="btn" href="/events">Eventos</a></li>
+                <li><a class="btn" href="/culture">Cultura</a></li>
+                <li><a class="btn" href="/consultants">Consultores</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Galería </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">Que hay de nuevo</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Soporte de edición</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Perfilado</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Instalar Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >Herramientas de desarrollo</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutoriales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+    
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Empezar</a
+      >
+
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+      
+
+<section class="hero">
+  <div class="container">
+    <div class="mantle">
+      <div class="text">
+        <h1>Aprende Flutter como quieras</h1>
+      </div>
+      <div class="media">
+        <img src="https://storage.googleapis.com/cms-storage-bucket/acb0587990b4e7890b95.png" alt="Learn Flutter">
+      </div>
+    </div>
+    <h2>Con codelabs, videos de YouTube, documentos detallados y más, encuentra todo lo que necesitas para comenzar con Flutter o continuar tu viaje de aprendizaje.</h2>
+  </div>
+</section>
+
+
+<section 
+  class="content-container" 
+  x-data="initSpy(headerOffset, toggleContentActive)">
+
+
+  <section id="feature-columns" class="module">
+    <div class="feature-columns container">
+      <div>
+        <h3>Conviértete en desarrollador de Flutter</h3>
+        <p>Ya sea que sea la primera vez que programas o que vengas de otro idioma, te ayudaremos a comenzar por el camino correcto.</p>
+        <img src="https://storage.googleapis.com/cms-storage-bucket/740d82517a6f13db51bd.png" alt="Flutter developer">
+      </div>
+      <div>
+        <h3>Lleva tus habilidades al siguiente nivel</h3>
+        <p>Lleve sus habilidades al siguiente nivel con el formato que mejor se adapte a sus necesidades: vea videos, documentación de alta calidad, codelabs y más.</p>
+        <img src="https://storage.googleapis.com/cms-storage-bucket/ae88812d333b7b90775e.png" alt="Skills next level">
+      </div>
+      <div>
+        <h3>Amplíe sus conocimientos sobre Flutter</h3>
+        <p>Aprenda cosas nuevas sobre Flutter, continúe ampliando sus habilidades y manténgase actualizado sobre los últimos anuncios y cambios importantes.</p>
+        <img src="https://storage.googleapis.com/cms-storage-bucket/1d323846f107a1614934.png" alt="Expand your knowledge">
+      </div>
+    </div>
+  </section>
+
+
+  <section id="tabs" class="learn-tabs">
+    <div class="tabs container" x-data="Tabs">
+      <div class="tabs-content" x-ref="contents">
+        <div class="tab-content no-spy" x-ref="a">
+          <div class="media">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/15ddf26df65cd2f79d6f.jpg" alt="Beginner">
+          </div>
+          <div class="text">
+            <h3>Principiante</h3>
+            <p>¿Nunca antes tocaste Flutter o Dart? Te tenemos cubierto. Este viaje le llevará desde "¿Qué es un widget?" a "¡Acabo de crear mi primera aplicación!"</p>
+          </div>
+        </div>
+        <div class="tab-content no-spy" x-ref="b">
+          <div class="media">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/9a56278d6a2ec98e6387.jpg" alt="Intermediate">
+          </div>
+          <div class="text">
+            <h3>Intermedio</h3>
+            <p>Este viaje lo llevará desde "Acabo de crear mi primera aplicación" hasta "¡Estoy listo para ayudar a otros desarrolladores!".</p>
+          </div>
+        </div>
+        <div class="tab-content no-spy" x-ref="c">
+          <div class="media">
+            <img src="https://storage.googleapis.com/cms-storage-bucket/891abf3d368913fb4b8e.jpg" alt="Advanced">
+          </div>
+          <div class="text">
+            <h3>Avanzado</h3>
+            <p>Pase de "Puedo ayudar a otros" a "Conozco el SDK por dentro y por fuera, y puedo liderar un equipo para crear, publicar y mantener una aplicación de primera clase".</p>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-footer">
+        <div class="tabs-menu">
+          <ul x-ref="tabs">
+            <li class="btn" @click="selectTab($event, 'a')">Principiante</li>
+            <li class="btn" @click="selectTab($event, 'b')">Intermedio</li>
+            <li class="btn" @click="selectTab($event, 'c')">Avanzado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="extras learn-content" x-ref="extras">
+        <div class="extra-content" x-ref="aa">
+          <div id="beginner" class="feature-grid learn-stage-grid">
+  <div class="feature-grid-features col-3">
+    <div>
+      <i></i>
+      <h4>¡Empecemos!</h4>
+      <ul>
+        <li>Prueba a jugar con <a target="_blank" href="https://dartpad.dev">DartPad</a>, el editor en línea de Flutter y Dart.</li>
+        <li>Utilice las <a target="_blank" href="https://flutter.dev/docs/get-started/install">guías de instalación</a> para ayudar a preparar su entorno</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Mientras estás instalando...</h4>
+      <ul>
+        <li><a target="_blank" href="https://flutter.dev/docs">Conozca la documentación de Flutter</a></li>
+        <li>Visita <a target="_blank" href="https://flutter.github.io/samples">la galería de ejemplos</a></li>
+        <li><a target="_blank" href="https://dart.dev/samples">Familiarízate con el código Dart</a></li>
+        <li>Suscríbete a los blogs de <a target="_blank" href="https://medium.com/flutter"> Flutter </a> y <a target="_blank" href="https://medium.com/dartlang"> Dart </a></li>
+        <li>Consulte la <a target="_blank" href="https://stackoverflow.com/questions/tagged/flutter">etiqueta de Flutter de StackOverflow</a></li>
+        <li>Suscríbete al <a target="_blank" href="https://youtube.com/flutterdev">canal de Youtube</a></li>
+        <li class="nested">
+          <ul>
+            <li>...¡y mira <a target="_blank" href="https://www.youtube.com/watch?v=b_sQ9bMltGU&amp;list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG"> el widget de la semana </a> hasta que tu IDE esté listo!</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¿Viene de otro SDK o idioma?</h4>
+      <ul>
+        <li><a target="_blank" href="https://flutter.dev/docs/get-started/flutter-for/">Guías de conversión a Flutter</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=l-YO9CmaSUM">¿Qué hace que Flutter sea diferente?</a></li>
+        <li><a target="_blank" href="https://flutter.dev/docs/development/tools/hot-reload">Usando hot reload</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¡Todo es un widget!</h4>
+      <ul>
+        <li>Lea la <a target="_blank" href="https://flutter.dev/docs/development/ui/widgets-intro">introducción a los Widgets</a></li>
+        <li><a target="_blank" href="https://flutter.dev/docs/development/ui/layout">Esta guía </a> explica cómo componer <a target="_blank" href="https://flutter.dev/docs/development/ui/layout">diseños</a> con widgets</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Aprende sobre Dart</h4>
+      <ul>
+        <li>Visita <a target="_blank" href="https://dart.dev">dart.dev</a> el sitio oficial de Dart</li>
+        <li>Descubra <a target="_blank" href="https://hackernoon.com/why-flutter-uses-dart-dd635a054ebf">por qúe Flutter usa Dart</a></li>
+        <li>Completa el laboratorio de código <a target="_blank" href="https://dart.dev/codelabs/dart-cheatsheet">de la hoja de trucos de Dart</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¡Vamos a sumergirnos!</h4>
+      <ul>
+        <li><a target="_blank" href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1/#0">Creando tu primera aplicación Flutter, parte 1</a></li>
+        <li><a target="_blank" href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2">Creando tu primera aplicación Flutter, parte 2</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Hacer que tu aplicación se vea genial</h4>
+      <ul>
+        <li>Una opción es <a target="_blank" href="https://material.io">Material</a> design</li>
+        <li class="nested">
+          <ul>
+            <li>¡Mira <a target="_blank" href="https://material.io/components?platform=flutter">sus componentes</a>!</li>
+            <li>¡ Y estos <a target="_blank" href="https://codelabs.developers.google.com/codelabs/mdc-101-flutter">laboratorios sobre Material</a>!</li>    
+          </ul>
+        </li>
+        <li>¿Necesitas inspiración?</li>
+        <li class="nested">
+          <ul>
+            <li>Prueba los vídeos de <a target="_blank" href="https://www.youtube.com/channel/UC0FD2apauvegCcsvqIBceLA">Johannes Milke</a></li>
+            <li>O <a target="_blank" href="https://www.youtube.com/watch?v=dOwVPZSJQuo&amp;list=PLR12su153J5PmGomy9Iit0pW-5NlkyzVg">los talleres de Super-Declarative</a></li>
+            <li>¡O un sitio mantenido por la comunidad como <a target="_blank" href="https://github.com/Solido/awesome-flutter#ui">Awesome Flutter</a>!</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¡Descubra cómo hacer que el networking funcione!</h4>
+      <ul>
+        <li>¿Has visto el libro de Flutter? Tiene <a target="_blank" href="https://flutter.dev/docs/cookbook#networking">un conjunto de artículos sobre networking.</a></li>
+        <li>Muchas aplicaciones usan el <a target="_blank" href="https://pub.dev/packages/http">paquete http</a></li>
+        <li>Aprenda <a target="_blank" href="https://flutter.dev/docs/development/data-and-backend/json">cómo deserializar JSON</a></li>
+        <li class="nested">
+          <ul>
+            <li>¡También hay un <a target="_blank" href="https://flutter.github.io/samples/jsonexample.html">ejemplo</a>!</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Navega con confianza</h4>
+      <ul>
+        <li>¡El libro de Flutter también tiene <a target="_blank" href="https://flutter.dev/docs/cookbook#navigation">un conjunto de artículos para eso</a>!</li>
+        <li>Por cierto, es posible que veas algunas cosas sobre el enrutador de Flutter y una navegación más avanzada. Son geniales, ¡pero no son totalmente necesarios!</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Flutter y gestión de estados</h4>
+      <ul>
+        <li>Mire <a target="_blank" href="https://www.youtube.com/watch?v=d_m5csmrf7I">una charla de I/O sobre lo que significa "administración de estado"</a> para Flutter</li>
+        <li>¡Te sorprendería lo lejos que puedes llegar con solo un <a target="_blank" href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a>!</li>
+        <li>Un buen siguiente paso es probar <a target="_blank" href="https://pub.dev/packages/provider">Provider</a> con <a target="_blank" href="https://api.flutter.dev/flutter/foundation/ChangeNotifier-class.html">ChangeNotifier</a></li>
+        <li class="nested">
+          <ul>
+            <li>Mira este <a target="_blank" href="https://www.youtube.com/watch?v=HrBiNHEqSYU&amp;list=PLjxrf2q8roU3ahJVrSgAnPjzkpGmL9Czl&amp;index=22">episodio de Boring Show </a></li>
+            <li>O estos ejemplos: <a target="_blank" href="https://github.com/flutter/samples/tree/main/provider_counter">provider_counter</a>, <a target="_blank" href="https://flutter.github.io/samples/provider_shopper.html">provider_shopper</a></li>    
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Utilice complementos para acceder a las API nativas</h4>
+      <ul>
+        <li>Lea <a target="_blank" href="https://flutter.dev/docs/development/packages-and-plugins/using-packages">la guía sobre el uso de paquetes y complementos.</a></li>
+        <li>Mira a <a target="_blank" href="https://www.youtube.com/watch?v=ht2bDlJd2c4">Matt y Andrew usar el barómetro</a> en el Boring Show</li>
+        <li>Consulta <a target="_blank" href="https://pub.dev">pub.dev</a>, el ecosistema de paquetes para Dart y Flutter.</li>
+        <li class="nested">
+          <ul>
+            <li><a target="_blank" href="https://pub.dev/help/scoring">Obtenga más información sobre las puntuaciones de los paquetes</a></li>
+            <li>...y los <a target="_blank" href="https://flutter.dev/docs/development/packages-and-plugins/favorites">favoritos de Flutter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¡Prueba tu código!</h4>
+      <ul>
+        <li>Lea la <a target="_blank" href="https://flutter.dev/docs/testing">guía para realizar pruebas en Flutter</a></li>
+        <li>Lectura completa <a target="_blank" href="https://flutter.github.io/samples/testing_app.html">de ejemplos de pruebas</a>, muestra varios tipos de pruebas</li>
+        <li>Practica tus habilidades con el <a target="_blank" href="https://codelabs.developers.google.com/codelabs/flutter-app-testing?hl=en">laboratorio de pruebas</a>!</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¡Unete a la communidad!</h4>
+      <ul>
+        <li>Consulta el <a target="_blank" href="https://flutter.dev/community">directorio de comunidades</a></li>
+        <li>Únase a la <a target="_blank" href="https://fluttercommunity.dev/joinslack">comunidad Flutter en Slack</a> y consulte su <a target="_blank" href="https://medium.com/flutter-community">blog</a></li>
+        <li><a target="_blank" href="https://twitter.com/flutteristas">Sigue a las Flutteristas</a> en Twitter!</li>
+        <li>Encuentra una <a target="_blank" href="https://www.meetup.com/find/?allMeetups=false&amp;keywords=flutter&amp;radius=Infinity&amp;userFreeform=Santa+Clara%2C+CA&amp;mcId=z95054&amp;mcName=Santa+Clara%2C+CA&amp;sort=recommended&amp;eventFilter=mysugg">reunión de Flutter</a> cerca de ti</li>
+        <li>Envíe su aplicación a <a target="_blank" href="https://itsallwidgets.com">itsallwidgets.com</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=nGlh4SVrsFg">Participe en la creación de Flutter presentando problemas y brindando comentarios.</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="extra-content"  x-ref="bb">
+          <div id="beginner" class="feature-grid learn-stage-grid">
+  <div class="feature-grid-features col-3">
+    <div>
+      <i></i>
+      <h4>Hagamos una pausa por un momento</h4>
+      <ul>
+        <li>...y entra a <a target="_blank" href="https://flutter.dev/docs/resources/inside-flutter">Flutter</a></li>
+        <li>...y aprnde sobre <a target="_blank" href="https://flutter.dev/docs/resources/architectural-overview">la arquitectura de Flutter</a></li>
+        <li>...y estudiar la filosofía de Flutter hacia <a target="_blank" href="https://flutter.dev/docs/resources/platform-adaptations">las adaptaciones de plataformas</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¿Qué hay debajo del widget?</h4>
+      <ul>
+        <li>Obtenga más información sobre elementos, claves y objetos de estado en <a target="_blank" href="https://www.youtube.com/watch?v=CXedqMlLo7M&amp;list=PLOU2XLYxmsIJyiwUPCou_OVTpRIn_8UMd">Widgets 101</a></li>
+        <li>Vea una charla técnica sobre el framework de Flutter desde <a target="_blank" href="https://www.youtube.com/watch?v=996ZgFRENMs">China</a>, <a target="_blank" href="https://www.youtube.com/watch?v=PnWxW21vDak">Europa</a>, o <a target="_blank" href="https://www.youtube.com/watch?v=U_1QsGC_BQo">Columbus, Ohio</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Futuros y Flujos</h4>
+      <ul>
+        <li>Mira los <a target="_blank" href="https://www.youtube.com/watch?v=vl_AaCgudcY&amp;list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2&amp;index=14">los episodios de Dart Async</a> de Flutter in Focus</li>
+        <li>Complete <a target="_blank" href="https://dart.dev/codelabs/async-await">el laboratorio de programación asincrónica</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Dale sabor a tu interfaz de usuario con animaciones implícitas</h4>
+      <ul>
+        <li>Lea la <a target="_blank" href="https://flutter.dev/docs/development/ui/animations">guía de Introducción a la Animación</a></li>
+        <li>Mire <a target="_blank" href="https://www.youtube.com/watch?v=IVTjpW3W33s&amp;list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2&amp;index=19">Flutter in Focus sobre animaciones implicitas</a></li>
+        <li>Pruebe el <a target="_blank" href="https://flutter.dev/docs/codelabs/implicit-animations">laboratorio de animación implícita</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>¿Qué pasa con los activos?</h4>
+      <ul>
+        <li>¿Necesita fuentes sobre la marcha? Utilice el <a target="_blank" href="https://pub.dev/packages/google_fonts">paquete google_fonts</a></li>
+        <li>Lea <a target="_blank" href="https://flutter.dev/docs/development/ui/assets-and-images">la guía para incluir activos</a> directamente en su aplicación</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Más información sobre diseños</h4>
+      <ul>
+        <li>Lea las guías sobre <a target="_blank" href="https://flutter.dev/docs/development/ui/layout">diseños</a>, <a target="_blank" href="https://flutter.dev/docs/development/ui/layout/constraints">restricciones</a>, y <a target="_blank" href="https://flutter.dev/docs/development/ui/layout/responsive">creación de aplicaciones responsivas</a> </li>
+        <li>Pruebe el <a target="_blank" href="https://flutter.dev/docs/codelabs/layout-basics">laboratorio de código sobre Conceptos básicos de diseño</a></li>
+        <li>Mire <a target="_blank" href="https://www.youtube.com/watch?v=A3WrA4zAaPw">el episodio del widget de la semana de MediaQuery</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Formularios y Validaciones</h4>
+      <ul>
+        <li>Lea algunos <a target="_blank" href="https://flutter.dev/docs/cookbook/forms">artículos de libros sobre entrada, validación y formularios.</a></li>
+        <li>Mira <a target="_blank" href="https://flutter.github.io/samples/form_app.html">la aplicación de muestra</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Firebase</h4>
+      <ul>
+        <li>Mire el <a target="_blank" href="https://www.youtube.com/watch?v=EXp0gq9kGxI">Firecast de introducción</a></li>
+        <li class="nested">
+          <ul>
+            <li>¡No olvides suscribirte al canal mientras estás allí!</li>
+          </ul>
+        </li>  
+        <li>Lea la <a target="_blank" href="https://firebase.flutter.dev/docs/overview">documentación de FlutterFire</a></li>
+        <li>Pruebe el <a target="_blank" href="https://codelabs.developers.google.com/?product=firebase%2Cflutter">laboratorio de Firebase para Flutter</a> o la <a target="_blank" href="https://flutter.github.io/samples/flutter_maps_firestore.html">aplicación de ejemplo Firestore + Maps</a></li>
+        <li>Aprende cómo <a target="_blank" href="https://www.youtube.com/watch?v=o7d5Zeic63s&amp;list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&amp;index=5">estructurar tus datos con Cloud Firestore</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Sumérjase en complementos y API nativas</h4>
+      <ul>
+        <li>Lea la guía sobre cómo funcionan <a target="_blank" href="https://flutter.dev/docs/development/platform-integration/platform-channels">los Platform Channels</a></li>
+        <li>Pruebe <a target="_blank" href="https://codelabs.developers.google.com/codelabs/write-flutter-plugin">un laboratorio para crear su propio complemento</a></li>
+        <li>Lea <a target="_blank" href="https://github.com/flutter/samples/tree/main/platform_channels">la aplicación de muestra de los canales de la plataforma</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Datos locales</h4>
+      <ul>
+        <li>Vea una charla técnica sobre <a target="_blank" href="https://www.youtube.com/watch?v=xjhxm3foCMk">la gestión de datos locales</a></li>
+        <li>Vea una charla técnica sobre <a target="_blank" href="https://www.youtube.com/watch?v=sYG7HAGu_Eg&amp;t=2h4m46s">la restauración del estado de Simon Lightfoot</a> o <a target="_blank" href="https://www.youtube.com/watch?v=Z_LNj8YAh50">una de Pawan Kumar</a></li>
+        <li>Lea algunos <a target="_blank" href="https://flutter.dev/docs/cookbook/persistence">artículos del Flutter Cookbook sobre la persistencia</a> </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Más información sobre bibliotecas de administración de estado adicionales</h4>
+      <ul>
+        <li>Como <a target="_blank" href="https://bloclibrary.dev/#/gettingstarted">Bloc</a></li>
+        <li>o <a target="_blank" href="https://riverpod.dev/">Riverpod</a></li>
+        <li>o <a target="_blank" href="https://pub.dev/packages/rxdart">RxDart</a></li>
+        <li>o <a target="_blank" href="https://pub.dev/packages/flutter_redux">Redux</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Aprenda a preparar una aplicación para su lanzamiento</h4>
+      <ul>
+        <li>Lea las guías para <a target="_blank" href="https://flutter.dev/docs/deployment/android">Android</a>, <a target="_blank" href="https://flutter.dev/docs/deployment/ios">iOS</a>, <a target="_blank" href="https://flutter.dev/docs/deployment/linux">Linux</a>, y <a target="_blank" href="https://flutter.dev/docs/deployment/web">la web</a></li>
+        <li>Hay <a target="_blank" href="https://pub.dev/packages/flutter_launcher_icons">un paquete</a> que puede ayudarte a crear íconos en tu iniciador.</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Echa un vistazo a Flutter DevTools</h4>
+      <ul>
+        <li>Lea <a target="_blank" href="https://flutter.dev/docs/development/tools/devtools/overview">la descripción general</a></li>
+        <li>Aprenda <a target="_blank" href="https://flutter.dev/docs/development/tools/devtools/inspector">a utilizar el inspector</a> para revisar sus widgets y diagnosticar problemas de diseño.</li>
+        <li>Lea las guías sobre herramientas de <a target="_blank" href="https://flutter.dev/docs/development/tools/devtools/performance">rendimiento</a>, creación de perfiles de 
+          <a target="_blank" href="https://flutter.dev/docs/development/tools/devtools/cpu-profiler"> CPU</a> y 
+          <a target="_blank" href="https://flutter.dev/docs/development/tools/devtools/memory">memoria</a> e inspección 
+          <a target="_blank" href="https://flutter.dev/docs/development/tools/devtools/app-size">del tamaño de la aplicación</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Devolver a la comunidad</h4>
+      <ul>
+        <li>¡Unete a la communidad!</li>
+        <li class="nested">
+          <ul>
+            <li>Sea voluntario en una <a target="_blank" href="https://www.meetup.com/find/?allMeetups=false&amp;keywords=flutter&amp;radius=Infinity&amp;userFreeform=Santa%2BClara%252C%2BCA&amp;mcId=z95054&amp;mcName=Santa%2BClara%252C%2BCA&amp;sort=recommended&amp;eventFilter=mysugg">reunión de Flutter</a></li>
+            <li>Responda algunas preguntas <a target="_blank" href="https://stackoverflow.com/questions/tagged/flutter">en StackOverflow</a></li>
+            <li>Cree una aplicación de código abierto en <a target="_blank" href="https://github.com">GitHub</a> y publíquela en <a target="_blank" href="https://itsallwidgets.com">itsallwidgets.com</a> </li>
+          </ul>
+        </li>
+        <li>¡Flutter confía en ti!</li>
+        <li class="nested">
+          <ul>
+            <li>Vota a favor de un problema en <a target="_blank" href="https://github.com/flutter/flutter/issues">flutter/flutter</a> que sea importante para ti</li>
+            <li>Contribuir a <a target="_blank" href="https://medium.com/flutter-community/announcing-flutter-community-plus-plugins-cf7cadf03b01">un complemento o paquete mantenido por la comunidad</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="extra-content" x-ref="cc">
+          <div id="advanced" class="feature-grid learn-stage-grid">
+  <div class="feature-grid-features col-3">
+    <div>
+      <i></i>
+      <h4>Aprende un poco de historia de Flutter</h4>
+      <ul>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=VUiVkDpikDI&amp;list=PLcGKfGEEONaDzd0Hkn2f1talsTu1HLDYu&amp;index=39&amp;t=0s">La charla Strange Loop</a> de Eric Seidel o <a target="_blank" href="https://www.youtube.com/watch?v=PnIWl33YMwA">su charla en DartConf</a> (de cuando Flutter todavía se llamaba "Sky!";).</li>
+        <li>Charla de Ian Hickson <a target="_blank" href="https://www.youtube.com/watch?v=dkyY9WCGMi0">sobre por qué existen los widgets</a></li>
+        <li>Charla de Adam Barth sobre <a target="_blank" href="https://www.youtube.com/watch?v=UUfXWzp0-DU">el proceso de renderizado de Flutter</a></li>
+      </ul>
+      <ul>
+        <li>Lea <a target="_blank" href="https://github.com/flutter/flutter/wiki/Roadmap">la hoja de ruta de Flutter</a> para saber hacia dónde se dirige Flutter</li>
+        <li>Consulte <a target="_blank" href="https://github.com/dart-lang/language/projects/1">la hoja de ruta del lenguaje Dart </a> para ver hacia dónde se dirige Dart</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Animaciones explícitas</h4>
+      <ul>
+        <li>Intente ejecutar <a target="_blank" href="https://flutter.github.io/samples/animations.html">la aplicación de ejemplo de animación</a></li>
+        <li>Lea las guías para <a target="_blank" href="https://flutter.dev/docs/development/ui/animations/hero-animations">hero widgets</a> y <a target="_blank" href="https://flutter.dev/docs/development/ui/animations/staggered-animations">animaciones escalonadas</a></li>
+        <li>Mira los episodios avanzados de <a target="_blank" href="https://www.youtube.com/watch?v=CunyH6unILQ&amp;list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2&amp;index=21">la serie Flutter in Focus sobre animación</a>.</li>
+        <li>Vea las charlas de Flutter Europa sobre <a target="_blank" href="https://www.youtube.com/watch?v=wnARLByOtKA"> cómo hacer bien las animaciones</a> e <a target="_blank" href="https://www.youtube.com/watch?v=FCyoHclCqc8">implementar una interfaz de usuario compleja</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Diseño/renderizado avanzado</h4>
+      <ul>
+        <li>Lea algunas <a target="_blank" href="https://medium.com/flutter-community/search?q=custompainter">publicaciones del blog de la comunidad Flutter en CustomPainter</a></li>
+        <li><a target="_blank" href="https://romain-rastel.medium.com/gap-a-simple-example-to-create-your-own-renderobject-88eacca2a4">Lea la publicación del blog</a> de Romain sobre cómo crear su propio objeto de renderizado</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Orientación a iOS</h4>
+      <ul>
+        <li>Visita la <a target="_blank" href="https://flutter.dev/docs/development/ui/widgets/cupertino">galería de widgets de Cupertino</a></li>
+        <li>Vea el paquete Cupertino en acción en <a target="_blank" href="https://github.com/flutter/samples/tree/main/veggieseasons">la aplicación de ejemplo VeggieSeasons</a></li>
+        <li>Vea <a target="_blank" href="https://www.youtube.com/watch?v=ZBJa-xjZl3w">Construyendo para iOS con Flutter</a> del Google I/O</li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Hacer algo de desarrollo de escritorio</h4>
+      <ul>
+        <li>Mira <a target="_blank" href="https://flutter.dev/desktop">la guía</a></li>
+        <li>Prueba <a target="_blank" href="https://codelabs.developers.google.com/codelabs/flutter-github-client">el laboratorio de escritorio</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Vincular a bibliotecas nativas</h4>
+      <ul>
+        <li>Lea sobre el uso de dart:ffi para conectarse a bibliotecas estilo C en las aplicaciones <a target="_blank" href="https://dart.dev/guides/libraries/c-interop">Dart</a> y <a target="_blank" href="https://codelabs.developers.google.com/codelabs/flutter-ffigen#0">aplicaciones Flutter</a>, luego consulte <a target="_blank" href="https://github.com/dart-lang/samples/tree/main/ffi">las aplicaciones de ejemplo</a></li>
+        <li>Lea sobre <a target="_blank" href="https://dart.dev/web/js-interop">la interoperabilidad JS de Dart para aplicaciones web</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Complementos federados</h4>
+      <ul>
+        <li>Lea la guía sobre <a target="_blank" href="https://flutter.dev/docs/development/packages-and-plugins/developing-packages#federated-plugins">los complementos federados de Flutter</a></li>
+        <li>Mira <a target="_blank" href="https://github.com/flutter/samples/tree/main/experimental/federated_plugin">el ejemplo</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Intente agregar Flutter a una aplicación existente</h4>
+      <ul>
+        <li>Lea <a target="_blank" href="https://flutter.dev/docs/development/add-to-app">la descripción general</a> y las secciones para <a target="_blank" href="https://flutter.dev/docs/development/add-to-app/android">Android</a> e <a target="_blank" href="https://flutter.dev/docs/development/add-to-app/ios">iOS</a></li>
+        <li>Juega con <a target="_blank" href="https://github.com/flutter/samples/tree/main/add_to_app">las muestras de complementos a aplicaciones</a></li>
+        <li>Experimente generando código para agregar a la aplicación usando el <a target="_blank" href="https://pub.dev/packages/pigeon">paquete:pigeon</a> </li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Aplicaciones en producción</h4>
+      <ul>
+        <li>Lea <a target="_blank" href="https://firebase.flutter.dev/docs/crashlytics/overview/">cómo registrar errores y excepciones /a> con Crashlytics desde Firebase </li>
+        <li>Obtenga más información sobre <a target="_blank" href="https://flutter.dev/docs/deployment/flavors">los sabores de productos y Flutter</a></li>
+        <li>Conozca <a target="_blank" href="https://flutter.dev/docs/deployment/cd">las opciones de entrega continua para Flutter</a></li>
+      </ul>
+    </div>
+    <div>
+      <i></i>
+      <h4>Devolver a la comunidad</h4>
+      <ul>
+        <li>Crear o ejecutar <a target="_blank" href="https://www.meetup.com/find/?allMeetups=false&amp;keywords=flutter&amp;radius=Infinity&amp;userFreeform=Santa%2BClara%252C%2BCA&amp;mcId=z95054&amp;mcName=Santa%2BClara%252C%2BCA&amp;sort=recommended&amp;eventFilter=mysugg">una reunión de Flutter</a></li>
+        <li>Lea sobre <a target="_blank" href="https://github.com/flutter/flutter/blob/main/CONTRIBUTING.md">cómo contribuir al SDK de Flutter</a></li>
+        <li>Contribuir a <a target="_blank" href="https://github.com/fluttercommunity/plus_plugins">un importante complemento o paquete mantenido por la comunidad</a></li>
+        <li>Lea cómo <a target="_blank" href="https://poojabhaumik.medium.com/becoming-a-flutter-gde-before-i-could-graduate-8a86271b11d2">convertirse en un desarrollador experto de Google en Flutter</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="module">
+    <div class="feature-header centered container">
+      <hgroup>
+        <h4 class="eyebrow">Documentación</h4>
+        <h2>Profundice en la <br/>documentación de Flutter</h2>
+      </hgroup>
+    </div>
+  </section>
+  
+
+  <section id="whats-new">
+    <div class="features container">
+      <div class="feature nospy">
+        <div class="text">
+          <hgroup>
+            <h3>¿Qué hay de nuevo en los documentos?</h3>
+          </hgroup>
+          <p>Vea las nuevas incorporaciones a los documentos, incluidos cambios importantes, anuncios de Flutter y nuevos blogs.</p>
+          <a class="btn" href="https://docs.flutter.dev/whats-new">Explora las novedades</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/442072a900a8a1c2cc10.jpg" alt="What’s new in docs">
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
+  <section id="transition-docs">
+    <div class="features container">
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Documentos de transición</h3>
+          </hgroup>
+          <p>¿Vienes de otra plataforma? Consulte nuestras guías para desarrolladores de Android, iOS, React Native, web y más.</p>
+          <a class="btn solid" href="https://docs.flutter.dev/get-started/flutter-for/android-devs">Empezar</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ee25d20ec3bdfcaa8e7b.png" alt="Transition Docs">
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
+  <section id="codelabs">
+    <div class="features container">
+      <div class="feature nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Laboratorios de código</h3>
+          </hgroup>
+          <p>Acceda a ejemplos interactivos para aprender conceptos importantes de Flutter, incluido cómo crear su primera aplicación Flutter y cómo integrar Firebase.</p>
+          <a class="btn" href="https://docs.flutter.dev/codelabs">Prueba un laboratorio de código</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/4398bd59d583cf59f479.png" alt="Codelabs">
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
+  <section id="cookbook">
+    <div class="features container">
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Libro de Flutter</h3>
+          </hgroup>
+          <p>Pruebe nuestras recetas para crear funcionalidades, implementar hermosos diseños y resolver problemas comunes en las aplicaciones Flutter.</p>
+          <a class="btn" href="https://docs.flutter.dev/cookbook">Pruebe una receta del libro</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/a5ff03ac3f418ef58da3.png" alt="Cookbook">
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
+  <section id="playlist" class="module carousel-section">
+    <div class="stacked-header container">
+      <hgroup>
+        <h4 class="eyebrow">Aprendizaje de YouTube</h4>
+        <h2>Vídeos de Flutter y listas de reproducción seleccionadas</h2>
+      </hgroup>
+      <a 
+        class="btn fixed" target="_blank"
+        href="https://www.youtube.com/c/flutterdev">
+        Ver todo
+      </a>
+    </div>
+    <div 
+      class="carousel"  
+      x-data="YouTubePlaylistCarousel('PLjxrf2q8roU3wk7CDw4RfV3mEwOJbjx1k')"
+      x-on:resize.window.debounce.300="onResize">
+      <div 
+        class="carousel-slider"
+        x-ref="slider" 
+        x-on:scroll="onScroll">
+      </div>
+      <div class="carousel-progress container">
+        <div class="carousel-track">
+          <div class="carousel-completed" x-ref="progress"></div>
+        </div>
+        <div class="carousel-nav">
+          <a 
+            href="#" class="disabled"
+            x-ref="prevBtn" @click.prevent="navigate($event, 'bwd')">
+            <i class="far fa-arrow-alt-circle-left fa-2x"></i>
+          </a>
+          <a 
+            href="#" class="disabled"
+            x-ref="nextBtn" @click.prevent="navigate($event, 'fwd')">
+            <i class="far fa-arrow-alt-circle-right fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="start-learning" class="module">
+    <div class="features container">
+      <div class="stacked-feature">
+        <hgroup>
+          <h4 class="eyebrow">Cursos de terceros</h4>
+          <h2>Toma un curso de Flutter</h2>
+        </hgroup>
+        <div class="feature full icons nospy">
+          <div class="text">
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/3aedb065a814ab3489b0.png" alt="App Brewery">
+            </div>
+            <div>
+              <h3>App Brewery</h3>
+              <p>Comience a aprender con el Bootcamp completo de desarrollo de Flutter 2021 con Dart</p>
+              <a href="https://www.appbrewery.co/p/flutter-development-bootcamp-with-dart" class="btn quiet collapsed">
+                Visitar sitio &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/dfabcc941920cd1b0030.png" alt="Flutter apprentice">
+            </div>
+            <div>
+              <h3>Flutter Apprentice</h3>
+              <p>Obtenga la guía completa para crear aplicaciones móviles con Flutter</p>
+              <a href="https://docs.flutter.dev/apprentice-giveaway" class="btn quiet collapsed">
+                Visitar sitio &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/df2d93fb2020fb64228a.png" alt="Udemy">
+            </div>
+            <div>
+              <h3>Flutter &amp; Dart: la guía completa [Edición 2023]</h3>
+              <p>Una guía completa para el SDK y el marco de Flutter</p>
+              <a href="https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/" class="btn quiet collapsed">
+                Visitar sitio &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="cta" class="module">
+    <div class="insert cta-insert container">
+      <div class="text">
+        <h3>Empezar</h3>
+        <p>Acceso instantáneo al poder del framework Flutter</p>
+        <div>
+          <a href="https://docs.flutter.dev/get-started/install" class="btn">
+            Instalar
+          </a>
+          <a href="https://docs.flutter.dev" class="btn quiet">
+            Lea los documentos &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+          </a>
+        </div>
+      </div>
+      <div class="media">
+        <img src="https://storage.googleapis.com/cms-storage-bucket/72521e62275b24d3c37d.png" alt="Powered by Dart">
+      </div>
+    </div>
+  </section>
+
+
+</section>
+
+    </main>
+    
+    
+
+    <footer>
+      <div class="content footer-main">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+              width="154"
+              alt="Flutter"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Acerca de Flutter</li>
+            <li>
+              <a href="https://docs.flutter.dev/jobs" target="_blank">Carreras</a>
+            </li>
+            <li><a href="https://medium.com/flutter" target="_blank">Noticias</a></li>
+            <li><a href="/brand">Marca</a></li>
+            <li><a href="/culture">Cultura</a></li>
+          </ul>
+          <ul>
+            <li>Aprenda Flutter</li>
+            <li><a href="/learn" target="_blank">Viaje de aprendizaje</a></li>
+            <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Laboratorios de código</a></li>
+            <li>
+              <a href="https://flutter.github.io/samples" target="_blank"
+                >Ejemplos</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+          </ul>
+          <ul>
+            <li>Multiplataforma</li>
+            <li><a href="/multi-platform/mobile">Móvil</a></li>
+            <li><a href="/multi-platform/web">Web</a></li>
+            <li><a href="/multi-platform/desktop">Escritorio</a></li>
+            <li><a href="/multi-platform/embedded">Embebido</a></li>
+            <li><a href="/multi-platform/ios">iOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content footer-social">
+        <div>
+          <a
+            href="https://www.youtube.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter YouTube"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://twitter.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter Twittter"
+          >
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/flutter"
+            target="_blank"
+            aria-label="Flutter Github"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://medium.com/flutter"
+            target="_blank"
+            aria-label="Flutter Medium"
+          >
+            <i class="fab fa-medium fa-lg"></i>
+          </a>
+          <a
+            href="https://www.meetup.com/pro/flutter/"
+            target="_blank"
+            aria-label="Flutter Meetup"
+          >
+            <i class="fab fa-meetup fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/flutterdevofficial/"
+            target="_blank"
+            aria-label="Flutter LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content footer-tray">
+        <div>
+          Salvo que se indique lo contrario, este trabajo tiene la licencia Creative Commons 
+          Attribution 4.0 International y los ejemplos de código tienen la licencia BSD.
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://docs.flutter.dev/tos">Terminos</a></li>
+            <li>
+              <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+                >Privacidad</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/security">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+        <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+      <div class="container">
+        <p>Google utiliza cookies para ofrecer sus servicios, personalizar anuncios y analizar el tráfico. Puedes
+          ajustar tus controles de privacidad en cualquier momento en tu 
+          <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">configuración de Google</a>. 
+          <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Aprende más</a>.
+        </p>
+        <button @click.prevent="consent" class="solid">Aceptar</button>
+      </div>
+    </section>
+    
+        <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+        <div class="container">
+          <p>AVISO: Flutter espera que este directorio sea útil para los clientes que buscan consultores con experiencia en Flutter; sin embargo, Flutter no representa ni garantiza a usted ni a ninguna otra persona que los consultores enumerados sean socios de Flutter o de Google, y Flutter no representa ni garantiza sus calificaciones ni la calidad de los servicios que puede recibir. Su relación es estrictamente entre usted y los consultores.</p>
+          <button @click.prevent="dismiss" class="solid">Aceptar</button>
+        </div>
+      </section>
+  
+  
+
+    
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>
