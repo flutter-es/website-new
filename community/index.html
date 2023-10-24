@@ -1,0 +1,1377 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+        Comunidades
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="Encuentra la comunidad Flutter en cualquier lugar. Únase a desarrolladores de todo el mundo para mejorar aún más Flutter."/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Community">
+    <meta property="og:url" content="//flutter.dev/community/">
+    <meta property="og:description" content="Encuentra la comunidad Flutter en cualquier lugar. Únase a desarrolladores de todo el mundo para mejorar aún más Flutter.">
+    <meta property="og:image" content="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior community"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multiplataforma <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Móvil</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter en iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Escritorio</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embebido</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Desarrollo <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/learn">Aprender</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Favoritos de Flutter </a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Paquetes</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetización</a></li>
+                <li><a class="btn" href="/games">Juegos</a></li>
+                <li><a class="btn" href="/news">Noticias</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosistema <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/community">Comunidad</a></li>
+                <li><a class="btn" href="/events">Eventos</a></li>
+                <li><a class="btn" href="/culture">Cultura</a></li>
+                <li><a class="btn" href="/consultants">Consultores</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Galería </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">Que hay de nuevo</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Soporte de edición</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Perfilado</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Instalar Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >Herramientas de desarrollo</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutoriales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+    
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Empezar</a
+      >
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+<section class="hero">
+  <div class="container">
+    <h1>Una comunidad abierta a todos</h1>
+    <div class="success-metrics">
+      <h2>Únase a desarrolladores de todo el mundo para mejorar aún más Flutter</h2>
+      <div class="success-metrics-wrapper">
+        <div class="success-metric"> 
+          <h4>155k</h4>
+          <h3>Estrellas en GitHub</h3>
+        </div>
+        <div class="success-metric"> 
+          <h4>240k</h4>
+          <h3>Seguidores en Twitter</h3>
+        </div>
+        <div class="success-metric"> 
+          <h4>175k</h4>
+          <h3>Miembros en Meetup</h3>
+        </div>
+      </div>
+      <h2>Flutter es el framework multiplataforma más popular del mundo*</h2>
+      <p>*Según la encuesta sobre el estado del ecosistema de desarrolladores de JetBrains 2021</p>
+    </div>
+  </div>
+</section>
+
+      
+<section 
+  class="content-container" 
+  x-data="initSpy(headerOffset, toggleContentActive)">
+
+
+  <section>
+    <div class="features container">
+      <div class="feature-header">
+        <hgroup>
+          <h4 class="eyebrow">Grupos comunitarios</h4>
+          <h2>Una red diversa de desarrolladores de Flutter</h2>
+        </hgroup>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="groups" class="module">
+    <div class="features container">
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Meetups</h3>
+          </hgroup>
+          <p>Encuentra un grupo de reunión cerca de ti y conéctate con otros desarrolladores de Flutter.</p>
+          <a class="btn" href="https://www.meetup.com/pro/flutter" target="_blank">Ingresar a un meetup</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/d83012c34a8f88a64e2b.jpg" alt="Meetup groups">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="gdes">
+    <div class="features container">
+      <div class="feature nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Flutter GDEs</h3>
+          </hgroup>
+          <p>Conviértete en un líder, apoya el ecosistema Flutter y obtén acceso a recursos exclusivos.</p>
+          <a class="btn solid" href="https://developers.google.com/community/experts/directory" target="_blank">Aprende más</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/1eaae18b150dd4777de6.jpg" alt="Flutter GDEs">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="flutteristas" class="module">
+    <div class="features container">
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Flutteristas</h3>
+          </hgroup>
+          <p>Únase a personas que se identifican como mujeres o no binarias y que tengan interés en Flutter.</p>
+          <a class="btn" href="https://flutteristas.org/" target="_blank">Únete a Flutteristas</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/5b17f6b55a9b53feb78e.jpg" alt="Flutteristas">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="community-events">
+    <div class="features container">
+      <div class="feature-header centered">
+        <hgroup>
+          <h4 class="eyebrow">Eventos comunitarios</h4>
+          <h2>Asista a eventos de forma virtual, local y en todo el mundo.</h2>
+        </hgroup>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="map" class="module">
+    <div id="meetups-map" class="map container" x-data="MeetupMap($el, __MAPS_DATA_URL__)"></div>
+  </section>
+  
+
+  <section>
+    <div class="features container">
+      <div class="feature reverse nospy">
+        <div class="text">
+          <hgroup>
+            <h3>Eventos comunitarios</h3>
+          </hgroup>
+          <p>Asista a eventos organizados por la comunidad global de Flutter y continúe aprendiendo más sobre Flutter.</p>
+          <a class="btn" href="/events">Ver eventos</a>
+        </div>
+        <div class="media">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/7227635cd24ea2aae078.jpg" alt="Commmunity Events">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="guidelines" class="module">
+    <div class="insert culture-insert container">
+      <div class="text">
+        <h4 class="eyebrow">Cultura de Flutter</h4>
+        <h3>Nos esforzamos por mantener todos los espacios comunitarios de Flutter acogedores y respetuosos.</h3>
+        <div>
+          <a href="/culture" class="btn">Aprende sobre la cultura de Flutter</a>
+        </div>
+      </div>
+      <div class="media"></div>
+      <img src="https://storage.googleapis.com/cms-storage-bucket/34802d5bb9875ca9cacc.jpg" alt="Powered by Dart">
+    </div>
+  </section>
+
+
+  <section id="twitter" class="module">
+    <div class="container features">
+      <div class="feature nospy">
+        <div class="text">
+          <h3>Sigue lo último en Flutter</h3>
+          <div class="social-icons">
+            <div>
+              <a href="https://www.youtube.com/flutterdev" target="_blank" aria-label="Flutter YouTube">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+              <a href="https://twitter.com/flutterdev" target="_blank" aria-label="Flutter Twittter">
+                <i class="fab fa-x-twitter fa-lg"></i>
+              </a>
+              <a href="https://github.com/flutter" target="_blank" aria-label="Flutter Github">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a href="https://medium.com/flutter" target="_blank" aria-label="Flutter Medium">
+                <i class="fab fa-medium fa-lg"></i>
+              </a>
+              <a href="https://www.meetup.com/pro/flutter/" target="_blank" aria-label="Flutter Meetup">
+                <i class="fab fa-meetup fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="media twitter-embed">
+          <a 
+            class="twitter-timeline" 
+            data-height="550"
+            href="https://twitter.com/FlutterDev">
+          </a> 
+        </div>
+      </div>
+    </div>
+  </section> 
+
+
+  <section id="community-grid" class="module">
+    <div class="feature-grid container">
+      <div class="feature-header">
+        <hgroup>
+          <h4 class="eyebrow">Encuentra en línea a la comunidad</h4>
+          <h2>Involúcrate y haz preguntas</h2>
+        </hgroup>
+      </div>
+      <div class="feature-grid-features col-3">
+        <div>
+          <a href="https://discord.com/invite/N7Yshp4" target="_blank">
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/966e3e1aad6476608b02.png" alt="Flutter Discord">
+            </div>
+            <h3>Discord Flutter &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Habla con otros desarrolladores de Flutter sobre Flutter y comparte recursos útiles.</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://fluttercommunity.dev/joinslack" target="_blank">
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/b2b2a2a9351bc36930b9.png" alt="Community Slack">
+            </div>
+            <h3>Comunidad en Slack&nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Chatea con GDE y otros miembros de la comunidad Flutter</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://stackoverflow.com/tags/flutter" target="_blank">
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/a4e813bdfd6580fba95b.png" alt="Stack Overflow">
+            </div>
+            <h3>Stack Overflow &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Encuentre respuestas a preguntas urgentes en Stack Overflow</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.reddit.com/r/FlutterDev/" target="_blank">
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/34dde115359a8f47a22b.png" alt="Reddit">
+            </div>
+            <h3>Reddit &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Únase al subreddit para debatir sobre todos los aspectos de Flutter</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://developers.google.com/community/gdg" target="_blank">
+            <div class="icon framed-icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/55d8127a3075abb8f641.png" alt="Google Developer Groups">
+            </div>
+            <h3>Google Developer Groups &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Conéctese con otros desarrolladores y nuevas empresas en su área, escuche a expertos de la industria, comparta sus habilidades y aprenda</p>
+          </a>
+        </div>
+        <div>
+          <a href="https://groups.google.com/forum/#!forum/flutter-announce" target="_blank">
+            <div class="icon">
+              <img src="https://storage.googleapis.com/cms-storage-bucket/98ee80ac8c147cd092c6.png" alt="Breaking changes">
+            </div>
+            <h3>Cambios importantes &nbsp;<i class="fas fa-arrow-right fa-sm"></i></h3>
+            <p>Reciba noticias sobre cambios importantes directamente en su bandeja de entrada</p>
+            <div class="btn quiet collapsed">
+              Suscríbete al boletín &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contribute" class="module">
+    <div class="features container">
+      <div class="stacked-feature">
+        <hgroup>
+          <h4 class="eyebrow">Contribuye</h4>
+          <h2>Contribuye a <br/>Flutter en GitHub</h2>
+        </hgroup>
+        <div class="feature full nospy">
+          <div class="text">
+            <div>
+              <h3>Lea al guía para contribuir</h3>
+              <a href="https://github.com/flutter/flutter/blob/main/CONTRIBUTING.md" class="btn quiet collapsed" target="_blank">
+                Leer más &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+            <div>
+              <h3>Cuéntanos qué quieres ver</h3>
+              <a href="https://github.com/flutter/flutter/issues" class="btn quiet collapsed" target="_blank">
+                Rastreador de problemas &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="newsletter">
+    
+
+
+<div class="newsletter container">
+  <div class="text">
+    <h2>Únase a nuestro <br/>boletín</h2>
+  </div>
+  <div class="form">
+    <form x-data="Newsletter" x-on:submit="onSubmit($event)">
+      <fieldset x-show="!submitted">
+        <h3>Manténgase al día con las últimas noticias, lanzamientos y más de Flutter:</h3>
+
+        <div class="global-error">
+          <span 
+            class="error" 
+            x-show="!!errors['unknown']">
+            Hubo un error desconocido al enviar sus datos. Inténtalo de nuevo.
+          </span>
+        </div>
+
+        <div class="field-wrapper">
+          <div class="field" x-bind:class="{ 'error': !!errors['email'] }">
+            <i class="far fa-envelope fa-2x"></i>
+            <label for="email" class="hidden">Correo</label>
+            <input 
+              type="email" id="email" name="email" placeholder="Ingrese su dirección de correo" 
+              x-model="fields.email" x-on:focus="focused = true">
+          </div>
+          <span 
+            class="error" 
+            x-show="!!errors['email']" x-text="errors['email']">
+          </span>
+        </div>
+        <div 
+          class="hidden-fields" 
+          x-show="focused" 
+          x-bind:class="{ 'active': focused }">
+          
+          <div class="field-grid">
+            <div class="field-wrapper">
+              <div class="field" x-bind:class="{ 'error': !!errors['first_name'] }">
+                <label for="firstname" class="hidden">Primer Nombre</label>
+                <input 
+                  type="text" id="firstname" name="firstname" placeholder="Primer Nombre" 
+                  x-model="fields.first_name">
+              </div>
+              <span 
+                class="error" 
+                x-show="!!errors['first_name']" x-text="errors['first_name']">
+              </span>
+            </div>
+            <div class="field-wrapper">
+              <div class="field" x-bind:class="{ 'error': !!errors['last_name'] }">
+                <label for="lastname" class="hidden">Apellido</label>
+                <input 
+                  type="text" id="lastname" name="lastname" placeholder="Apellido" 
+                  x-model="fields.last_name">
+              </div>
+              <span 
+                class="error" 
+                x-show="!!errors['last_name']" x-text="errors['last_name']">
+              </span>
+            </div>
+          </div>
+
+          <div class="field-wrapper">
+            <div class="field" x-bind:class="{ 'error': !!errors['country'] }">
+              <label for="country" class="hidden">País</label>
+              <select name="countries" id="country" x-model="fields.country">
+                <option value="" disabled selected>País</option>
+                
+                  <option value="US">United States of America</option>
+                
+                  <option value="AF">Afghanistan</option>
+                
+                  <option value="AX">Åland Islands</option>
+                
+                  <option value="AL">Albania</option>
+                
+                  <option value="DZ">Algeria</option>
+                
+                  <option value="AS">American Samoa</option>
+                
+                  <option value="AD">Andorra</option>
+                
+                  <option value="AO">Angola</option>
+                
+                  <option value="AI">Anguilla</option>
+                
+                  <option value="AQ">Antarctica</option>
+                
+                  <option value="AG">Antigua and Barbuda</option>
+                
+                  <option value="AR">Argentina</option>
+                
+                  <option value="AM">Armenia</option>
+                
+                  <option value="AW">Aruba</option>
+                
+                  <option value="AU">Australia</option>
+                
+                  <option value="AT">Austria</option>
+                
+                  <option value="AZ">Azerbaijan</option>
+                
+                  <option value="BS">Bahamas</option>
+                
+                  <option value="BH">Bahrain</option>
+                
+                  <option value="BD">Bangladesh</option>
+                
+                  <option value="BB">Barbados</option>
+                
+                  <option value="BY">Belarus</option>
+                
+                  <option value="BE">Belgium</option>
+                
+                  <option value="BZ">Belize</option>
+                
+                  <option value="BJ">Benin</option>
+                
+                  <option value="BM">Bermuda</option>
+                
+                  <option value="BT">Bhutan</option>
+                
+                  <option value="BO">Bolivia</option>
+                
+                  <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                
+                  <option value="BA">Bosnia and Herzegovina</option>
+                
+                  <option value="BW">Botswana</option>
+                
+                  <option value="BV">Bouvet Island</option>
+                
+                  <option value="BR">Brazil</option>
+                
+                  <option value="IO">British Indian Ocean Territory</option>
+                
+                  <option value="BN">Brunei</option>
+                
+                  <option value="BG">Bulgaria</option>
+                
+                  <option value="BF">Burkina Faso</option>
+                
+                  <option value="BI">Burundi</option>
+                
+                  <option value="CV">Cabo Verde</option>
+                
+                  <option value="KH">Cambodia</option>
+                
+                  <option value="CM">Cameroon</option>
+                
+                  <option value="CA">Canada</option>
+                
+                  <option value="KY">Cayman Islands</option>
+                
+                  <option value="CF">Central African Republic</option>
+                
+                  <option value="TD">Chad</option>
+                
+                  <option value="CL">Chile</option>
+                
+                  <option value="CN">China</option>
+                
+                  <option value="CX">Christmas Island</option>
+                
+                  <option value="CC">Cocos (Keeling) Islands</option>
+                
+                  <option value="CO">Colombia</option>
+                
+                  <option value="KM">Comoros</option>
+                
+                  <option value="CG">Congo</option>
+                
+                  <option value="CD">Congo (the Democratic Republic of the)</option>
+                
+                  <option value="CK">Cook Islands</option>
+                
+                  <option value="CR">Costa Rica</option>
+                
+                  <option value="CI">Côte d&#x27;Ivoire</option>
+                
+                  <option value="HR">Croatia</option>
+                
+                  <option value="CU">Cuba</option>
+                
+                  <option value="CW">Curaçao</option>
+                
+                  <option value="CY">Cyprus</option>
+                
+                  <option value="CZ">Czechia</option>
+                
+                  <option value="DK">Denmark</option>
+                
+                  <option value="DJ">Djibouti</option>
+                
+                  <option value="DM">Dominica</option>
+                
+                  <option value="DO">Dominican Republic</option>
+                
+                  <option value="EC">Ecuador</option>
+                
+                  <option value="EG">Egypt</option>
+                
+                  <option value="SV">El Salvador</option>
+                
+                  <option value="GQ">Equatorial Guinea</option>
+                
+                  <option value="ER">Eritrea</option>
+                
+                  <option value="EE">Estonia</option>
+                
+                  <option value="SZ">Eswatini</option>
+                
+                  <option value="ET">Ethiopia</option>
+                
+                  <option value="FK">Falkland Islands (Malvinas)</option>
+                
+                  <option value="FO">Faroe Islands</option>
+                
+                  <option value="FJ">Fiji</option>
+                
+                  <option value="FI">Finland</option>
+                
+                  <option value="FR">France</option>
+                
+                  <option value="GF">French Guiana</option>
+                
+                  <option value="PF">French Polynesia</option>
+                
+                  <option value="TF">French Southern Territories</option>
+                
+                  <option value="GA">Gabon</option>
+                
+                  <option value="GM">Gambia</option>
+                
+                  <option value="GE">Georgia</option>
+                
+                  <option value="DE">Germany</option>
+                
+                  <option value="GH">Ghana</option>
+                
+                  <option value="GI">Gibraltar</option>
+                
+                  <option value="GR">Greece</option>
+                
+                  <option value="GL">Greenland</option>
+                
+                  <option value="GD">Grenada</option>
+                
+                  <option value="GP">Guadeloupe</option>
+                
+                  <option value="GU">Guam</option>
+                
+                  <option value="GT">Guatemala</option>
+                
+                  <option value="GG">Guernsey</option>
+                
+                  <option value="GN">Guinea</option>
+                
+                  <option value="GW">Guinea-Bissau</option>
+                
+                  <option value="GY">Guyana</option>
+                
+                  <option value="HT">Haiti</option>
+                
+                  <option value="HM">Heard Island and McDonald Islands</option>
+                
+                  <option value="VA">Holy See</option>
+                
+                  <option value="HN">Honduras</option>
+                
+                  <option value="HK">Hong Kong</option>
+                
+                  <option value="HU">Hungary</option>
+                
+                  <option value="IS">Iceland</option>
+                
+                  <option value="IN">India</option>
+                
+                  <option value="ID">Indonesia</option>
+                
+                  <option value="IR">Iran</option>
+                
+                  <option value="IQ">Iraq</option>
+                
+                  <option value="IE">Ireland</option>
+                
+                  <option value="IM">Isle of Man</option>
+                
+                  <option value="IL">Israel</option>
+                
+                  <option value="IT">Italy</option>
+                
+                  <option value="JM">Jamaica</option>
+                
+                  <option value="JP">Japan</option>
+                
+                  <option value="JE">Jersey</option>
+                
+                  <option value="JO">Jordan</option>
+                
+                  <option value="KZ">Kazakhstan</option>
+                
+                  <option value="KE">Kenya</option>
+                
+                  <option value="KI">Kiribati</option>
+                
+                  <option value="KW">Kuwait</option>
+                
+                  <option value="KG">Kyrgyzstan</option>
+                
+                  <option value="LA">Laos</option>
+                
+                  <option value="LV">Latvia</option>
+                
+                  <option value="LB">Lebanon</option>
+                
+                  <option value="LS">Lesotho</option>
+                
+                  <option value="LR">Liberia</option>
+                
+                  <option value="LY">Libya</option>
+                
+                  <option value="LI">Liechtenstein</option>
+                
+                  <option value="LT">Lithuania</option>
+                
+                  <option value="LU">Luxembourg</option>
+                
+                  <option value="MO">Macao</option>
+                
+                  <option value="MG">Madagascar</option>
+                
+                  <option value="MW">Malawi</option>
+                
+                  <option value="MY">Malaysia</option>
+                
+                  <option value="MV">Maldives</option>
+                
+                  <option value="ML">Mali</option>
+                
+                  <option value="MT">Malta</option>
+                
+                  <option value="MH">Marshall Islands</option>
+                
+                  <option value="MQ">Martinique</option>
+                
+                  <option value="MR">Mauritania</option>
+                
+                  <option value="MU">Mauritius</option>
+                
+                  <option value="YT">Mayotte</option>
+                
+                  <option value="MX">Mexico</option>
+                
+                  <option value="FM">Micronesia (Federated States of)</option>
+                
+                  <option value="MD">Moldova</option>
+                
+                  <option value="MC">Monaco</option>
+                
+                  <option value="MN">Mongolia</option>
+                
+                  <option value="ME">Montenegro</option>
+                
+                  <option value="MS">Montserrat</option>
+                
+                  <option value="MA">Morocco</option>
+                
+                  <option value="MZ">Mozambique</option>
+                
+                  <option value="MM">Myanmar</option>
+                
+                  <option value="NA">Namibia</option>
+                
+                  <option value="NR">Nauru</option>
+                
+                  <option value="NP">Nepal</option>
+                
+                  <option value="NL">Netherlands</option>
+                
+                  <option value="NC">New Caledonia</option>
+                
+                  <option value="NZ">New Zealand</option>
+                
+                  <option value="NI">Nicaragua</option>
+                
+                  <option value="NE">Niger</option>
+                
+                  <option value="NG">Nigeria</option>
+                
+                  <option value="NU">Niue</option>
+                
+                  <option value="NF">Norfolk Island</option>
+                
+                  <option value="KP">North Korea</option>
+                
+                  <option value="MK">North Macedonia</option>
+                
+                  <option value="MP">Northern Mariana Islands</option>
+                
+                  <option value="NO">Norway</option>
+                
+                  <option value="OM">Oman</option>
+                
+                  <option value="PK">Pakistan</option>
+                
+                  <option value="PW">Palau</option>
+                
+                  <option value="PS">Palestine, State of</option>
+                
+                  <option value="PA">Panama</option>
+                
+                  <option value="PG">Papua New Guinea</option>
+                
+                  <option value="PY">Paraguay</option>
+                
+                  <option value="PE">Peru</option>
+                
+                  <option value="PH">Philippines</option>
+                
+                  <option value="PN">Pitcairn</option>
+                
+                  <option value="PL">Poland</option>
+                
+                  <option value="PT">Portugal</option>
+                
+                  <option value="PR">Puerto Rico</option>
+                
+                  <option value="QA">Qatar</option>
+                
+                  <option value="RE">Réunion</option>
+                
+                  <option value="RO">Romania</option>
+                
+                  <option value="RU">Russia</option>
+                
+                  <option value="RW">Rwanda</option>
+                
+                  <option value="BL">Saint Barthélemy</option>
+                
+                  <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                
+                  <option value="KN">Saint Kitts and Nevis</option>
+                
+                  <option value="LC">Saint Lucia</option>
+                
+                  <option value="MF">Saint Martin (French part)</option>
+                
+                  <option value="PM">Saint Pierre and Miquelon</option>
+                
+                  <option value="VC">Saint Vincent and the Grenadines</option>
+                
+                  <option value="WS">Samoa</option>
+                
+                  <option value="SM">San Marino</option>
+                
+                  <option value="ST">Sao Tome and Principe</option>
+                
+                  <option value="SA">Saudi Arabia</option>
+                
+                  <option value="SN">Senegal</option>
+                
+                  <option value="RS">Serbia</option>
+                
+                  <option value="SC">Seychelles</option>
+                
+                  <option value="SL">Sierra Leone</option>
+                
+                  <option value="SG">Singapore</option>
+                
+                  <option value="SX">Sint Maarten (Dutch part)</option>
+                
+                  <option value="SK">Slovakia</option>
+                
+                  <option value="SI">Slovenia</option>
+                
+                  <option value="SB">Solomon Islands</option>
+                
+                  <option value="SO">Somalia</option>
+                
+                  <option value="ZA">South Africa</option>
+                
+                  <option value="GS">South Georgia and the South Sandwich Islands</option>
+                
+                  <option value="KR">South Korea</option>
+                
+                  <option value="SS">South Sudan</option>
+                
+                  <option value="ES">Spain</option>
+                
+                  <option value="LK">Sri Lanka</option>
+                
+                  <option value="SD">Sudan</option>
+                
+                  <option value="SR">Suriname</option>
+                
+                  <option value="SJ">Svalbard and Jan Mayen</option>
+                
+                  <option value="SE">Sweden</option>
+                
+                  <option value="CH">Switzerland</option>
+                
+                  <option value="SY">Syria</option>
+                
+                  <option value="TW">Taiwan</option>
+                
+                  <option value="TJ">Tajikistan</option>
+                
+                  <option value="TZ">Tanzania</option>
+                
+                  <option value="TH">Thailand</option>
+                
+                  <option value="TL">Timor-Leste</option>
+                
+                  <option value="TG">Togo</option>
+                
+                  <option value="TK">Tokelau</option>
+                
+                  <option value="TO">Tonga</option>
+                
+                  <option value="TT">Trinidad and Tobago</option>
+                
+                  <option value="TN">Tunisia</option>
+                
+                  <option value="TR">Turkey</option>
+                
+                  <option value="TM">Turkmenistan</option>
+                
+                  <option value="TC">Turks and Caicos Islands</option>
+                
+                  <option value="TV">Tuvalu</option>
+                
+                  <option value="UG">Uganda</option>
+                
+                  <option value="UA">Ukraine</option>
+                
+                  <option value="AE">United Arab Emirates</option>
+                
+                  <option value="GB">United Kingdom</option>
+                
+                  <option value="UM">United States Minor Outlying Islands</option>
+                
+                  <option value="US">United States of America</option>
+                
+                  <option value="UY">Uruguay</option>
+                
+                  <option value="UZ">Uzbekistan</option>
+                
+                  <option value="VU">Vanuatu</option>
+                
+                  <option value="VE">Venezuela</option>
+                
+                  <option value="VN">Vietnam</option>
+                
+                  <option value="VG">Virgin Islands (British)</option>
+                
+                  <option value="VI">Virgin Islands (U.S.)</option>
+                
+                  <option value="WF">Wallis and Futuna</option>
+                
+                  <option value="EH">Western Sahara</option>
+                
+                  <option value="YE">Yemen</option>
+                
+                  <option value="ZM">Zambia</option>
+                
+                  <option value="ZW">Zimbabwe</option>
+                
+              </select>
+            </div>
+            <span 
+              class="error" 
+              x-show="!!errors['country']" x-text="errors['country']">
+            </span>
+          </div>
+
+          <div class="field-wrapper">
+            <div class="checkbox opt-in">
+              <div class="field" x-bind:class="{ 'error': !!errors['optin'] }">
+                <input type="checkbox" name="optin" id="optin" x-model="fields.optin">
+              </div>
+              <label for="optin" class="optin">
+                Al utilizar este servicio, usted acepta estar sujeto a nuestras <a href="https://policies.google.com/terms">condiciones de servicio de Google</a>. 
+                Reconozco que la información proporcionada en este formulario estará sujeta a las<a href="https://policies.google.com/privacy">políticas de privacidad de Google</a>. 
+              </label>
+            </div>
+            <span 
+                class="error" 
+                x-show="!!errors['optin']" x-text="errors['optin']">
+          </div>
+          <div class="captcha-container field-wrapper">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LdG504kAAAAAPZGIhZd_--CkTASNKaW64oMriCL"
+              x-model="fields.captcha"
+              x-bind:class="{ 'error': !!errors['captcha'] }"
+            >
+            </div>
+            <span 
+              class="error" 
+              x-show="!!errors['captcha']" x-text="errors['captcha']">
+            </span>
+          </div>
+          <div>
+            <input type="submit" class="btn primary" value="Subscribe">
+          </div>
+
+        </div>
+      </fieldset>
+      <div class="success" x-show="submitted">
+        <h3>¡Estas dentro!</h3>
+        <p>Te has registrado correctamente para recibir las últimas actualizaciones y anuncios de Flutter.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+  </section>
+  
+
+  
+
+  <section id="cta" class="module">
+    <div class="insert cta-insert container">
+      <div class="text">
+        <h3>Empezar</h3>
+        <p>Acceso instantáneo al poder del framework Flutter</p>
+        <div>
+          <a href="https://docs.flutter.dev/get-started/install" class="btn">
+            Instalar
+          </a>
+          <a href="https://docs.flutter.dev" class="btn quiet">
+            Lea los documentos &nbsp;<i class="fas fa-arrow-right fa-sm"></i>
+          </a>
+        </div>
+      </div>
+      <div class="media">
+        <img src="https://storage.googleapis.com/cms-storage-bucket/72521e62275b24d3c37d.png" alt="Powered by Dart">
+      </div>
+    </div>
+  </section>
+
+
+
+</section>
+
+    </main>
+    
+    
+    <footer>
+      <div class="content footer-main">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+              width="154"
+              alt="Flutter"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Acerca de Flutter</li>
+            <li>
+              <a href="https://docs.flutter.dev/jobs" target="_blank">Carreras</a>
+            </li>
+            <li><a href="https://medium.com/flutter" target="_blank">Noticias</a></li>
+            <li><a href="/brand">Marca</a></li>
+            <li><a href="/culture">Cultura</a></li>
+          </ul>
+          <ul>
+            <li>Aprenda Flutter</li>
+            <li><a href="/learn" target="_blank">Viaje de aprendizaje</a></li>
+            <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Laboratorios de código</a></li>
+            <li>
+              <a href="https://flutter.github.io/samples" target="_blank"
+                >Ejemplos</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+          </ul>
+          <ul>
+            <li>Multiplataforma</li>
+            <li><a href="/multi-platform/mobile">Móvil</a></li>
+            <li><a href="/multi-platform/web">Web</a></li>
+            <li><a href="/multi-platform/desktop">Escritorio</a></li>
+            <li><a href="/multi-platform/embedded">Embebido</a></li>
+            <li><a href="/multi-platform/ios">iOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content footer-social">
+        <div>
+          <a
+            href="https://www.youtube.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter YouTube"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://twitter.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter Twittter"
+          >
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/flutter"
+            target="_blank"
+            aria-label="Flutter Github"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://medium.com/flutter"
+            target="_blank"
+            aria-label="Flutter Medium"
+          >
+            <i class="fab fa-medium fa-lg"></i>
+          </a>
+          <a
+            href="https://www.meetup.com/pro/flutter/"
+            target="_blank"
+            aria-label="Flutter Meetup"
+          >
+            <i class="fab fa-meetup fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/flutterdevofficial/"
+            target="_blank"
+            aria-label="Flutter LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content footer-tray">
+        <div>
+          Salvo que se indique lo contrario, este trabajo tiene la licencia Creative Commons 
+          Attribution 4.0 International y los ejemplos de código tienen la licencia BSD.
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://docs.flutter.dev/tos">Terminos</a></li>
+            <li>
+              <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+                >Privacidad</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/security">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+        <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+      <div class="container">
+        <p>Google utiliza cookies para ofrecer sus servicios, personalizar anuncios y analizar el tráfico. Puedes
+          ajustar tus controles de privacidad en cualquier momento en tu 
+          <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">configuración de Google</a>. 
+          <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Aprende más</a>.
+        </p>
+        <button @click.prevent="consent" class="solid">Aceptar</button>
+      </div>
+    </section>
+    
+        <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+        <div class="container">
+          <p>AVISO: Flutter espera que este directorio sea útil para los clientes que buscan consultores con experiencia en Flutter; sin embargo, Flutter no representa ni garantiza a usted ni a ninguna otra persona que los consultores enumerados sean socios de Flutter o de Google, y Flutter no representa ni garantiza sus calificaciones ni la calidad de los servicios que puede recibir. Su relación es estrictamente entre usted y los consultores.</p>
+          <button @click.prevent="dismiss" class="solid">Aceptar</button>
+        </div>
+      </section>  
+
+    
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPD0orCPohiaPjNVAiKjeZs-B0eSHc6hw&callback=initMap"></script>
+<script>
+  const __MAPS_DATA_URL__ = 'https://storage.googleapis.com/cms-storage-bucket/bb75bda5bffcb8018e6c0797fbf9e4a2.json';
+</script>
+
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>

@@ -1,0 +1,2173 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+        Flutter Forward
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content="¡Obtenga una vista previa de algunas de nuestras inversiones en las tecnologías del futuro en Flutter Forward, transmitiendo en vivo desde Nairobi, Kenia, el 25 de enero de 2023! El evento contará con una conferencia magistral, charlas técnicas y una sesión de preguntas y respuestas en vivo que mostrarán cómo Flutter está impulsando el desarrollo de la interfaz de usuario.
+
+    ¡Regístrese ahora y esté atento a más actualizaciones y anuncios emocionantes!"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Flutter Forward">
+    <meta property="og:url" content="//flutter.dev/events/flutter-forward/">
+    <meta property="og:description" content="¡Obtenga una vista previa de algunas de nuestras inversiones en las tecnologías del futuro en Flutter Forward, transmitiendo en vivo desde Nairobi, Kenia, el 25 de enero de 2023! El evento contará con una conferencia magistral, charlas técnicas y una sesión de preguntas y respuestas en vivo que mostrarán cómo Flutter está impulsando el desarrollo de la interfaz de usuario.
+
+    ¡Regístrese ahora y esté atento a más actualizaciones y anuncios emocionantes!">
+    <meta property="og:image" content="
+  https://storage.googleapis.com/cms-storage-bucket/images/Flutter_F_4K_Wallpaper_1.width-500.png
+">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multiplataforma <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Móvil</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter en iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Escritorio</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embebido</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Desarrollo <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/learn">Aprender</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Favoritos de Flutter </a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Paquetes</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetización</a></li>
+                <li><a class="btn" href="/games">Juegos</a></li>
+                <li><a class="btn" href="/news">Noticias</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosistema <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/community">Comunidad</a></li>
+                <li><a class="btn" href="/events">Eventos</a></li>
+                <li><a class="btn" href="/culture">Cultura</a></li>
+                <li><a class="btn" href="/consultants">Consultores</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Galería </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">Que hay de nuevo</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Soporte de edición</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Perfilado</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Instalar Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >Herramientas de desarrollo</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutoriales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+    
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Empezar</a
+      >
+    
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+  <section id="banner" style="background: center / cover no-repeat url('https://storage.googleapis.com/cms-storage-bucket/ff2bc4e5c6849bcf276a.png')">
+    
+      <div class="embed-container">
+        <iframe
+          src="https://www.youtube.com/embed/PAOAjOR6K_Q" 
+          allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+          allowfullscreen frameborder="0">
+        </iframe>
+      </div>
+    
+    <div class="hero-details">
+      
+        <a
+          class="btn secondary"
+          href="http://flutter.dev/events/flutter-forward/#on-demand"
+          target="_blank"
+        >
+        Ver todo el contenido del evento
+        </a>
+      
+      <p>Haga clic arriba para ver más de Flutter Forward a pedido.</p>
+    </div>
+  </section>
+
+      
+  <section id="story">
+    <article class="story-detail">
+      <section id="tabs" class="module" x-data="{ ...initSpy(-300), showTabs: 'True' === 'True', tab: window.location.hash ? window.location.hash.substring(1) : '' }">
+        <div class="tabs container" x-show="tab != 'community-guidelines'">
+          
+          <div class="tabs-header" x-show="showTabs">
+            <div class="tabs-menu">
+              <ul>
+                <a
+                  :class="{ 'active': tab === 'home' || tab === '' }"
+                  class="btn"
+                  @click.prevent="tab = 'home'; window.location.hash = 'home'"
+                  href="#"
+                >
+                  Inicio
+                </a>
+                <a
+                  :class="{ 'active': tab === 'schedule' }"
+                  class="btn"
+                  @click.prevent="tab = 'schedule'; window.location.hash = 'schedule'"
+                  href="#"
+                >
+                  Agenda
+                </a>
+                <a
+                  :class="{ 'active': tab === 'on-demand' }"
+                  class="btn"
+                  @click.prevent="tab = 'on-demand'; window.location.hash = 'on-demand'"
+                  href="#"
+                >
+                  Bajo demanda
+                </a>
+                <a
+                  :class="{ 'active': tab === 'community' }"
+                  class="btn"
+                  @click.prevent="tab = 'community'; window.location.hash = 'community'"
+                  href="#"
+                >
+                  Comunidad
+                </a>
+                <a
+                  :class="{ 'active': tab.includes('17-days-of-flutter') }"
+                  class="btn"
+                  @click.prevent="tab = '17-days-of-flutter'; window.location.hash = '17-days-of-flutter'"
+                  href="#"
+                >
+                  17 días de Flutter
+                </a>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tabs-content" x-data="Modal">
+            <div
+              id="modal"
+              class="modal"
+              x-show="showModal"
+              @keydown.escape="closeModal()"
+            >
+              <div
+                class="modal-inner"
+                @click.away="closeModal()"
+                x-transition:enter="motion-safe:ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100">
+
+                <div class="modal-media">
+                  <img class="modal-inner-close" src="https://storage.googleapis.com/cms-storage-bucket/b866f9e12ecfdf943780.svg" @click="closeModal()"/>
+                  <img class="modal-img" :src="modalInfo.imageUrl">
+                </div>
+                <div class="modal-body">
+                  <h5 x-text="modalInfo.dayNumber"></h5>
+                  <h3 x-text="modalInfo.title"></h3>
+                  <p x-text="modalInfo.description"></p>
+                  <a :href="modalInfo.linkUrl" class="btn quiet" target="_blank">
+                    <h5 x-text="modalInfo.linkText"></h5>
+                    &nbsp;<i class='fas fa-arrow-right fa-sm'></i> 
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-content"
+              :class="{ 'active': !showTabs || tab === 'home' || tab === '' }"
+              x-show="!showTabs || tab === 'home' || tab === ''"
+            >
+              <section id="home" class="module">
+                <div class="features container">
+                  <div class="stacked-feature">
+                    
+                  </div>
+                </div>
+              </section>
+              
+            </div>
+
+            <div
+              class="tab-content"
+              :class="{ 'active': tab === 'schedule'}"
+              x-show="showTabs && tab === 'schedule'"
+            >
+              <section id="schedule" class="module">
+                <div class="features container">
+                  <div class="stacked-feature">
+                    <div class="stacked-feature-banner">
+                      <hgroup>
+                        <h4 class="eyebrow faqs">Agenda</h4>
+                        <h1>
+                          Miércoles, <br />
+                          25 de enero
+                        </h1>
+                      </hgroup>
+                      <img
+                        src="https://storage.googleapis.com/cms-storage-bucket/b6c333414eac6b599a1e.png"
+                        alt="Flutter Forward Schedule"
+                      />
+                    </div>
+                    <div class="feature full nospy">
+                      
+                          <div class="schedule-section">
+    <h1>Agenda Flutter Forward</h1>
+    
+        <p>Todos los horarios en PST</p>
+    
+    
+        <a class="btn quiet workshop-nav" @click="tab = 'workshop-details'; window.location.hash = 'workshop-details'">Consulta detalles adicionales sobre los talleres ></a>
+    
+    
+    <div class="schedule-container">
+        
+            <div class="schedule-subsection">
+                
+                    <h3>
+                        
+                            06:30 - 07:00
+                        
+                    </h3>
+                
+                <div class="schedule-subsection-body">
+                    <h3>Presentación previa del discurso de apertura de Flutter</h3>
+                    <p>¡Únase a nosotros temprano para obtener contenido exclusivo que incluye preguntas y respuestas con el equipo de Flutter!</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>John Ryan, Developer Relations Engineer, Flutter &amp; Dart</p>
+                            
+                                <p>Kate Lovett, Software Engineer, Flutter Framework</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                    <h3>
+                        
+                            07:00 - 08:00
+                        
+                    </h3>
+                
+                <div class="schedule-subsection-body">
+                    <h3>Presentación principal de Flutter Forward</h3>
+                    <p>Vea cómo estamos impulsando el desarrollo de la interfaz de usuario con anuncios de productos, demostraciones técnicas, invitados especiales y más.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Tim Sneath, Product &amp; UX Director, Flutter &amp; Dart</p>
+                            
+                                <p>Leigha Jarett, Product Manager, Flutter</p>
+                            
+                                <p>Ander Dobo, Product Manager, Flutter</p>
+                            
+                                <p>Michael Thomsen, Product Manager, Dart</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                    <h3>
+                        
+                            08:00 - 08:30
+                        
+                    </h3>
+                
+                <div class="schedule-subsection-body">
+                    <h3>#AskFlutter en vivo</h3>
+                    <p>Vea una sesión de preguntas y respuestas en vivo con líderes de Dart, Flutter y Firebase. Tuitea tus preguntas ahora con el hashtag #AskFlutter y podrás verlas respondidas en vivo.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>John Ryan, Developer Relations Engineer, Flutter &amp; Dart</p>
+                            
+                                <p>Kate Lovett, Software Engineer, Flutter Framework</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+    </div>
+    
+</div>
+                      
+                          <div class="schedule-section">
+    <h1>Contenido bajo demanda</h1>
+    
+    
+    
+        <h2>Vea todas estas charlas bajo demanda</h2>
+    
+    <div class="schedule-container">
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Diseño con Flutter: traducción del diseño a código con Material 3</h3>
+                    <p>Aprenda cómo construir el estudio de material de albahaca en Flutter con técnicas avanzadas de temática y cómo construir para múltiples contextos de dispositivos.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Liam Spradlin, Senior Design Advocate, Google</p>
+                            
+                                <p>Rody Davis, Developer Advocate, Google</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Creando prototipos de hermosos diseños con Flutter</h3>
+                    <p>Mostraremos por qué Flutter es una excelente opción para crear diseños ambiciosos, mientras comenzamos a crear prototipos de una aplicación de rompecabezas con animaciones personalizadas, fuentes variables y sombreadores.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Brian James, UX Engineer, Flutter</p>
+                            
+                                <p>Leigha Jarett, Product Manager, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Usando FlutterFlow para crear experiencias atractivas sin código</h3>
+                    <p>Únase a nosotros mientras creamos una aplicación de imágenes generadas por IA utilizando FlutterFlow. Aprenderá cómo crear una interfaz de usuario hermosa y receptiva, utilizar componentes prediseñados, así como un editor visual de arrastrar y soltar para ayudarlo a crear aplicaciones de manera más eficiente, agregar animaciones y obtener vistas previas rápidamente, conectarse con una API, crear widgets personalizados en nuestro código. editor e impleméntelo en las tiendas de aplicaciones y en la web con un solo clic usando FlutterFlow.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Souvik Biswas, Growth Engineer, FlutterFlow</p>
+                            
+                                <p>Andrew Daniels, Head of Design, FlutterFlow</p>
+                            
+                                <p>Sofia Helpert, Software Engineer, FlutterFlow</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Crea juegos de rol en Flutter con Bonfire</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Sakina Abbas, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Principales consejos de desarrollo en la nube para desarrolladores de Flutter</h3>
+                    <p>Flutter y Dart se ejecutan en todos los dispositivos de tus usuarios, pero ¿qué pasa en el servidor? ¿Puedes seguir usando tus habilidades con Dart al escribir la lógica del lado del servidor que impulsa tu aplicación? ¡Por supuesto que puede! Siga esta guía integral para el desarrollo del lado del servidor, escrita específicamente para desarrolladores de Flutter y Dart.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Craig Labenz, Developer Programs Engineer, Flutter</p>
+                            
+                                <p>Martin Omander, Developer Advocate, Google</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Juegos en tiempo real con Dart</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Dominik Roszkowski, Google Developer Expert, Flutter</p>
+                            
+                                <p>Felix Angelov, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Controla tu aplicación Flutter sobre la marcha con Firebase Remote Config</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Mangirdas Kazlauskas, Google Developer Expert, Flutter &amp; Dart</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Bringing pattern matching to Dart</h3>
+                    <p>Records and pattern matching are two of the largest features coming in Dart 3.0. I&#x27;ll talk about what they are, what they&#x27;re useful for, and how they harmonize with the rest of the Dart language.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Bob Nystrom, Software Engineer, Dart</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Impeller</h3>
+                    <p>Everything you need to know about Impeller, a new rendering runtime solution for Flutter to resolve early-onset jank issues. Impeller precompiles a smaller, simpler set of shaders at Engine build time so that they will not be compiled while an app is running.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Chinmay Garde, Software Engineer, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Screenshots on pub</h3>
+                    <p>A short talk about why and how we are introducing screenshots on pub.dev.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Sarah Zakarias, Software Engineer, Dart</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Two-dimensional scrolling</h3>
+                    <p>A preview of upcoming scrolling features - in two dimensions!</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Kate Lovett, Software Engineer, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Preview: Multiple Windows on Desktop</h3>
+                    <p>In this talk you&#x27;ll get an early preview of what it will look like to render content into multiple windows from a single Flutter app.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Michael Goderbauer, Software Engineer, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Canvas.drawVertices</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Filip Hracek, Founder, Raindead</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Making UI Animation Easy &amp; Fun</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Grant Skinner, CEO, gskinner</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Navigation with Go Router 6</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Jaime Blasco, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>How to write effective Flutter and Dart tests</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Matt Carroll, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>How to migrate your existing native apps to Flutter?</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Vivek Yadav, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Adaptive UI for a multiplatform world</h3>
+                    <p>An in-depth look at application adaptivity and practical ways to add adaptivity to your Flutter applications.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Greg Spencer, Senior Software Engineer, Flutter</p>
+                            
+                                <p>Justin McCandless, Software Engineer, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Flutter on Desktop: end to end from build to distribution</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Teresa Wu, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>7 Ways to Speed Up Your Flutter web apps</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Danielle Cox, Senior Software Engineer (Flutter), Ardley</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>How to integrate Payment gateway in Flutter web app</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Renuka Kelkar, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Tiny Flutter: The future of Dart &amp; Flutter on small devices?</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Maksim Lin, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Dart Language Evolution since 2.15</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Pooja Bhaumik</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Software supply chain security for Flutter and its ecosystem</h3>
+                    <p>Dart and Flutter are investing heavily in tools and services to protect their software supply chain. In this talk we will share our progress improving Flutter’s software supply chain security and the tools created to help the Flutter Ecosystem to improve their security posture.</p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Godofredo Contreras, Software Engineer, Flutter</p>
+                            
+                                <p>Alexander Thomas, Software Engineering Manager, Dart</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Securing Flutter Apps</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Majid Hajian, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Private Dart and Flutter packages</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Oleksandr Leushchenko, Google Developer Expert, Flutter</p>
+                            
+                                <p>Anna Leushchenko, Google Developer Expert, Flutter</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+            <div class="schedule-subsection">
+                
+                <div class="schedule-subsection-body">
+                    <h3>Flutter in Africa</h3>
+                    <p></p>
+                    
+                        <h4>Speaker&#40;s&#41;</h4>
+                        <ul>
+                            
+                                <p>Maureen Josephine</p>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        
+    </div>
+    
+</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div
+              class="tab-content"
+              :class="{ 'active': tab === 'on-demand'}"
+              x-show="showTabs && tab === 'on-demand'"
+            >
+              <section id="on-demand" class="module">
+                <div class="features">
+                  <div class="stacked-feature">
+                    <div class="overview">
+                      <div class="overview-content">
+                        <hgroup>
+                          <h1>Flutter Forward Keynote</h1>
+                        </hgroup>
+                        <p>¡Emocionantes anuncios de productos, demostraciones técnicas e invitados especiales!</p>
+                        <a class="btn primary" href="https://www.youtube.com/watch?v=zKQYGKAe5W8" target="_blank">
+                          Mirar
+                        </a>
+                      </div>
+                      <div class="embed-container">
+                        <iframe
+                          src="https://www.youtube.com/embed/zKQYGKAe5W8"
+                          title="Flutter Forward 2023 Livestream" frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe>
+                      </div>
+                    </div>
+                    <div class="feature">
+                      <div class="on-demand-section-container">
+                        <h3>Diseñar con Flutter</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/7nrhTdS7dHg" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Traducir diseño a código con Material 3</h3>
+                              <p>Aprenda cómo construir el estudio de material de albahaca en Flutter con técnicas avanzadas de temática y cómo construir para múltiples contextos de dispositivos.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/sA5MRFFUuOU" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Creando prototipos de hermosos diseños con Flutter</h3>
+                              <p>Mostraremos por qué Flutter es una excelente opción para crear diseños ambiciosos, mientras comenzamos a crear prototipos de una aplicación de rompecabezas con animaciones personalizadas, fuentes variables y sombreadores.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/V18UL-sUsqk" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Usando FlutterFlow para crear experiencias atractivas a la velocidad del rayo</h3>
+                              <p>Aprenda a crear una interfaz de usuario hermosa y responsiva, agregue animaciones, cree widgets personalizados, genere código limpio e implemente en las tiendas de aplicaciones y en la web con un solo clic usando FlutterFlow.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/w03xxrwHQl8" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Crea juegos de rol en Flutter con Bonfire</h3>
+                              <p>Aprenda a crear juegos de rol en Flutter con Bonfire, un paquete creado en el motor de juegos Flame.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="on-demand-section-container">
+                        <h3>Desarrollo Full Stack</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/P1XzbpeD2GY" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Principales consejos de desarrollo en la nube para desarrolladores de Flutter</h3>
+                              <p>Complemente sus aplicaciones Flutter con Dart en el servidor en estos diez pasos que van desde el desarrollo inicial del proyecto hasta la implementación y la automatización del control de calidad.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/TGKipiJhpXo" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Juegos en tiempo real con Dart</h3>
+                              <p>Aprenda a ejecutar Dart en el backend para impulsar un juego multijugador sencillo en tiempo real en múltiples plataformas. Vamos a jugar con el motor del juego Flame e intentaremos reutilizar algo de código entre el cliente y el servidor.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/1qHSvGoqqiE" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Controla tu aplicación Flutter sobre la marcha con Firebase Remote Config</h3>
+                              <p>Actualizaciones en tiempo real, marcado de funciones, pruebas A/B: ¿qué pasaría si te dijera que puedes habilitar estas poderosas funciones en tu aplicación Flutter con un mínimo esfuerzo de desarrollo y sin ningún costo? Firebase Remote Config es un servicio gratuito que permite cambiar el comportamiento de una aplicación de forma remota sin publicar una actualización de la aplicación. En este video, cubriré múltiples casos de uso del mundo real en los que Firebase Remote Config podría ayudarlo mientras crea aplicaciones de Flutter.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="on-demand-section-container">
+                        <h3>El futuro de Dart y Flutter</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/KhYTFglbF2k" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Llevando la combinación de patrones a Dart</h3>
+                              <p>Los registros y la coincidencia de patrones son dos de las características más importantes de Dart 3.0. Hablaré sobre qué son, para qué sirven y cómo armonizan con el resto del lenguaje Dart.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/gKrYWC_SDxQ" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Impeller</h3>
+                              <p>Todo lo que necesita saber sobre Impeller, una nueva solución de tiempo de ejecución de renderizado para Flutter para resolver problemas de bloqueo tempranos. Impeller precompila un conjunto más pequeño y simple de sombreadores en el momento de la compilación del motor para que no se compilen mientras se ejecuta una aplicación.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/uZQT8nWaj_o" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Presentamos capturas de pantalla en pub.dev</h3>
+                              <p>Una breve charla sobre por qué y cómo introducimos capturas de pantalla en pub.dev.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/UDZ0LPQq-n8" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Desplazamiento bidimensional</h3>
+                              <p>Una vista previa de las próximas funciones de desplazamiento: ¡en dos dimensiones!</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/vtB-teu57vw" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Vista previa de varias ventanas en el escritorio</h3>
+                              <p>En esta charla obtendrás una vista previa de cómo se verá renderizar contenido en múltiples ventanas desde una sola aplicación Flutter.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="on-demand-section-container">
+                        <h3>Ingeniero con Flutter</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/pD38Yyz7N2E" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Canvas.draw Vertices</h3>
+                              <p>En esta charla, Filip explicará la API de Canvas.drawVertices() y el constructor Vertices.raw(); ambos son oscuros, de muy bajo nivel y difíciles de explicar solo en la documentación. Pero valen la pena cuando necesitas exprimir hasta el último rendimiento de Flutter.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/lxkFL9disq0" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Hacer que la animación de la interfaz de usuario sea fácil y divertida</h3>
+                              <p>Esta charla para Flutter Forward 2023 profundiza en la biblioteca Flutter Animate y explora lo fácil que es crear hermosas animaciones de interfaz de usuario con solo unas pocas líneas de código. Cubre cómo aplicar y ajustar la amplia variedad de efectos incluidos, cómo crear efectos totalmente personalizados, cómo controlar la reproducción de la animación y comparte consejos para reducir el impacto de la animación en el rendimiento.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/ZH3tlL60fTI" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Navegación con Go Router 6</h3>
+                              <p>Aprenda cómo administrar la navegación en su aplicación Flutter con el nuevo paquete Go Router 6.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/bHLrSliaL1Q" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Cómo escribir pruebas efectivas de Flutter y Dart</h3>
+                              <p>Obtenga más información sobre las pruebas de software, por qué escribimos pruebas, los tipos de pruebas que puede y debe escribir y cómo escribir las pruebas más efectivas para las aplicaciones Flutter.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/ES8O8Cs_VoI" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Migra tus aplicaciones nativas a Flutter</h3>
+                              <p>Conozca los aspectos esenciales de la conversión de una aplicación existente a Flutter, extraídos de lo aprendido en ZestMoney. Profundizaremos en comprender cuánto tiempo y recursos necesitaremos para realizar esta conversión.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="on-demand-section-container">
+                        <h3>Toques específicos de la plataforma</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/mkxwAKJkc94" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>UI adaptable para un mundo multiplataforma</h3>
+                              <p>Una mirada en profundidad a la adaptabilidad de las aplicaciones y formas prácticas de agregar adaptabilidad a sus aplicaciones Flutter.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/Jiz9xHbWpb4" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Flutter en el escritorio</h3>
+                              <p>Esta charla comienza con una breve discusión que explica el beneficio del proyecto multiplataforma en múltiples pantallas (es decir, escritorio), luego se sumerge en la creación de una aplicación de escritorio usando Flutter en macOS, Linux y Windows. Luego continúa hablando sobre distribuciones de aplicaciones de escritorio en estas tres plataformas, brindándole una descripción general de una solución integral para crear su primera aplicación de escritorio.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/zPnt7kjV2Es" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Cómo integrar la pasarela de pago en una aplicación web Flutter</h3>
+                              <p>Flutter web es estable ahora y está madurando. La mayoría de las veces consideramos Flutter web para crear un portafolio o cualquier aplicación de una sola página. Si desea desarrollar cualquier aplicación que necesite alguna funcionalidad básica e importante, como una pasarela de pago, ¿cuáles son las opciones disponibles en Flutter web y con qué facilidad puede integrarla? pasarela de pago. Repasemos esto más detalladamente en esta charla.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/CdH2CXG_M-s" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>7 formas de acelerar tus aplicaciones web flutter</h3>
+                              <p>Conozca 7 pasos que puede seguir para acelerar la carga de sus Flutter Webapps.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="on-demand-section-container">
+                        <h3>Dart</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/h1iy6mI8PSc" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Evolución del lenguaje Dart desde 2.15</h3>
+                              <p>Sumérgete en la evolución del lenguaje Dart desde Dart 2.15 hasta Dart 2.18, cubriendo características como cortes de constructores, enumeraciones mejoradas, parámetros de súper inicializador y argumentos con nombre mejorados.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/7LFftXcw1jA" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Seguridad de la cadena de suministro de software para Flutter y su ecosistema</h3>
+                              <p>Dart y Flutter están invirtiendo fuertemente en herramientas y servicios para proteger su cadena de suministro de software. En esta charla compartiremos nuestro progreso en la mejora de la seguridad de la cadena de suministro de software de Flutter y las herramientas creadas para ayudar al ecosistema de Flutter a mejorar su postura de seguridad.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/DYwn4KciL1U" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Proteger las aplicaciones de Flutter</h3>
+                              <p>Revisar el top 10 de OWASP para dispositivos móviles, informar vulnerabilidades, mejores prácticas para minimizar riesgos, prevenir la ingeniería inversa, mantenerse actualizado e identificar y bloquear ataques en tiempo real con tecnología como RASP (Autoprotección de aplicaciones en tiempo de ejecución) son los temas que sacará de esta charla.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/jfRhyAKzaBY" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Paquetes privados de dardos y aleteos</h3>
+                              <p>En este vídeo, mostramos cómo se puede hacer referencia a los paquetes privados y cuál es la forma más conveniente de trabajar cuando necesita mantener los paquetes en secreto y seguros.</p>
+                            </div>
+                          </div>
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/LIKI-FassBg" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Tiny Flutter</h3>
+                              <p>Dart añadió recientemente soporte experimental para la nueva arquitectura de CPU RISC-V y las primeras placas con estos nuevos chips ya están empezando a estar disponibles. Uno de ellos es el Sipeed Lichee D1. Aprenda cómo hacer que Dart se ejecute en uno de estos tableros con una pantalla pequeña y cómo Flutter puede ayudar.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="on-demand-section-container">
+                        <h3>Comunidad</h3>
+                        <div class="on-demand-grid">
+                          <div class="on-demand-card">
+                            <div class="embed-container">
+                              <iframe
+                                src="https://www.youtube.com/embed/MaMfG3xd35A" 
+                                allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
+                                allowfullscreen frameborder="0">
+                              </iframe>
+                            </div>
+                            <div class="card-content">
+                              <h3>Flutter en África</h3>
+                              <p>¡Aprenda sobre las comunidades de Flutter en África y las cosas interesantes que están construyendo los desarrolladores de Flutter en todo el continente!</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overview on-demand-demo">
+                      <div class="overview-content">
+                        <hgroup>
+                          <h1>Flutter Demo</h1>
+                        </hgroup>
+                        <p>Descubra cómo creamos la demostración de Holobooth Machine Learning, una aplicación web de Flutter que utiliza TensorFlowJS con el modelo MediaPipe FaceMesh para detectar puntos de referencia faciales 3D en tiempo real en un navegador.</p>
+                        <a class="btn secondary" href="https://medium.com/flutter/how-its-made-holobooth-6473f3d018dd" target="_blank">
+                          Aprende más
+                        </a>
+                      </div>
+                      <div class="img-container">
+                        <img
+                          src="https://storage.googleapis.com/cms-storage-bucket/133a9d3115a9b0c3c4ff.png"
+                          alt="Holo Booth Home"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div
+              class="tab-content"
+              :class="{ 'active': tab === 'community'}"
+              x-show="showTabs && tab === 'community'"
+            >
+              <section id="community" class="module">
+                <div class="community-header">
+                  <hgroup>
+                    <h4 class="eyebrow">Eventes de comunidades</h4>
+                    <h1>Encuentra un evento cerca de ti</h1>
+                  </hgroup>
+                  <img alt="Dash_map_image.png" height="312" src="https://storage.googleapis.com/cms-storage-bucket/images/Dash_map_image.width-556.png" width="556">
+                </div>
+                
+                <div class="community-section" x-data="{ expanded: false }">
+                  <h1>Eventos regionales</h1>
+                  <p>¡Encuentre una fiesta para ver Flutter Forward en vivo o una sesión de preguntas y respuestas posterior al evento cerca de usted!</p>
+                  <div :class="{ 'collapsible-container': true, 'expanded': expanded }">
+                    
+                      
+
+<div :class="{ 'qa-card': true, 'expanded': expanded }">
+    <h3>Flutter Forward Extended Londres</h3>
+    <p data-block-key="1r5my">Únase a GDG London y Flutter London para una emocionante reunión el 30 de enero de 2023.</p>
+    <a href="https://gdg.community.dev/events/details/google-gdg-london-presents-flutter-forward-extended-london/" class="btn quiet" target="_blank">Registrate ahora</a>
+</div>
+                    
+                      
+
+<div :class="{ 'qa-card': true, 'expanded': expanded }">
+    <h3>Flutter Forward Extended Países Bajos</h3>
+    <p data-block-key="1r5my">Únase a Flutter Países Bajos para una reunión y fiesta de visualización en vivo de Flutter Forward el 25 de enero de 2023.</p>
+    <a href="https://www.meetup.com/flutternl/events/290720478/" class="btn quiet" target="_blank">Registrate ahora</a>
+</div>
+                    
+                      
+
+<div :class="{ 'qa-card': true, 'expanded': expanded }">
+    <h3>Flutter Forward Extended París</h3>
+    <p data-block-key="1r5my">Únase al capítulo de GDG París para una reunión en persona el 1 de febrero de 2023.</p>
+    <a href="https://gdg.community.dev/events/details/google-gdg-paris-presents-flutter-forward-extended/" class="btn quiet" target="_blank">Registrate ahora</a>
+</div>
+                    
+                      
+
+<div :class="{ 'qa-card': true, 'expanded': expanded }">
+    <h3>Flutter Forward Extended Silicon Valley</h3>
+    <p data-block-key="1r5my">Únase a Flutter Silicon Valley para una reunión especial el 25 de enero de 2023.</p>
+    <a href="https://www.meetup.com/flutter-silicon-valley/events/290205748" class="btn quiet" target="_blank">Registrate ahora</a>
+</div>
+                    
+                  </div>
+                  <button @click="expanded = !expanded" class="btn quiet"><p x-text="expanded ? 'View Less' : 'View More'"></p><img x-show="!expanded" src="https://storage.googleapis.com/cms-storage-bucket/2a99e49f4eed28178739.svg"/><img x-show="expanded" src="https://storage.googleapis.com/cms-storage-bucket/a2721986ac7e7bf9fb2d.svg"/></button>
+                </div>
+
+                <div class="community-section">
+                  <h1>Reuniones de la comunidad</h1>
+                  <p>Continúe la emoción con su comunidad local incluso después del evento.</p>
+                  <section id="map" class="module">
+                    <div id="community-map" class="map container" x-data="CommunityMap($el)"></div>
+                  </section>
+                </div>
+
+                <div class="community-section">
+                  <h1>Principios de la Comunidad</h1>
+                  <p>Google se dedica a brindar una experiencia inclusiva y libre de acoso para todos, independientemente de su identidad y expresión de género, orientación sexual, discapacidades, neurodiversidad, apariencia física, tamaño corporal, origen étnico, nacionalidad, raza, edad, religión u otra categoría protegida. No toleramos el acoso de los participantes del evento de ninguna manera. Google se toma en serio las infracciones de nuestras políticas y responderá de manera adecuada.</p>
+                  <button @click="tab = 'community-guidelines'; window.location.hash = 'community-guidelines'">Ver pautas del evento</button>
+                </div>
+              </section>
+              
+              <section id="twitter" class="module">
+                <div class="text">
+                  <h3>Siga las últimas novedades sobre Flutter Forward</h3>
+                  <div class="social-icons">
+                    <a href="https://www.youtube.com/flutterdev" target="_blank" aria-label="Flutter YouTube">
+                      <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com/flutterdev" target="_blank" aria-label="Flutter Twittter">
+                      <i class="fab fa-x-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://github.com/flutter" target="_blank" aria-label="Flutter Github">
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="https://medium.com/flutter" target="_blank" aria-label="Flutter Medium">
+                      <i class="fab fa-medium fa-lg"></i>
+                    </a>
+                    <a href="https://www.meetup.com/pro/flutter/" target="_blank" aria-label="Flutter Meetup">
+                      <i class="fab fa-meetup fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="media twitter-embed">
+                  <a 
+                    class="twitter-timeline" 
+                    data-height="550"
+                    href="https://twitter.com/FlutterDev">
+                  </a> 
+                </div>
+              </section>
+            </div>
+
+            <div class="tab-content" :class="{ 'active': tab.includes('17-days-of-flutter')}" x-show="showTabs && tab.includes('17-days-of-flutter')">
+              <section id="seventeen-days-of-flutter" class="module">
+                <div class="features" x-data="Scroll">
+                  <div class="stacked-feature">
+                    <div class="explore">
+                      <div class="explore-content">
+                        <hgroup>
+                          <h4 class="eyebrow faqs">Explorar</h4>
+                          <h1>17 días de Flutter</h1>
+                        </hgroup>
+                        <p>
+                          <p data-block-key="il6uv">
+                            ¡Bienvenido a 17 Days of Flutter, un maratón de contenido de Flutter que presenta contenido nuevo todos los días desde el lunes 9 de enero hasta Flutter Forward, que se transmitirá en vivo desde Nairobi, Kenia, el 25 de enero de 2023!
+                          </p>
+                          <p data-block-key="6epup">
+                            Ingrese al contenido a continuación para descubrir laboratorios de código, publicaciones de blog, tutoriales en video y un próximo desafío de codificación que le enseñará cómo crear juegos en Flutter, aplicar las mejores prácticas de Flutter a su experiencia de usuario y más.
+                          </p>
+                          <p data-block-key="2au93">¿Aún tienes preguntas? ¡Consulte la 
+                            <a href="https://medium.com/flutter/join-us-for-17daysofflutter-924ede5063ca">publicación del blog </a> 
+                            o mire el <a href="https://www.youtube.com/watch?v=hpgkrUPRBjc">vídeo de introducción</a> 
+                            para obtener más información! Para inspirarte, ¡mira la<br/>
+                            <br/> 
+                            <a href="http://flutter.dev/events/doodle-dash-challenge">galería de la comunidad!</a></p></p>
+                        <a
+                          class="btn primary"
+                          href="#17-days-of-flutter"
+                          target="_self"
+                          @click="scrollToElement('17-days-of-flutter-' + currentDay)"
+                        >
+                        ¡Salta al día de hoy!
+                        </a>
+                      </div>
+                      <img
+                        src="https://storage.googleapis.com/cms-storage-bucket/e8769beac5da94531b93.png"
+                        alt="17 Days of Flutter"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="content-cards">
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Codelab) Build a game with Flutter and Flame', description: 'Learn how to build a platformer game with Flutter &amp; Flame! In the Doodle Dash game, inspired by Doodle Jump, you play as either Dash (the Flutter mascot), or her best friend Sparky (the Firebase mascot), and try to reach as high as possible by jumping on platforms.', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/doodle_dash_codelab_day1.width-532.png', dayNumber:'Day 1', linkText:'Start learning', linkUrl:'https://codelabs.developers.google.com/codelabs/flutter-flame-game'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/71c2ef8ad526ff21d506.png" alt="flutter-content-card-background" />
+                    <h3>(Laboratio) Crea un juego con Flutter y Flame</h3>
+                    <div class="day-badge">1</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Video) Package of the Week: Flame', description: 'Flame is a game engine built for Flutter. It comes with the building blocks that are needed for building games like a game loop, an object component system, collision detection, and a whole lot more!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/FWW140_thumbnail_day2.width-532.png', dayNumber:'Day 2', linkText:'Watch now', linkUrl:'https://www.youtube.com/watch?v=tEqVyJNOroI'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/acc682a6d31d3df3bed7.png" alt="flutter-content-card-background" />
+                    <h3>(Video) Paquete de la semana: Flame</h3>
+                    <div class="day-badge">2</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Video) Building Doodle Dash with Flutter &amp; Flame', description: 'You have completed the Codelab, now see how the game was made. Check out the first episode of Learning to Fly – Season 2, where Eric &amp; Khanh vlog their journey with building Doodle Dash from scratch with Flutter and Flame!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/FLF201_Thumb_day3.width-532.png', dayNumber:'Day 3', linkText:'Watch now', linkUrl:'https://www.youtube.com/watch?v=ILTx1Wa33Z0'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/8fbad2691330fdf84739.png" alt="flutter-content-card-background" />
+                    <h3>(Video) Contruyendo Doodle Dash con Flutter &amp; Flame</h3>
+                    <div class="day-badge">3</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Video) More Doodle Dash Improvements!', description: 'Follow along as Eric &amp; Khanh make Doodle Dash more fun to play by increasing the speed of play with varying difficulty levels, tweaking collision detection, adding overlays, and introducing new platforms!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/flf_s2e2_day4.width-532.jpg', dayNumber:'Day 4', linkText:'Watch now', linkUrl:'https://www.youtube.com/watch?v=qSrWikiptEE'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/89001a1f4420d3212452.png" alt="flutter-content-card-background" />
+                    <h3>(Video) ¡Más mejoras en Doodle Dash!</h3>
+                    <div class="day-badge">4</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Video) Adding platforms, enemies, and power ups', description: 'Doodle Dash is finally starting to come together. To polish things off, Eric &amp; Khanh are adding new custom Doodle Dash assets, platforms, enemies, and power ups!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/flf_s2e3_day5.width-532.jpg', dayNumber:'Day 5', linkText:'Watch now', linkUrl:'https://www.youtube.com/watch?v=hz9t8ODkDmM'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/1e063da3fff1996aab7f.png" alt="flutter-content-card-background" />
+                    <h3>(Video) Agregando plataformas, enemigos y potenciadores</h3>
+                    <div class="day-badge">5</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Challenge) Add Your Own Doodle Dash Power Up or Enemy!', description: 'Can you add your own power up or enemy to Doodle Dash? Share it with us on Twitter @FlutterDev with #DoodleDashChallenge or email us at 17-days-of-Flutter@google.com. We can\&#x27;t wait to see what you build!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/doodle_dash_challenge_day6.width-532.png', dayNumber:'Day 6', linkText:'Get building', linkUrl:'https://codelabs.developers.google.com/codelabs/flutter-flame-game'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/298a09a677e759220c80.png" alt="flutter-content-card-background" />
+                    <h3>(Desafío) ¡Agrega a tu Doodle Dash potenciador o enemigo!</h3>
+                    <div class="day-badge">6</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(DartPad) Play Pong Built with Flutter &amp; Flame', description: 'Wrapping up Flame week, did you know that Flame also works in DartPad? Check out this DartPad and play some Pong right in your browser without installing Flutter or Dart!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/pong_dartpad_day7.width-532.png', dayNumber:'Day 7', linkText:'Play now', linkUrl:'https://dartpad.dev/?id=21e84542c90af9d32fa0d37c141e8fec'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/2d50c96d7dc35d385abc.png" alt="flutter-content-card-background" />
+                    <h3>(DartPad) Juega Pong hecho con Flutter &amp; Flame</h3>
+                    <div class="day-badge">7</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Codelab) Using FFI in a Flutter plugin', description: 'Dart\&#x27;s FFI (foreign function interface) allows Flutter apps to make use of existing native libraries that expose a C API. In this codelab, you build a mobile and desktop plugin that uses a C library and write a simple example app that makes use of the plugin.', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/ffi_sample_app_day8.width-532.png', dayNumber:'Day 8', linkText:'Start building', linkUrl:'https://codelabs.developers.google.com/codelabs/flutter-ffigen'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/5a5d874c030cd692d1b3.png" alt="flutter-content-card-background" />
+                    <h3>(Laboratio) Usando FFI en un complemento de Flutter</h3>
+                    <div class="day-badge">8</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Livestream) The Boring Show - LIVE!', description: 'Craig and Khanh are hosting a Boring Show – LIVE– on the Flutter YouTube channel. What will they build? How many bad jokes will they tell? Tune in on Tuesday, January 17th at 10:30 am PST to find out!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/craig_khanh_boring_show_day9.width-532.jpg', dayNumber:'Day 9', linkText:'Tune in now', linkUrl:'https://youtu.be/JFm_89xDM_k'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/c0f0f82384bbc47b6792.png" alt="flutter-content-card-background" />
+                    <h3>(Transmisión en vivo) The Boring Show - En vivo!</h3>
+                    <div class="day-badge">9</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Blog) Material 3 for Flutter', description: 'Learn all about the new features in Material 3, how to integrate them into your Flutter app, and take a look at what’s coming next.', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/material3_day10.width-532.jpg', dayNumber:'Day 10', linkText:'Read now', linkUrl:'https://medium.com/flutter/material-3-for-flutter-d417a8a65564'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/b55e77ba5bdc1b888225.png" alt="flutter-content-card-background" />
+                    <h3>(Blog) Material 3 para Flutter</h3>
+                    <div class="day-badge">10</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Video) Dart Analyze &amp; Fix', description: 'Breaking changes from upgrading your Flutter version? Skip the tedious, manual code changes. Ask the analyzer find issues and then use dart fix to resolve them. Watch the video to learn how you can use Dart\&#x27;s analyzer and quick fixes to streamline code maintenance.', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/dartfix_day11.width-532.jpg', dayNumber:'Day 11', linkText:'Watch now', linkUrl:'https://www.youtube.com/watch?v=OBIuSrg_Quo'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/f37c149e4fc937c5333c.png" alt="flutter-content-card-background" />
+                    <h3>(Video) Dart Análisis &amp; Reparación</h3>
+                    <div class="day-badge">11</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Blog) Playful Typography with Flutter', description: 'Explore typography, variable font support, and shaders from the perspective of a hybrid designer–developer with Type Jam, a typography-themed puzzle app. Inspired by the 2022 Flutter Puzzle Hack competition!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/typography_day12.width-532.png', dayNumber:'Day 12', linkText:'Read now', linkUrl:'https://medium.com/flutter/playful-typography-with-flutter-f030385058b4'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/f4bef18315f732f3881c.png" alt="flutter-content-card-background" />
+                    <h3>(Blog) Tipografía divertida con Flutter</h3>
+                    <div class="day-badge">12</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Download) New Sprites for Doodle Dash', description: 'We loved the assets that our design team came up with for Doodle Dash, so we asked if they could create a few more for us to share with you. The download includes the original Doodle Dash assets along with some all new ones. Add them to your Doodle Dash game or create a brand new game!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/game_assets_day13.width-532.png', dayNumber:'Day 13', linkText:'Download Now', linkUrl:'https://drive.google.com/drive/folders/1YWscYzD6BkieZr1CW1yRXAjV4tVqfRBx?usp=sharing'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/4344c39ae42c667526db.png" alt="flutter-content-card-background" />
+                    <h3>(Descargar) Nuevos Sprites para Doodle Dash</h3>
+                    <div class="day-badge">13</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Challenge) Last Day to submit', description: 'If you have added your own power up or enemy to Doodle Dash, today\&#x27;s your last day to submit it! Share it with us on Twitter @FlutterDev with #DoodleDashChallenge or email us at 17-days-of-Flutter@google.com. We\&#x27;ll be sharing the submissions tomorrow. *hint*', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/doodle_dash_challenge_last_call_day14.width-532.png', dayNumber:'Day 14', linkText:'Finish building', linkUrl:'https://codelabs.developers.google.com/codelabs/flutter-flame-game'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/00bef8f3cd319400316e.png" alt="flutter-content-card-background" />
+                    <h3>(Desafio) Último día para enviar</h3>
+                    <div class="day-badge">14</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Gallery) Doodle Dash Challenge', description: 'We loved to see all of the creative power up and enemy #DoodleDashChallenge submissions, so we didn\&#x27;t want to keep them all to ourselves. Take a look at some of the awesome #DoodleDashChallenge submissions that we received from all around the Flutter community!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/challenge_submissions.width-532.png', dayNumber:'Day 15', linkText:'Take a look', linkUrl:'http://flutter.dev/events/doodle-dash-challenge'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/0d4662bdeff80320693e.png" alt="flutter-content-card-background" />
+                    <h3>(Galeria) Desafio Doodle Dash</h3>
+                    <div class="day-badge">15</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'(Download) 17 Days of Dash Wallpapers', description: 'Just one more day until Flutter Forward! To get you ready for tomorrow, download our 17 Days of Flutter wallpaper pack, set one as your background, and tweet us your Flutter Forward watching setup @FlutterDev!', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/17_days_of_flutter_day_16.width-532.png', dayNumber:'Day 16', linkText:'Download now', linkUrl:'https://drive.google.com/drive/folders/1Mp1J0cjSC9bd-dotcAJ9Jr4ogwdaaLO0?usp=sharing'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/ec88dad0dd660ccb9625.png" alt="flutter-content-card-background" />
+                    <h3>(Descargar) Fondos de pantalla de 17 días de Dash</h3>
+                    <div class="day-badge">16</div>
+                </div>
+            
+        
+    
+ 
+                    
+                      
+
+
+
+
+    
+        
+            
+                <div @click="setModalInfo({title:'Flutter Forward', description: 'Thank you for following along with 17 Days of Flutter! We hope you had as much of blast following along with all the Flutter content as we did creating it. Now, it\&#x27;s Flutter Forward time! Join us at 6:30 AM PST (5:30 PM EAT) to see where we\&#x27;re planning to take Flutter over the coming years.', imageUrl:'https://storage.googleapis.com/cms-storage-bucket/images/Full_Hero.width-532.png', dayNumber:'Day 17', linkText:'Watch now', linkUrl:'https://flutter.dev/events/flutter-forward'}); openModal()">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/34d8b93d7abc77ec7734.png" alt="flutter-content-card-background" />
+                    <h3>Flutter Forward</h3>
+                    <div class="day-badge">17</div>
+                </div>
+            
+        
+    
+ 
+                    
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div id="workshop-details" class="module" x-show="tab == 'workshop-details'">
+          <div class="container">
+            <div class="workshop-details-nav">
+              <a class="btn quiet" @click="tab = 'schedule'; window.location.hash = 'schedule'"><i class="fas fa-arrow-left fa-sm"></i>Volver a la agenda</a>
+            </div>
+            <div class="workshop-details-body">
+              <div class="text-block">
+                <h2>Crear widgets de pantalla de inicio y de bloqueo para tu aplicación Flutter</h2>
+                <p>En este taller, recorreremos los pasos necesarios para agregar widgets de pantalla de inicio y widgets de pantalla de bloqueo a su aplicación Flutter en iOS y Android.</p>
+                <br />
+                <b>Antes de llegar</b>
+                <br />
+                <p>
+                  Este taller recorrerá el desarrollo nativo de Android e iOS. Además de tener instalado el SDK de Flutter y 
+                  un entorno de desarrollo, necesitarás cierto software para seguir cada parte. Para seguir la parte de Android, 
+                  solo necesitarás <a href="https://developer.android.com/studio">Android Studio</a> . 
+                  Para seguir la parte de iOS, necesitará una computadora MacOS con <a href="https://developer.apple.com/xcode/">Xcode</a> 
+                  instalado y una <a href="https://developer.apple.com/programs/">cuenta de desarrollador de Apple</a> . 
+                  Puede encontrar más información en el archivo README de este 
+                  repositorio de <a href="https://github.com/leighajarett/homescreen_widgets_example/blob/main/README.md">GitHub</a> .
+                </p>
+              </div>
+              <div class="text-block">
+                <h2>Práctica con autenticación multifactor y consultas de recuento de Firestore</h2>
+                <p>Obtén las últimas funciones de Firebase para tu aplicación Flutter. Comenzaremos con una aplicación básica y luego agregaremos autenticación telefónica multifactor para garantizar un inicio de sesión más seguro. Luego usaremos el nuevo operador COUNT() en Firestore para incluir recuentos en la aplicación en solo una fracción del costo y complejidad.</p>
+                <br />
+                <b>Antes de llegar</b>
+                <br />
+                <p>
+                  Para poder seguir este taller, necesitará configurar un entorno de desarrollo de Flutter y Firebase. 
+                  Puedes seguir las instrucciones de configuración en el 
+                  <a href="https://firebase.google.com/codelabs/firebase-get-to-know-flutter?hl=es-419#0">laboratorio Conozca Firebase para Flutter</a> . 
+                  Es importante que complete los pasos del uno al cuatro del laboratorio para configurar su entorno. Si no 
+                  tiene experiencia en Firebase, le recomendamos que complete todo el laboratorio de código antes del taller.
+                </p>
+              </div>
+              <div class="text-block">
+                <h2>Cómo construir el estudio Basil Material 3</h2>
+                <p>Aprenda a utilizar funciones temáticas avanzadas y el sistema de color Material hct con el estudio de Basil Material 3. La aplicación Basil también muestra cómo crear pantallas ambientales e inteligentes.</p>
+                <br />
+                <b>Antes de llegar</b>
+                <br />
+                <p>Este taller incluye pasos del proceso de diseño, que ayudarán a los desarrolladores a aprender cómo convertir el diseño en código. Para seguir la parte del proceso de diseño del taller, debe instalar Figma o planear usar el Cliente web para Figma. (Si planeas usar el cliente web, debes probar Figma de antemano, ya que es menos confiable que el cliente de escritorio si la conexión a Internet no es lo suficientemente rápida). Aparte de Figma, este taller solo utilizará el entorno de desarrollo estándar Flutter.</p>            
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="guidelines" class="module" x-show="tab == 'community-guidelines'">
+          <div class="container">
+            <div class="guidelines-nav">
+              <a class="btn quiet" @click="tab = 'community'; window.location.hash = 'community'"><i class="fas fa-arrow-left fa-sm"></i>Back to community</a>
+            </div>
+            <div class="guidelines-header">
+              <hgroup>
+                <h4 class="eyebrow">Comunidad</h4>
+                <h1>Principios de la Comunidad</h1>
+              </hgroup>
+              <img
+                src="https://storage.googleapis.com/cms-storage-bucket/13b2017cb2ef1c0a4909.png"
+                alt="Community Guidelines"
+              />
+            </div>
+            <div class="guidelines-body">
+              <div class="text-block">
+                <h2>Pautas de la comunidad de Google y política contra el acoso para eventos virtuales y en persona</h2>
+                <p> Google se dedica a brindar una experiencia de evento inclusiva y libre de acoso para todos, independientemente de su identidad y expresión de género, orientación sexual, discapacidades, neurodiversidad, apariencia física, tamaño corporal, origen étnico, nacionalidad, raza, edad, religión u otra categoría protegida. No toleramos el acoso de los participantes del evento de ninguna forma. Google se toma en serio las infracciones de nuestra política y responderá de forma adecuada.</p>
+                <br />
+                <p>Todos los participantes de eventos de Google, incluidos los asistentes presenciales y en línea, el personal del evento, los oradores y los empleados de Google, deben cumplir con la siguiente política:</p>
+              </div>
+              <div class="text-block">
+                <h2>Sean respetuosos unos con otros.</h2>
+                <p>
+                  Trata a todos con respeto. Participe reconociendo que todos merecen estar aquí y que cada uno de nosotros tiene derecho a disfrutar de nuestra experiencia sin temor al acoso, la discriminación o la condescendencia, ya sea descarada o mediante microagresiones. Todas las formas de comunicación no deben degradar a los demás. Considere lo que está diciendo y cómo se sentiría si se lo dijeran a usted o sobre usted.
+                </p>
+              </div>
+              <div class="text-block">
+                <h2>Habla si ves o escuchas algo.</h2>
+                <p>
+                  No se tolera el acoso y usted está autorizado a participar cortésmente cuando a usted o a otros se les falte el respeto. Es posible que la persona que te hace sentir incómodo no sea consciente de lo que está haciendo, por lo que se recomienda informarle cortésmente sobre su comportamiento.
+                </p>
+              </div>
+              <div class="text-block columns">
+                <ul class="five-rows">
+                  <li>Acechar/seguir</li>
+                  <li>Intimidación deliberada</li>
+                  <li>Acosar fotografías o grabaciones</li>
+                  <li>nterrupción sostenida de conversaciones u otros eventos</li>
+                  <li>Lenguaje verbal ofensivo</li>
+                  <li>Lenguaje verbal que refuerza las estructuras sociales de dominación.</li>
+                  <li>Imágenes y lenguaje sexual en espacios públicos.</li>
+                  <li>Contacto físico inadecuado</li>
+                  <li>Atención sexual o física no deseada</li>
+                  <li>Amenazas físicas o cibernéticas</li>
+                </ul>
+              </div>
+              <div class="text-block columns">
+                <h2>En relación, pero no limitado a:</h2>
+                <ul class="eight-rows">
+                  <li>Neurodiversidad</li>
+                  <li>Raza</li>
+                  <li>Color</li>
+                  <li>Nacionalidad</li>
+                  <li>Identidad de género</li>
+                  <li>Expresión de género</li>
+                  <li>Orientación sexual</li>
+                  <li>Edad</li>
+                  <li>Tamaño corporal</li>
+                  <li>Discapacidades</li>
+                  <li>Apariencia</li>
+                  <li>Religión</li>
+                  <li>Embarazo</li>
+                  <li>Situación militar</li>
+                  <li>Demografía social</li>
+                </ul>
+              </div>
+              <div class="text-block">
+                <p>Se espera que los participantes a los que se les pide que pongan fin a cualquier comportamiento de acoso cumplan de inmediato. Nuestra política de tolerancia cero significa que investigaremos y revisaremos cada acusación de violación de nuestras Pautas de la comunidad de eventos y nuestra Política contra el acoso y responderemos de manera adecuada. Para denunciar cualquier comportamiento que le haga sentir incómodo a usted o a otras personas, envíenos una nota a <a href = "mailto: flutter-engage-community@google.com">flutter-engage-community@google.com</a>.</p>
+                <br />
+                <p>Esta política se extiende a charlas, foros, talleres, codelabs, redes sociales, todos los asistentes, socios, patrocinadores, voluntarios, personal, etc. Ya entiendes nuestra idea. Google se reserva el derecho de rechazar la admisión o eliminar a cualquier persona de cualquier evento organizado por Google (incluidos eventos futuros de Google) en cualquier momento y a su exclusivo criterio. Esto incluye, entre otros, asistentes que se comporten de manera desordenada o que no cumplan con esta política y los términos y condiciones del presente. Si un participante se comporta acosando o incomodando, los organizadores de la conferencia pueden tomar cualquier acción que consideren apropiada, incluyendo advertir o expulsar al infractor de la conferencia sin reembolso o bloquear la cuenta del infractor para que no pueda participar en línea.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </section>
+
+    </main>
+    
+    
+
+    <footer>
+      <div class="content footer-main">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+              width="154"
+              alt="Flutter"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Acerca de Flutter</li>
+            <li>
+              <a href="https://docs.flutter.dev/jobs" target="_blank">Carreras</a>
+            </li>
+            <li><a href="https://medium.com/flutter" target="_blank">Noticias</a></li>
+            <li><a href="/brand">Marca</a></li>
+            <li><a href="/culture">Cultura</a></li>
+          </ul>
+          <ul>
+            <li>Aprenda Flutter</li>
+            <li><a href="/learn" target="_blank">Viaje de aprendizaje</a></li>
+            <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Laboratorios de código</a></li>
+            <li>
+              <a href="https://flutter.github.io/samples" target="_blank"
+                >Ejemplos</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+          </ul>
+          <ul>
+            <li>Multiplataforma</li>
+            <li><a href="/multi-platform/mobile">Móvil</a></li>
+            <li><a href="/multi-platform/web">Web</a></li>
+            <li><a href="/multi-platform/desktop">Escritorio</a></li>
+            <li><a href="/multi-platform/embedded">Embebido</a></li>
+            <li><a href="/multi-platform/ios">iOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content footer-social">
+        <div>
+          <a
+            href="https://www.youtube.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter YouTube"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://twitter.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter Twittter"
+          >
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/flutter"
+            target="_blank"
+            aria-label="Flutter Github"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://medium.com/flutter"
+            target="_blank"
+            aria-label="Flutter Medium"
+          >
+            <i class="fab fa-medium fa-lg"></i>
+          </a>
+          <a
+            href="https://www.meetup.com/pro/flutter/"
+            target="_blank"
+            aria-label="Flutter Meetup"
+          >
+            <i class="fab fa-meetup fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/flutterdevofficial/"
+            target="_blank"
+            aria-label="Flutter LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content footer-tray">
+        <div>
+          Salvo que se indique lo contrario, este trabajo tiene la licencia Creative Commons 
+          Attribution 4.0 International y los ejemplos de código tienen la licencia BSD.
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://docs.flutter.dev/tos">Terminos</a></li>
+            <li>
+              <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+                >Privacidad</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/security">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+        <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+      <div class="container">
+        <p>Google utiliza cookies para ofrecer sus servicios, personalizar anuncios y analizar el tráfico. Puedes
+          ajustar tus controles de privacidad en cualquier momento en tu 
+          <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">configuración de Google</a>. 
+          <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Aprende más</a>.
+        </p>
+        <button @click.prevent="consent" class="solid">Aceptar</button>
+      </div>
+    </section>
+    
+        <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+        <div class="container">
+          <p>AVISO: Flutter espera que este directorio sea útil para los clientes que buscan consultores con experiencia en Flutter; sin embargo, Flutter no representa ni garantiza a usted ni a ninguna otra persona que los consultores enumerados sean socios de Flutter o de Google, y Flutter no representa ni garantiza sus calificaciones ni la calidad de los servicios que puede recibir. Su relación es estrictamente entre usted y los consultores.</p>
+          <button @click.prevent="dismiss" class="solid">Aceptar</button>
+        </div>
+      </section>
+  
+
+    
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPD0orCPohiaPjNVAiKjeZs-B0eSHc6hw&callback=initMap"></script>
+  <script>
+    const __MAPS_DATA_URL__ = 'https://storage.googleapis.com/cms-storage-bucket/7f021acfccda5880ca9d1db011d4ee5b.json';
+    const __CUSTOM_MAP_MARKER__ = 'https://storage.googleapis.com/cms-storage-bucket/6dc97420be3c1b91c374.svg';
+  </script>
+
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>

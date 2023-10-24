@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png" />
+
+    <title>
+      
+        
+          
+        
+      
+      
+       Términos de servicio para el directorio de consultores de Flutter
+      
+    </title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="description" content=""/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content=" Términos de servicio para el directorio de consultores de Flutter">
+    <meta property="og:url" content="//flutter.dev/consultants/flutter-consultants-terms-of-service/">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png">
+
+    
+      <meta name="google-site-verification" content="HFqxhSbf9YA_0rBglNLzDiWnrHiK_w4cqDh2YD2GEY4" />
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-ND4LWWZ');
+      </script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67589403-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    
+      <link href="https://storage.googleapis.com/cms-storage-bucket/main.8ce461e717a9e7ed7502.css" rel="stylesheet" media="all">
+        
+
+    
+
+    <script async defer src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" 
+            data-auto-replace-svg="nest"></script>
+  </head>
+  <body 
+    class="interior partner"
+    x-data="ScrollSpy"
+    x-on:scroll.window="onScroll"
+    x-bind:class="{ 'in-content': $store.spy.inContent }">
+    
+    
+    
+    
+
+<header
+  role="banner"
+  x-data="Header()"
+  x-bind:class="{
+    'hide': !navOpen && $store.spy.inHomeHero,
+    'mobile': isMobile, 
+    'mobile-nav-open': navOpen, 
+    'searching': searchActive,
+  }"
+  x-on:resize.window.debounce.200="onResize"
+>
+  <div class="content">
+    <div>
+      <div class="logo logo-white">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/ec64036b4eacc9f3fd73.svg" alt="Flutter" />
+        </a>
+      </div>
+      <div class="logo logo-normal">
+        <a href="/">
+          <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter" />
+        </a>
+      </div>
+    </div>
+    <div class="tray">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a
+              href="/multi-platform"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Multiplataforma <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/multi-platform">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/mobile">Móvil</a>
+                  <ul>
+                    <li>
+                      <a class="btn subMenu" href="/multi-platform/ios">Flutter en iOS</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="btn" href="/multi-platform/web">Web</a></li>
+                <li>
+                  <a class="btn" href="/multi-platform/desktop">Escritorio</a>
+                </li>
+                <li>
+                  <a class="btn" href="/multi-platform/embedded">Embebido</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/development"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Desarrollo <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/development">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/learn">Aprender</a></li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/packages-and-plugins/favorites"
+                    target="_blank"
+                    >Favoritos de Flutter </a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://pub.dev" target="_blank"
+                    >Paquetes</a
+                  >
+                </li>
+                <li><a class="btn" href="/monetization">Monetización</a></li>
+                <li><a class="btn" href="/games">Juegos</a></li>
+                <li><a class="btn" href="/news">Noticias</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="/ecosystem"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Ecosistema <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="/ecosystem">Descripción general</a>
+                </li>
+                <li><a class="btn" href="/community">Comunidad</a></li>
+                <li><a class="btn" href="/events">Eventos</a></li>
+                <li><a class="btn" href="/culture">Cultura</a></li>
+                <li><a class="btn" href="/consultants">Consultores</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/showcase" class="btn top-level"> Galería </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.flutter.dev"
+              class="btn top-level"
+              @click="handleMobileClick($event)"
+            >
+              Docs <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dd-connector"></div>
+            <div class="dd dd-double">
+              <ul>
+                <li class="mobile-only">
+                  <a class="btn" href="https://docs.flutter.dev">Descripción general</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/whats-new">Que hay de nuevo</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/editor"
+                    >Soporte de edición</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/hot-reload"
+                    >Hot reload</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/perf/ui-performance"
+                    >Perfilado</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/get-started/install"
+                    >Instalar Flutter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="btn"
+                    href="https://docs.flutter.dev/development/tools/devtools/overview"
+                    >Herramientas de desarrollo</a
+                  >
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/cookbook">Cookbook</a>
+                </li>
+                <li>
+                  <a class="btn" href="https://docs.flutter.dev/reference/tutorials"
+                    >Tutoriales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    
+      <div
+        class="icon-btn search"
+        x-bind:class="{ 'active': searchActive || navOpen }"
+      >
+        <i class="fas fa-search search-icon" @click="toggleSearch($event)"> </i>
+        <form action="https://docs.flutter.dev/search">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+            name="q"
+            id="q"
+            autocomplete="off"
+          />
+        </form>
+        <i
+          class="fas fa-times"
+          @click="toggleSearch($event)"
+          x-show="searchActive"
+        >
+        </i>
+      </div>
+    
+      <a
+        href="https://docs.flutter.dev/get-started/install"
+        id="get-started__header"
+        class="btn"
+        >Empezar</a
+      >
+
+      <div
+        class="icon-btn hamburger"
+        x-show="!navOpen"
+        @click="toggleMobileNav"
+      >
+        <i class="fas fa-bars fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="icon-btn close" x-show="navOpen" @click="toggleMobileNav">
+        <i class="fas fa-times fa-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main>
+      
+  <section class="hero">
+    <div class="hero-content">
+      <h2>
+        Términos <br />
+        de servicio para <br />
+        directorio de consultores <br />
+        de Flutter
+      </h2>
+      <p>Última modificación: 13 de julio de 2023</p>
+    </div>
+  </section>
+
+      
+  <section class="content-container" >
+    <div class="text-container terms-of-service-text-container">
+      <h3>Términos de servicio</h3>
+        <p class="paragraph">
+          Gracias por usar Flutter y solicitar ser incluido en el directorio en línea de Flutter de consultores o proveedores de servicios de Flutter que los clientes pueden optar por contratar para ayudar a desarrollar sus aplicaciones de Flutter. Al solicitar aparecer en el sitio web de Flutter como consultor o proveedor de servicios, acepta estos términos. Estos términos NO niegan, modifican ni alteran los términos de servicios aplicables a usted como usuario de Flutter o de otro modo aplicables a sus credenciales o cuenta de Flutter, excepto en la medida en que sean directamente contradictorios con su listado de directorio en el sitio web de Flutter bajo estos términos. Todos los demás términos son totalmente aplicables, incluidos, entre otros, confidencialidad, propiedad intelectual, responsabilidad, indemnización y otras disposiciones.
+        </p>
+        <p class="paragraph"> 
+          <strong>PILOTO Y ENMIENDAS A ESTOS TÉRMINOS:</strong> Tenga en cuenta que el programa del directorio de consultores de Flutter es un programa piloto; Podemos optar por probar, modificar, ampliar o eliminar este programa a nuestro exclusivo criterio y sin previo aviso. Además, podemos y probablemente modificaremos estos términos de vez en cuando a medida que obtengamos aprendizajes del programa piloto y hagamos crecer el programa durante y después de cualquier crecimiento adicional o lanzamiento no piloto del programa.
+        </p>
+        <strong>
+        <p class="paragraph"> 
+          1. Participación.(a) No Garantizado. Gracias por aplicar; Nos tomamos su solicitud muy en serio, pero no podemos prometerle que será aceptado para su inclusión como consultor. Google puede, a su entera y exclusiva discreción, por cualquier motivo o sin él, optar por incluir o no a cualquier proveedor de servicios como consultor incluido en el sitio web de Flutter. Si está incluido, Flutter creará una lista de directorio que identificará a todos los consultores de manera similar, utilizando enlaces, miniaturas u otros identificadores sustancialmente del mismo tamaño o estilo, sujeto al arte del consultor y consideraciones similares.
+        </p>
+        <p class="paragraph"> 
+          (b) Sin compensación. No le proporcionaremos ninguna compensación por o relacionada con su participación en el programa del directorio de consultores.
+        </p>
+        <p class="paragraph"> 
+          (c) Suspensión. Podemos suspender el programa o su participación en cualquier momento.
+        </p>
+        <p class="paragraph"> 
+          (d) Relación con sus clientes. Flutter espera que, al incluirlo a usted o a su empresa en el directorio de consultores del sitio web de Flutter, los clientes interesados ​​en aplicaciones creadas con Flutter buscarán sus servicios para hacerlo; sin embargo, al incluirlo en nuestro sitio, Flutter no garantiza a los clientes potenciales, a usted ni a ninguna otra persona, que usted es un socio de Google/Flutter, que está calificado para prestar sus servicios o que los clientes lo encontrarán o deberían encontrarlo a través de nuestro sitio. sitio. No somos parte ni somos responsables de su relación con dichos clientes potenciales, y usted será el único y total responsable de formar y mantener dichas relaciones y de su conducta y derechos relacionados con dichas relaciones.
+        </p>
+        <p class="paragraph"> 
+          (e) Cumplimiento de Leyes y Documentación.
+        </p>
+        <p class="paragraph"> 
+          (i) Cumplirá con todas las leyes aplicables en su participación en el programa y en su uso de Flutter y otros productos y servicios de Google, incluidas las leyes, políticas y regulaciones relacionadas con la recopilación, el uso y el intercambio de información sobre sus usuarios.
+        </p>
+        <p class="paragraph"> 
+          (ii) Seguirá todas las instrucciones y cumplirá con todas las restricciones contenidas en cualquier documentación del programa aplicable al programa que ponemos a su disposición ("Documentación"). Toda la documentación se incorpora mediante esta referencia a estos términos. Como se describe en la Documentación y a nuestro exclusivo criterio, Usted no utilizará Productos y Servicios de Google específicos en relación con ninguna aplicación que recopile información confidencial (ya sea directa, indirecta o inferida).
+        </p>
+        <p class="paragraph"> 
+          (f) Cumplimiento de Exportaciones. Al realizar sus servicios relacionados con nosotros, el programa o nuestros productos y servicios, cumplirá con todas las leyes y regulaciones de control de exportaciones y reexportaciones aplicables, incluidas (a) las Regulaciones de Administración de Exportaciones ("EAR") mantenidas por los EE. UU. Departamento de Comercio, (b) las sanciones comerciales y económicas mantenidas por la Oficina de Control de Activos Extranjeros del Departamento del Tesoro de los Estados Unidos, y (c) el Reglamento sobre Tráfico Internacional de Armas ("ITAR") mantenido por el Departamento de Estado de los Estados Unidos.
+        </p>
+        <p class="paragraph"> 
+          2. Derechos de Propiedad Intelectual.
+          <br />
+          (a) Flutter y el programa de directorio de consultores.
+        </p>
+        <p class="paragraph"> 
+          (i) Licencia. Usted nos otorga el derecho totalmente pagado y libre de regalías de utilizar su logotipo, nombres comerciales, marcas registradas y otras obras de arte o propiedad intelectual que proporcione en asociación con el programa del directorio de consultores, con el fin de incluirlo a usted o a su empresa en el Sitio web de Flutter como proveedor de servicios dispuesto a brindar servicios a terceros utilizando Flutter. Reconocemos que usted posee los derechos de toda dicha propiedad intelectual y simplemente nos proporciona una licencia a través de estos términos.
+        </p>
+        <p class="paragraph"> 
+          (ii) Nuestra propiedad. Excepto lo reconocido en la sección (i) anterior, entre usted y nosotros, poseemos y conservamos todos los derechos, títulos e intereses en Flutter, el sitio web de Flutter, el programa y cualquier otro arte o elemento que pueda existir en el mismo o estar relacionado con o apoye el programa y su listado en el sitio web. Nada en este acuerdo cambia las disposiciones de propiedad de propiedad intelectual con respecto a nuestra propiedad intelectual contenidas en los términos aplicables a su uso de Flutter.
+        </p>
+        <p class="paragraph"> 
+          (b) Retroalimentación. Es posible que le pidamos que proporcione comentarios sobre Flutter, Google y/o el programa del directorio de consultores ("Comentarios"). No está obligado a proporcionar comentarios, pero si lo hace, los comentarios deben (i) ser veraces; (ii) se originan únicamente en usted; y (iii) no contener información confidencial de ningún tercero. Podemos utilizar Comentarios sin obligación para con usted. Por la presente, usted nos cede irrevocablemente todos los derechos, títulos e intereses sobre esos Comentarios o, si eso no es posible, nos otorga una licencia perpetua, irrevocable, exclusiva, mundial, sublicenciable, libre de regalías y totalmente pagada para Utilice sus comentarios.
+        </p>
+        <p class="paragraph"> 
+          3. Uso de la información de la aplicación. Usted nos otorga el derecho de utilizar toda la información que proporciona en su solicitud con el fin de operar el programa del directorio de consultores, Flutter y operaciones relacionadas, pero siempre sujeto a las disposiciones de confidencialidad de los términos de uso aplicables a su uso de Flutter.
+        </p>
+        <p class="paragraph"> 
+          4. información personal.
+        </p>
+        <p class="paragraph"> 
+          (a) Autorización para Usar y Compartir. Podemos usar y compartir la información personal que usted proporciona para operar el programa del directorio de consultores y el sitio Flutter, y ejercer nuestros derechos, sujeto a la Política de Privacidad vigente en ese momento en <a target="_blank" href="https://www.google.com/privacy.html">http://www.google.com/privacy.html </a> (o cualquier otra URL que podamos proporcionar). Por ejemplo, podemos proporcionar su información a clientes potenciales que estén interesados ​​en saber más sobre usted en relación con el programa del directorio de consultores. También podemos utilizar la información de su envío para determinar en qué otros pilotos podemos invitarlo a participar, o productos y servicios que podríamos invitarle a probar. "Cuenta de Google" significa Su cuenta de Google (ya sea la dirección de gmail.com o una dirección de correo electrónico proporcionada bajo la línea de productos "Google Apps"), que está sujeta a los términos de servicio aplicables.
+        </p>
+        <p class="paragraph"> 
+          (b) Nuestras Responsabilidades como Controlador de Datos o Procesador de Datos. Usted reconoce y acepta que podemos ser un controlador o procesador de datos con respecto a cualquier dato personal sobre usted que nos proporcione bajo estos términos ("Sus datos"), y que somos un procesador de datos con respecto a cualquier dato personal. sobre sus usuarios finales, empleados o agentes ("Datos de usuario final") que nos proporciona en virtud de este Acuerdo. NOTA: es su obligación evitar proporcionarnos Datos de usuario final, que no sean información de contacto comercial de su empleado o agente que pueda comunicarse con nosotros con respecto al programa del directorio de consultores; sin embargo, estos términos se establecen aquí para cubrir esta información de contacto comercial, así como cualquier dato de usuario final que pueda proporcionar para su uso en contravención de este subpárrafo.
+        </p>
+        <p class="paragraph"> 
+          (i) La recopilación de Sus datos en virtud de este Acuerdo está sujeta a los términos de la Política de privacidad de Google (que puede modificarse periódicamente) disponible en <a target="_blank" href="https://www.google.com/policies/privacy">www.google.com/policies/privacy</a>.
+        </p>
+        <p class="paragraph"> 
+          (ii) Nos ayudará a obtener el consentimiento de los interesados ​​para el procesamiento de los Datos del usuario final de manera oportuna antes de recopilar y proporcionarnos los Datos del usuario final.
+        </p>
+        <p class="paragraph"> 
+          (c) Sus responsabilidades como responsable del tratamiento de datos. En la medida en que también acceda, utilice, almacene o procese de otro modo sus datos o los datos del usuario final para sus propios fines, también será un controlador de datos con respecto a sus datos o los datos del usuario final. Mantendrá una política de privacidad que cumpla con las leyes aplicables y que no proteja menos sus datos y los datos del usuario final que la Política de privacidad de Google. Obtendrá los consentimientos necesarios de los interesados ​​para permitirnos a usted y a nosotros compartir sus datos y los datos del usuario final, y para su procesamiento de sus datos y los datos del usuario final, a los efectos de estos términos.
+        </p>
+        <p class="paragraph"> 
+          (d) Transferencia, Procesamiento y Almacenamiento de Datos. Como parte de la prestación de nuestros productos y servicios, podemos almacenar, procesar y entregar Datos de usuario final proporcionados a Google y YourData en los Estados Unidos o en cualquier otro país en el que Google o sus agentes tengan instalaciones. Al utilizar los productos y servicios de Google, usted acepta esta transferencia, procesamiento y almacenamiento.
+        </p>
+        <p class="paragraph"> 
+          (e) Devolución, Eliminación o Modificación de Datos. No tenemos ninguna obligación de devolverle sus datos, aunque cumpliremos con las solicitudes de los interesados ​​para eliminar o modificar los datos del usuario final que nos proporcionen.
+        </p>
+        <p class="paragraph"> 
+          (f) Eliminación y copia de seguridad de datos. Podemos eliminar sus datos de sus sistemas en cualquier momento. Usted es el único responsable de realizar una copia de seguridad de sus datos y de los datos del usuario final. No asumiremos ningún riesgo de pérdida de Sus datos o de Su acceso a los Datos del usuario final.
+        </p>
+        <p class="paragraph"> 
+          (g) Análisis de uso. Google tendrá acceso a sus análisis de uso. Usted es el único responsable de determinar el alcance de su notificación a los interesados.
+        </p>
+        <p class="paragraph"> 
+          5. Plazo. Estos términos lo vinculan y son efectivos como un acuerdo, efectivo cuando hace clic en el botón "Acepto" o envía el formulario de solicitud que hace referencia a estos términos. Cualquiera de las partes puede rescindir este acuerdo con efecto inmediato mediante notificación por escrito. Todas las disposiciones que, según sus términos o implícitamente, deberían sobrevivir, sobrevivirán. Podemos rescindir el acuerdo formado por estos términos sin previo aviso por escrito eliminándolo del programa del directorio de consultores, lo que se considerará terminación permanente de este acuerdo, pero que se restablecerá automáticamente si usted solicita y nosotros le otorgamos el restablecimiento del programa.
+        </p>
+        <p class="paragraph"> 
+          6. Descargo de responsabilidad de garantía. EN LA MEDIDA EN QUE LO PERMITA LA LEY, FLUTTER Y GOOGLE PROPORCIONAN TODOS LOS PRODUCTOS Y SERVICIOS APLICABLES Y OTROS ARTÍCULOS RELACIONADOS CON ESTE ACUERDO "TAL CUAL", SIN NINGUNA DECLARACIÓN NI GARANTÍA DE NINGÚN TIPO. EN LA MEDIDA EN QUE LO PERMITA LA LEY, FLUTTER, GOOGLE Y SUS PROVEEDORES RECHAZAN TODAS LAS DECLARACIONES, GARANTÍAS, CONDICIONES Y GARANTÍAS EXPRESAS O IMPLÍCITAS, INCLUYENDO CUALQUIER GARANTÍA IMPLÍCITA DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.
+        </p>
+        <p class="paragraph"> 
+          7. Indemnización. Defenderá, indemnizará y eximirá de responsabilidad a Flutter Google y sus afiliados, directores, funcionarios y empleados contra todas las responsabilidades, daños, pérdidas, costos, honorarios (incluidos honorarios legales) y gastos relacionados con cualquier alegación o procedimiento legal de terceros para en la medida que surja de:
+          <br />
+          (a) su conducta bajo o en conexión con este acuerdo;
+          <br />
+          (b) su relación con sus clientes, ya sea obtenida a través del programa del directorio de consultores o de otro modo;
+          <br />
+          (c) su incumplimiento de este Acuerdo; o
+          <br />
+          (d) alegar que el uso, posesión o venta del software que usted desarrolla o sus productos, servicios, contenido o características de marca viola o infringe los derechos de terceros, incluidos los derechos de propiedad intelectual.
+        </p>
+        <p class="paragraph"> 
+          8. Limitación de Responsabilidad.
+        </p>
+        <p class="paragraph"> 
+          (a) Responsabilidad. EN ESTA SECCIÓN 8, "RESPONSABILIDAD" SIGNIFICA CUALQUIER RESPONSABILIDAD, YA SEA BAJO CONTRATO, AGRAVIO O DE OTRA MANERA, INCLUYENDO POR NEGLIGENCIA.
+        </p>
+        <p class="paragraph"> 
+          (b) Limitaciones. SUJETO A LA SECCIÓN 8 (c) (EXCEPCIONES A LAS LIMITACIONES):
+        </p>
+        <p class="paragraph"> 
+          (i) NINGUNA PARTE TENDRÁ NINGUNA RESPONSABILIDAD DERIVADA DE O RELACIONADA CON ESTE ACUERDO POR:
+          <br />
+          (A) PÉRDIDA DE CUALQUIER DATO O COMUNICACIÓN;
+          <br />
+          (B) PÉRDIDA DE BENEFICIOS (YA SEA DIRECTA O INDIRECTA);
+          <br />
+          (C) PÉRDIDAS INDIRECTAS, ESPECIALES, INCIDENTALES O CONSECUENCIALES (SEAN O NO PREVISIBLES O CONTEMPLADAS POR LAS PARTES EN LA FECHA DE VIGENCIA); O
+          <br />
+          (D) DAÑOS EJEMPLARES O PUNITIVOS; Y
+          <br />
+          (ii) LA RESPONSABILIDAD TOTAL TOTAL DE CADA PARTE QUE SURJA DE O RELACIONADA CON ESTE ACUERDO SE LIMITA A USD 100.
+          <br />
+          (c) Excepciones a las limitaciones. NADA EN ESTE ACUERDO EXCLUYE O LIMITA LA RESPONSABILIDAD DE NINGUNA PARTE POR:
+          <br />
+          (i) FRAUDE O DECLARACIÓN FALSA FRAUDULENTA;
+          <br />
+          (ii) VIOLACIÓN DE CONFIDENCIALIDAD;
+          <br />
+          (iii) SU RESPONSABILIDAD BAJO LA SECCIÓN 7 (INDEMNIZACIÓN);
+          <br />
+          (iv) INFRACCIÓN DE LOS DERECHOS DE PROPIEDAD INTELECTUAL DE LA OTRA PARTE; O
+          <br />
+          (v) ASUNTOS PARA LOS CUALES LA RESPONSABILIDAD NO PUEDE EXCLUIRSE O LIMITARSE SEGÚN LA LEY APLICABLE.
+        </p>
+        <p class="paragraph"> 
+          9. Varios. Todos los avisos legales deben estar en inglés, por escrito (que puede ser por correo electrónico) y dirigidos al contacto principal de la otra parte, que para Google es legal-notices@google.com. Cualquier modificación debe realizarse por escrito y firmada por ambas partes. No podrá ceder ninguna parte de este Acuerdo sin el consentimiento previo por escrito de Google. Google puede asignar o delegar sus derechos y obligaciones en virtud de este Acuerdo. Se considerará que ninguna de las partes ha renunciado a ningún derecho al no ejercer (o retrasar el ejercicio de) algún derecho en virtud de este Acuerdo. Este Acuerdo establece todos los términos acordados entre las partes y cancela y reemplaza todos los demás acuerdos entre las partes relacionados con su tema. TODOS LOS RECLAMOS QUE SURJAN DE O RELACIONADOS CON ESTE ACUERDO SE REGIRÁN POR LAS LEYES DE CALIFORNIA,
+        </p>
+      </strong>
+    </div>
+  </section>
+
+    </main>
+    
+     
+    <footer>
+      <div class="content footer-main">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg"
+              width="154"
+              alt="Flutter"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li>Acerca de Flutter</li>
+            <li>
+              <a href="https://docs.flutter.dev/jobs" target="_blank">Carreras</a>
+            </li>
+            <li><a href="https://medium.com/flutter" target="_blank">Noticias</a></li>
+            <li><a href="/brand">Marca</a></li>
+            <li><a href="/culture">Cultura</a></li>
+          </ul>
+          <ul>
+            <li>Aprenda Flutter</li>
+            <li><a href="/learn" target="_blank">Viaje de aprendizaje</a></li>
+            <li><a href="https://docs.flutter.dev/codelabs" target="_blank">Laboratorios de código</a></li>
+            <li>
+              <a href="https://flutter.github.io/samples" target="_blank"
+                >Ejemplos</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/cookbook" target="_blank">Cookbook</a></li>
+          </ul>
+          <ul>
+            <li>Multiplataforma</li>
+            <li><a href="/multi-platform/mobile">Móvil</a></li>
+            <li><a href="/multi-platform/web">Web</a></li>
+            <li><a href="/multi-platform/desktop">Escritorio</a></li>
+            <li><a href="/multi-platform/embedded">Embebido</a></li>
+            <li><a href="/multi-platform/ios">iOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content footer-social">
+        <div>
+          <a
+            href="https://www.youtube.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter YouTube"
+          >
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a
+            href="https://twitter.com/flutterdev"
+            target="_blank"
+            aria-label="Flutter Twittter"
+          >
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/flutter"
+            target="_blank"
+            aria-label="Flutter Github"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://medium.com/flutter"
+            target="_blank"
+            aria-label="Flutter Medium"
+          >
+            <i class="fab fa-medium fa-lg"></i>
+          </a>
+          <a
+            href="https://www.meetup.com/pro/flutter/"
+            target="_blank"
+            aria-label="Flutter Meetup"
+          >
+            <i class="fab fa-meetup fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/showcase/flutterdevofficial/"
+            target="_blank"
+            aria-label="Flutter LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content footer-tray">
+        <div>
+          Salvo que se indique lo contrario, este trabajo tiene la licencia Creative Commons 
+          Attribution 4.0 International y los ejemplos de código tienen la licencia BSD.
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://docs.flutter.dev/tos">Terminos</a></li>
+            <li>
+              <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+                >Privacidad</a
+              >
+            </li>
+            <li><a href="https://docs.flutter.dev/security">Seguridad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+        <section class="cookie-snack" x-data="CookieSnack" x-bind:class="{ 'show': !agreed }">
+      <div class="container">
+        <p>Google utiliza cookies para ofrecer sus servicios, personalizar anuncios y analizar el tráfico. Puedes
+          ajustar tus controles de privacidad en cualquier momento en tu 
+          <a href="https://myaccount.google.com/data-and-personalization" target="_blank" rel="noopener">configuración de Google</a>. 
+          <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Aprende más</a>.
+        </p>
+        <button @click.prevent="consent" class="solid">Aceptar</button>
+      </div>
+    </section>
+    
+        <section class="cookie-snack" x-data="Snack" x-bind:class="{ 'show': !agreed && window.location.href.includes('consultants') }">
+        <div class="container">
+          <p>AVISO: Flutter espera que este directorio sea útil para los clientes que buscan consultores con experiencia en Flutter; sin embargo, Flutter no representa ni garantiza a usted ni a ninguna otra persona que los consultores enumerados sean socios de Flutter o de Google, y Flutter no representa ni garantiza sus calificaciones ni la calidad de los servicios que puede recibir. Su relación es estrictamente entre usted y los consultores.</p>
+          <button @click.prevent="dismiss" class="solid">Aceptar</button>
+        </div>
+      </section>
+  
+
+    
+    <script src="https://storage.googleapis.com/cms-storage-bucket/main.441cd7c5f611b207ffc3.js"></script>
+    
+
+  </body>
+</html>
